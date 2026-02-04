@@ -25,6 +25,8 @@ app.use((req, res, next) => {
 import authRoutes from './routes/auth';
 import waterRoutes from './routes/water';
 import farmRoutes from './routes/farm';
+import profileRoutes from './routes/profile';
+import leaderboardRoutes from './routes/leaderboard';
 
 // Supabase Client
 const supabaseUrl = process.env.SUPABASE_URL || '';
@@ -40,6 +42,8 @@ app.get('/', (req: Request, res: Response) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/water', waterRoutes);
 app.use('/api/farm', farmRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/leaderboard', leaderboardRoutes);
 
 // Test DB Connection Route
 app.get('/api/health', async (req: Request, res: Response) => {

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import FarmDashboard from './pages/FarmDashboard';
+import Leaderboard from './pages/Leaderboard';
 import Profile from './pages/Profile';
 import MainLayout from './layouts/MainLayout';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -27,6 +28,7 @@ const App: React.FC = () => {
                   <Route element={<MainLayout />}>
                     <Route path="/" element={<Dashboard />} />
                     <Route path="/farm" element={<FarmDashboard />} />
+                    <Route path="/leaderboard" element={<Leaderboard />} />
                     <Route path="/interviews" element={<div className="p-6 text-center text-ios-subtext">Interviews (Coming Soon)</div>} />
                     <Route path="/camera" element={<div className="p-6 text-center text-ios-subtext">Camera (Coming Soon)</div>} />
                     <Route path="/profile" element={<Profile />} />
@@ -39,7 +41,7 @@ const App: React.FC = () => {
           </div>
         </AuthProvider>
       </LanguageProvider>
-    </BrowserRouter>
+    </BrowserRouter >
   );
 };
 

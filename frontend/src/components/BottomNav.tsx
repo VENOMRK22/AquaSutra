@@ -1,12 +1,14 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { House, Tractor, Camera, User } from 'lucide-react';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { House, Tractor, Camera, User, TrendingUp } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const BottomNav: React.FC = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const { t } = useLanguage();
+
     return (
-        // Fixed at bottom, but constrained to the max-width of the parent layout (effectively)
-        // We achieve this by using 'fixed' but centering it max-w-md like the main app container
-        // Added left-1/2 and -translate-x-1/2 to ensure it stays centered on the viewport
         <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 z-50 glass-ios pb-safe-bottom w-full max-w-md border-t border-black/5">
             <div className="flex justify-around items-center h-14 px-2">
 
@@ -15,7 +17,7 @@ const BottomNav: React.FC = () => {
                     className={({ isActive }) => `flex flex-col items-center justify-center w-full h-full space-y-[2px] ${isActive ? 'text-ios-blue' : 'text-ios-subtext hover:text-ios-gray'}`}
                 >
                     <House size={26} strokeWidth={2} />
-                    <span className="text-[10px] font-medium">Home</span>
+                    <span className="text-[10px] font-medium">{t('nav.home')}</span>
                 </NavLink>
 
                 <NavLink
@@ -23,7 +25,7 @@ const BottomNav: React.FC = () => {
                     className={({ isActive }) => `flex flex-col items-center justify-center w-full h-full space-y-[2px] ${isActive ? 'text-ios-blue' : 'text-ios-subtext hover:text-ios-gray'}`}
                 >
                     <Tractor size={26} strokeWidth={2} />
-                    <span className="text-[10px] font-medium">Farm</span>
+                    <span className="text-[10px] font-medium">{t('nav.farm')}</span>
                 </NavLink>
 
                 <NavLink
@@ -31,15 +33,20 @@ const BottomNav: React.FC = () => {
                     className={({ isActive }) => `flex flex-col items-center justify-center w-full h-full space-y-[2px] ${isActive ? 'text-ios-blue' : 'text-ios-subtext hover:text-ios-gray'}`}
                 >
                     <Camera size={26} strokeWidth={2} />
-                    <span className="text-[10px] font-medium">Camera</span>
+                    <span className="text-[10px] font-medium">{t('nav.camera')}</span>
                 </NavLink>
+
+                <button onClick={() => navigate('/leaderboard')} className={`flex flex-col items-center gap-1 transition-colors w-full h-full ${location.pathname === '/leaderboard' ? 'text-green-600' : 'text-gray-400'}`}>
+                    <TrendingUp size={24} strokeWidth={location.pathname === '/leaderboard' ? 2.5 : 2} />
+                    <span className="text-[10px] font-medium">{t('nav.market')}</span>
+                </button>
 
                 <NavLink
                     to="/profile"
                     className={({ isActive }) => `flex flex-col items-center justify-center w-full h-full space-y-[2px] ${isActive ? 'text-ios-blue' : 'text-ios-subtext hover:text-ios-gray'}`}
                 >
                     <User size={26} strokeWidth={2} />
-                    <span className="text-[10px] font-medium">Profile</span>
+                    <span className="text-[10px] font-medium">{t('nav.profile')}</span>
                 </NavLink>
 
             </div>

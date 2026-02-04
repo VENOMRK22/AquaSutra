@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { supabase } from '../lib/supabase';
-import { User, LogOut, ChevronRight, Settings, Phone } from 'lucide-react';
+import { User, LogOut, ChevronRight, Settings, Phone, Globe } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface ProfileData {
     username: string;
@@ -11,6 +12,7 @@ interface ProfileData {
 
 const Profile: React.FC = () => {
     const { user, signOut } = useAuth();
+    const { language, setLanguage, t } = useLanguage();
     const [profile, setProfile] = useState<ProfileData | null>(null);
 
     useEffect(() => {
@@ -45,7 +47,7 @@ const Profile: React.FC = () => {
         <div className="animate-fade-in pb-10">
             {/* Header */}
             <header className="pt-4 pb-6 px-4">
-                <h1 className="text-3xl font-bold text-ios-text tracking-tight">Profile</h1>
+                <h1 className="text-3xl font-bold text-ios-text tracking-tight">{t('profile.title')}</h1>
             </header>
 
             <div className="space-y-6 px-4">
@@ -74,6 +76,31 @@ const Profile: React.FC = () => {
                         </div>
                         <ChevronRight size={20} className="text-gray-300" />
                     </div>
+
+                    {/* Language Switcher */}
+                    <div className="p-4 flex items-center justify-between border-b border-gray-100">
+                        <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-500">
+                                <Globe size={18} />
+                            </div>
+                            <span className="font-medium text-ios-text">{t('profile.language')}</span>
+                        </div>
+                        <div className="flex bg-gray-100 rounded-lg p-1">
+                            {(['en', 'mr', 'hi'] as const).map((lang) => (
+                                <button
+                                    key={lang}
+                                    onClick={() => setLanguage(lang)}
+                                    className={`px-3 py-1 text-xs font-semibold rounded-md transition-all ${language === lang
+                                            ? 'bg-white text-ios-text shadow-sm'
+                                            : 'text-gray-400 hover:text-gray-600'
+                                        }`}
+                                >
+                                    {lang === 'en' ? 'En' : lang === 'mr' ? 'म' : 'हि'}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
                     <div className="p-4 flex items-center justify-between active:bg-gray-50 transition-colors cursor-pointer">
                         <div className="flex items-center gap-3">
                             <div className="w-8 h-8 bg-green-50 rounded-lg flex items-center justify-center text-ios-green">

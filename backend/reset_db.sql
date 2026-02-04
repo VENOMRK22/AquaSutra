@@ -27,6 +27,10 @@ CREATE TABLE public.profiles (
   username TEXT UNIQUE,
   full_name TEXT,
   avatar_url TEXT,
+
+  village TEXT,
+  district TEXT,
+  state TEXT,
   updated_at TIMESTAMP WITH TIME ZONE,
   
   CONSTRAINT username_length CHECK (char_length(username) >= 3)
@@ -57,12 +61,15 @@ GRANT ALL ON TABLE public.profiles TO service_role;
 CREATE OR REPLACE FUNCTION public.handle_new_user() 
 RETURNS TRIGGER AS $$
 BEGIN
-  INSERT INTO public.profiles (id, username, full_name, avatar_url)
+  INSERT INTO public.profiles (id, username, full_name, avatar_url, village, district, state)
   VALUES (
     new.id, 
     new.raw_user_meta_data->>'username', 
     new.raw_user_meta_data->>'full_name', 
-    new.raw_user_meta_data->>'avatar_url'
+    new.raw_user_meta_data->>'avatar_url',
+    new.raw_user_meta_data->>'village',
+    new.raw_user_meta_data->>'district',
+    new.raw_user_meta_data->>'state'
   );
   /* Existing handle_new_user triggers ... */
   RETURN new;

@@ -38,6 +38,8 @@ const FarmDashboard: React.FC = () => {
 
     // Farm Edit State
     const [newTotalArea, setNewTotalArea] = useState('');
+    const [newVillage, setNewVillage] = useState('');
+
 
     useEffect(() => {
         fetchFarmData();
@@ -62,6 +64,10 @@ const FarmDashboard: React.FC = () => {
             } else {
                 setShowSetupModal(true);
             }
+
+            // Fetch Profile for Village
+            const { data: profile } = await supabase.from('profiles').select('village').eq('id', user.id).single();
+            if (profile && profile.village) setNewVillage(profile.village);
 
             if (json.crops) setCrops(json.crops);
         } catch (err) {
@@ -89,7 +95,30 @@ const FarmDashboard: React.FC = () => {
                     name: "My Farm"
                 })
             });
+
+            // Save Village
+            // Save Village (Directly via Supabase to pass RLS)
+            if (newVillage) {
+                const { error: profileError } = await supabase
+                    .from('profiles')
+                    .upsert({
+                        id: user.id,
+                        village: newVillage,
+                        username: user.email?.split('@')[0] || 'User', // Fallback for new profile
+                        full_name: user.user_metadata?.full_name || 'Farmer',
+                        updated_at: new Date()
+                    }, { onConflict: 'id' });
+
+                if (profileError) {
+                    console.error("Profile Save Error:", profileError);
+                } else {
+                    console.log("Village Saved Successfully:", newVillage);
+                }
+            }
+
             const updatedFarm = await res.json();
+
+
 
             if (updatedFarm && !updatedFarm.error) {
                 setFarm(updatedFarm);
@@ -164,10 +193,6 @@ const FarmDashboard: React.FC = () => {
         setShowSetupModal(true);
     }
 
-    // ... (unchanged code) ...
-
-
-
     if (loading) return (
         <div className="flex items-center justify-center min-h-screen bg-gray-50">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600"></div>
@@ -175,10 +200,10 @@ const FarmDashboard: React.FC = () => {
     );
 
     return (
-        <div className="bg-gray-50 min-h-screen pb-32">
-            {/* Elegant Header with Gradient & Image */}
+        <div className="bg-gray-50 min-h-screen pb-24">
+            {/* Elegant Header with Gradient & Image - REDUCED HEIGHT */}
             <div
-                className="relative p-8 rounded-b-[2.5rem] shadow-xl text-white overflow-hidden"
+                className="relative px-6 pt-6 pb-20 rounded-b-[2rem] shadow-xl text-white overflow-hidden"
                 style={{
                     backgroundImage: "url('/farm-header-bg.png')",
                     backgroundSize: 'cover',
@@ -190,39 +215,39 @@ const FarmDashboard: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-green-900/90 via-emerald-800/70 to-black/30 backdrop-blur-[1px]"></div>
 
                 <div className="relative z-10">
-                    <div className="flex justify-between items-start mb-6">
+                    <div className="flex justify-between items-start mb-4">
                         <div>
-                            <h1 className="text-3xl font-bold tracking-tight">My Farm</h1>
-                            <p className="text-green-100 opacity-90 text-sm mt-1">Manage your crops & water</p>
+                            <h1 className="text-2xl font-bold tracking-tight">My Farm</h1>
+                            <p className="text-green-100 opacity-90 text-xs mt-0.5">Manage your crops & water</p>
                         </div>
                         <button
                             onClick={() => setShowAddModal(true)}
-                            className="bg-white/20 backdrop-blur-md p-3 rounded-full hover:bg-white/30 transition-all active:scale-95 shadow-lg border border-white/10"
+                            className="bg-white/20 backdrop-blur-md p-2.5 rounded-full hover:bg-white/30 transition-all active:scale-95 shadow-lg border border-white/10"
                         >
-                            <Plus size={24} className="text-white" />
+                            <Plus size={20} className="text-white" />
                         </button>
                     </div>
 
                     {/* Stats Card */}
-                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/10 flex items-center justify-between">
+                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10 flex items-center justify-between">
                         <div>
-                            <p className="text-green-100 text-xs font-bold uppercase tracking-wider mb-1">Total Land</p>
+                            <p className="text-green-100 text-[10px] font-bold uppercase tracking-wider mb-1">Total Land</p>
                             <div className="flex items-baseline gap-2">
-                                <span className="text-4xl font-bold">{farm?.total_area || 0}</span>
-                                <span className="text-lg font-medium opacity-80">Acres</span>
+                                <span className="text-3xl font-bold">{farm?.total_area || 0}</span>
+                                <span className="text-sm font-medium opacity-80">Acres</span>
                             </div>
                         </div>
                         <button
                             onClick={openEditFarm}
-                            className="p-3 bg-white text-green-700 rounded-xl shadow-md active:scale-95 transition-transform hover:bg-gray-50"
+                            className="p-2.5 bg-white text-green-700 rounded-xl shadow-md active:scale-95 transition-transform hover:bg-gray-50"
                         >
-                            <Pencil size={18} />
+                            <Pencil size={16} />
                         </button>
                     </div>
                 </div>
             </div>
 
-            {/* Quick Stats Grid */}
+            {/* Quick Stats Grid - ADJUSTED MARGIN */}
             <div className="grid grid-cols-2 gap-3 px-5 -mt-10 relative z-20 mb-6">
                 <div className="bg-white p-4 rounded-2xl shadow-lg shadow-gray-200/50 flex flex-col items-center justify-center gap-1">
                     <span className="text-3xl font-bold text-gray-800">{crops.length}</span>
@@ -388,7 +413,7 @@ const FarmDashboard: React.FC = () => {
                             {farm ? 'Update your total land area to keep your records accurate.' : 'Welcome! To help you plan better, tell us the Total Area of your land.'}
                         </p>
 
-                        <div className="mb-8 text-left bg-gray-50 p-4 rounded-2xl border border-gray-100">
+                        <div className="mb-4 text-left bg-gray-50 p-4 rounded-2xl border border-gray-100">
                             <label className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1 block">Total Land (Acres)</label>
                             <input
                                 type="number"
@@ -399,6 +424,19 @@ const FarmDashboard: React.FC = () => {
                                 autoFocus
                             />
                         </div>
+
+                        <div className="mb-8 text-left bg-gray-50 p-4 rounded-2xl border border-gray-100">
+                            <label className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1 block">Village Name</label>
+                            <input
+                                type="text"
+                                value={newVillage}
+                                onChange={(e) => setNewVillage(e.target.value)}
+                                placeholder="e.g. Rampur"
+                                className="w-full bg-transparent p-0 font-bold text-2xl text-gray-900 focus:outline-none placeholder:text-gray-300"
+                            />
+                        </div>
+
+
 
                         <button
                             onClick={handleSaveFarm}

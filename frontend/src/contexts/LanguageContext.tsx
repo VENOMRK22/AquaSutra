@@ -1,6 +1,5 @@
-import React, { createContext, useContext, useState } from 'react';
-import { translations } from '../i18n';
-import type { Language } from '../i18n';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { translations, Language } from '../i18n/translations';
 
 interface LanguageContextType {
     language: Language;
@@ -11,10 +10,24 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [language, setLanguage] = useState<Language>('en');
+    const [language, setLanguageState] = useState<Language>('en');
 
-    const t = (key: string) => {
-        return translations[key]?.[language] || key;
+    useEffect(() => {
+        const savedLang = localStorage.getItem('app-language') as Language;
+        if (savedLang && ['en', 'mr', 'hi'].includes(savedLang)) {
+            setLanguageState(savedLang);
+        }
+    }, []);
+
+    const setLanguage = (lang: Language) => {
+        setLanguageState(lang);
+        localStorage.setItem('app-language', lang);
+    };
+
+    const t = (key: string): string => {
+        const langTranslations = translations[language] as Record<string, string>;
+        const enTranslations = translations['en'] as Record<string, string>;
+        return langTranslations[key] || enTranslations[key] || key;
     };
 
     return (
@@ -24,7 +37,6 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     );
 };
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const useLanguage = () => {
     const context = useContext(LanguageContext);
     if (!context) {
