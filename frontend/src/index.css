@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  :root {
+    --ios-safe-area-top: env(safe-area-inset-top);
+    --ios-safe-area-bottom: env(safe-area-inset-bottom);
+  }
+
+  body {
+    @apply bg-ios-bg text-ios-text font-sans antialiased overflow-x-hidden;
+    /* iOS Scroll Physics */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: none;
+  }
+
+  /* Improve touch tap highlights */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .safe-pt {
+    padding-top: max(1rem, var(--ios-safe-area-top));
+  }
+
+  .safe-pb {
+    padding-bottom: max(1rem, var(--ios-safe-area-bottom));
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* iOS Blur Utilities */
+  .glass-ios {
+    @apply bg-white/80 backdrop-blur-xl border-t border-black/5;
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-lg border border-white/40 shadow-ios;
+  }
+}
