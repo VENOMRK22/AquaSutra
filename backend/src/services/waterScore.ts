@@ -1,4 +1,7 @@
+
 import axios from 'axios';
+import { CGWBService } from './CGWBService';
+import { LocationService } from './LocationService';
 
 interface WaterBalanceResult {
     balance_mm: number;
@@ -6,6 +9,7 @@ interface WaterBalanceResult {
     soil_moisture_index: number;
     status: 'Surplus' | 'Adequate' | 'Deficit' | 'Critical';
     message: string;
+    villageName: string;
 }
 
 export const calculateWaterBalance = async (
@@ -14,14 +18,31 @@ export const calculateWaterBalance = async (
     soilType: string = 'Medium Black'
 ): Promise<WaterBalanceResult> => {
 
-    // 1. Scientific Constants for Hard Rock (Basalt) Terrain
+    // 1. Resolve Admin Location (District/Block)
+    const blockInfo = await LocationService.getBlockFromCoords(lat, lon);
+    const villageLabel = blockInfo.block !== 'Unknown' ? `${blockInfo.block}, ${blockInfo.district}` : 'Unknown Village';
+
+    // 2. Fetch Real Hydro-Geological Data
+    // Use specific Block Status if available, otherwise just use Lat/Lon depth
+    const blockStatus = await CGWBService.getBlockWaterStatus(blockInfo.district, blockInfo.block);
+    let aquiferDepth_m = await CGWBService.getGroundwaterLevel(lat, lon);
+
+    // Override depth if Block is known to be deeper according to CGWB records vs generic heatmap
+    if (blockStatus.waterTableDepth > aquiferDepth_m) {
+        aquiferDepth_m = blockStatus.waterTableDepth;
+    }
+
+    // Scientific Constants for Hard Rock (Basalt) Terrain
     const SPECIFIC_YIELD = 0.02; // 2% for Basalt/Hard Rock
-    const AQUIFER_DEPTH_M = 10;  // Assumed active aquifer depth: 10 meters
     const CropWaterDemand_mm_per_day = 4; // Avg for Rabi crops
 
-    // 2. Determine Infiltration Factor (Rainfall -> Groundwater)
-    // Hard rock terrain in Maharashtra allows only ~5-15% recharge
+    // 3. Determine Infiltration Factor (Rainfall -> Groundwater)
+    // Adjust based on "Over-exploited" status (Soil is likely harder/crusted or terrain is difficult)
     let infiltrationFactor = 0.10; // Default: Medium Black Soil
+
+    if (blockStatus.classification === 'Over-exploited' || blockStatus.classification === 'Critical') {
+        infiltrationFactor *= 0.8; // Reduce recharge potential in stressed areas (runoff is higher)
+    }
 
     const soilLower = soilType.toLowerCase();
     if (soilLower.includes('clay') || soilLower.includes('black')) {
@@ -30,7 +51,7 @@ export const calculateWaterBalance = async (
         infiltrationFactor = 0.15; // 15% recharge (Better Permeability)
     }
 
-    // 3. Fetch Hydrological Data (Rain + Evapotranspiration)
+    // 4. Fetch Hydrological Data (Rain + Evapotranspiration)
     const endDate = new Date();
     const startDate = new Date();
     startDate.setMonth(startDate.getMonth() - 6);
@@ -66,7 +87,7 @@ export const calculateWaterBalance = async (
         totalRainfall = 400; // Fallback
     }
 
-    // 4. Fetch Deep Soil Moisture (Proxy for GRACE / Aquifer Storage)
+    // 5. Fetch Deep Soil Moisture (Proxy for GRACE / Aquifer Storage)
     let soilMoistureIndex = 0.3; // Default
     try {
         const forecastUrl = `https://api.open-meteo.com/v1/forecast`;
@@ -84,12 +105,12 @@ export const calculateWaterBalance = async (
         console.error("Failed to fetch soil moisture:", error);
     }
 
-    // 5. Calculate Net Water Balance (Scientific Formula)
+    // 6. Calculate Net Water Balance (Scientific Formula)
     // Step A: Inflow = (Rainfall * Infiltration)
     const groundwaterRecharge = totalRainfall * infiltrationFactor;
 
     // Step B: Storage = Aquifer Depth * Specific Yield * Saturation
-    const aquiferDepth_mm = AQUIFER_DEPTH_M * 1000;
+    const aquiferDepth_mm = aquiferDepth_m * 1000;
     const currentStorage_mm = aquiferDepth_mm * SPECIFIC_YIELD * soilMoistureIndex;
 
     // Total Available Groundwater (mm)
@@ -98,7 +119,7 @@ export const calculateWaterBalance = async (
     // Step C: Days of Irrigation = Balance / Daily Demand
     const daysLeft = Math.round(netBalance_mm / CropWaterDemand_mm_per_day);
 
-    // 6. Determine Status and Message
+    // 7. Determine Status and Message
     let status: WaterBalanceResult['status'] = 'Adequate';
     let message = `Sufficient for ~${daysLeft} days.`;
 
@@ -118,6 +139,7 @@ export const calculateWaterBalance = async (
         rainfall_6m_mm: Math.round(totalRainfall),
         soil_moisture_index: soilMoistureIndex,
         status,
-        message
+        message,
+        villageName: villageLabel
     };
 };
