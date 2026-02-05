@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sprout, ChevronRight, Calendar, Droplets, TrendingUp } from 'lucide-react';
 import WaterBalanceWidget from '../components/WaterBalanceWidget';
+import SowingDispatcherWidget from '../components/SowingDispatcherWidget';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -112,7 +113,12 @@ const Dashboard: React.FC = () => {
                 {/* Featured Card (Water Balance) */}
                 <WaterBalanceWidget />
 
-                {/* Grid Widgets */}
+                {/* PROACTIVE SOWING DISPATCHER (New Feature) */}
+                <div className="animate-in slide-in-from-bottom-4 duration-700 delay-150">
+                    <SowingDispatcherWidget />
+                </div>
+
+                {/* Additional Tools Grid */}
                 <div className="grid grid-cols-2 gap-4">
                     {/* Interview Widget */}
                     <button className="bg-white rounded-2xl p-5 shadow-ios flex flex-col items-start gap-3 active:scale-95 transition-transform text-left">

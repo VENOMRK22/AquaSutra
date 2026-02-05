@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 import { X, CloudRain, AlertOctagon } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface SimulationData {
     day: number;
@@ -46,6 +47,7 @@ interface Props {
 }
 
 const WaterForecastModal: React.FC<Props> = ({ isOpen, onClose, lat, lon, crop }) => {
+    const { t } = useLanguage();
     const [data, setData] = useState<ForecastResponse | null>(null);
     const [loading, setLoading] = useState(false);
     const [selectedCrop, setSelectedCrop] = useState(crop?.crop_type || 'High'); // Default to passed crop type
@@ -111,7 +113,7 @@ const WaterForecastModal: React.FC<Props> = ({ isOpen, onClose, lat, lon, crop }
                 <div className="p-5 flex justify-between items-center bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-10">
                     <div>
                         <h2 className="text-xl font-bold text-gray-900 tracking-tight">
-                            {crop?.name || 'Water Forecast'}
+                            {crop?.name || t('forecast.title')}
                         </h2>
                         <div className="flex items-center gap-2 text-xs font-medium text-gray-500 mt-1">
                             {crop && (
@@ -120,7 +122,7 @@ const WaterForecastModal: React.FC<Props> = ({ isOpen, onClose, lat, lon, crop }
                                     <span className="bg-stone-100 px-2 py-0.5 rounded-md text-stone-600">{crop.soil_type || 'Soil'}</span>
                                 </>
                             )}
-                            <span>180-Day Plan</span>
+                            <span>{t('forecast.180_day_plan')}</span>
                         </div>
                     </div>
                     <button onClick={onClose} className="p-2 bg-gray-100 rounded-full active:bg-gray-200 transition-colors">
@@ -134,7 +136,7 @@ const WaterForecastModal: React.FC<Props> = ({ isOpen, onClose, lat, lon, crop }
 
                         {/* Crop Category Selector */}
                         <div className="bg-white p-4 rounded-2xl shadow-sm">
-                            <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 block">Water Category</label>
+                            <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 block">{t('forecast.water_category')}</label>
                             <div className="grid grid-cols-2 gap-2">
                                 {cropCategories.map(c => (
                                     <button
@@ -154,7 +156,7 @@ const WaterForecastModal: React.FC<Props> = ({ isOpen, onClose, lat, lon, crop }
 
                         {/* Intervention Toggles (Feature #2) */}
                         <div className="bg-white p-4 rounded-2xl shadow-sm">
-                            <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 block">Interventions (Save Water)</label>
+                            <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3 block">{t('forecast.interventions')}</label>
                             <div className="space-y-3">
                                 {/* Drip Toggle */}
                                 <div className="flex items-center justify-between">
@@ -163,8 +165,8 @@ const WaterForecastModal: React.FC<Props> = ({ isOpen, onClose, lat, lon, crop }
                                             <CloudRain size={18} />
                                         </div>
                                         <div>
-                                            <p className="text-sm font-semibold text-gray-800">Drip Irrigation</p>
-                                            <p className="text-[10px] text-green-600 font-medium">Saves ~40% Water</p>
+                                            <p className="text-sm font-semibold text-gray-800">{t('forecast.drip_irrigation')}</p>
+                                            <p className="text-[10px] text-green-600 font-medium">{t('forecast.saves_40')}</p>
                                         </div>
                                     </div>
                                     <button
@@ -182,8 +184,8 @@ const WaterForecastModal: React.FC<Props> = ({ isOpen, onClose, lat, lon, crop }
                                             <div className="w-4 h-4 border-b-2 border-current" />
                                         </div>
                                         <div>
-                                            <p className="text-sm font-semibold text-gray-800">Use Mulching</p>
-                                            <p className="text-[10px] text-green-600 font-medium">Saves ~20% Water</p>
+                                            <p className="text-sm font-semibold text-gray-800">{t('forecast.mulching')}</p>
+                                            <p className="text-[10px] text-green-600 font-medium">{t('forecast.saves_20')}</p>
                                         </div>
                                     </div>
                                     <button
@@ -199,7 +201,7 @@ const WaterForecastModal: React.FC<Props> = ({ isOpen, onClose, lat, lon, crop }
                         {loading ? (
                             <div className="h-64 flex flex-col items-center justify-center text-gray-400 bg-white rounded-2xl shadow-sm">
                                 <div className="w-8 h-8 border-4 border-blue-500/30 border-t-blue-500 rounded-full animate-spin mb-3"></div>
-                                <span className="text-sm">Running Physics Model...</span>
+                                <span className="text-sm">{t('forecast.running_model')}</span>
                             </div>
                         ) : data ? (
                             <>
@@ -238,9 +240,9 @@ const WaterForecastModal: React.FC<Props> = ({ isOpen, onClose, lat, lon, crop }
                                         </ResponsiveContainer>
                                     </div>
                                     <div className="px-4 pb-2 flex justify-between text-[10px] text-gray-400 font-medium uppercase tracking-wider">
-                                        <span>Today</span>
-                                        <span>3 Months</span>
-                                        <span>6 Months</span>
+                                        <span>{t('forecast.today')}</span>
+                                        <span>{t('forecast.3_months')}</span>
+                                        <span>{t('forecast.6_months')}</span>
                                     </div>
                                 </div>
 
@@ -249,48 +251,48 @@ const WaterForecastModal: React.FC<Props> = ({ isOpen, onClose, lat, lon, crop }
                                     <div className="bg-white p-4 rounded-2xl shadow-sm">
                                         <div className="flex items-center gap-2 text-blue-500 mb-1">
                                             <CloudRain size={18} />
-                                            <span className="text-[10px] font-bold uppercase">Inflow</span>
+                                            <span className="text-[10px] font-bold uppercase">{t('forecast.inflow')}</span>
                                         </div>
                                         <p className="text-2xl font-bold text-gray-900">{data.summary.totalRain}<span className="text-sm font-normal text-gray-400">mm</span></p>
-                                        <p className="text-xs text-gray-400 mt-1">Expected Rain</p>
+                                        <p className="text-xs text-gray-400 mt-1">{t('forecast.expected_rain')}</p>
                                     </div>
                                     <div className={`p-4 rounded-2xl shadow-sm ${data.summary.daysStress > 0 ? 'bg-red-50' : 'bg-white'}`}>
                                         <div className={`flex items-center gap-2 mb-1 ${data.summary.daysStress > 0 ? 'text-red-500' : 'text-green-500'}`}>
                                             <AlertOctagon size={18} />
-                                            <span className="text-[10px] font-bold uppercase">Stress</span>
+                                            <span className="text-[10px] font-bold uppercase">{t('forecast.stress')}</span>
                                         </div>
-                                        <p className={`text-2xl font-bold ${data.summary.daysStress > 0 ? 'text-red-600' : 'text-gray-900'}`}>{data.summary.daysStress}<span className="text-sm font-normal text-gray-400"> days</span></p>
-                                        <p className="text-xs text-gray-400 mt-1">Below Wilting Point</p>
+                                        <p className={`text-2xl font-bold ${data.summary.daysStress > 0 ? 'text-red-600' : 'text-gray-900'}`}>{data.summary.daysStress}<span className="text-sm font-normal text-gray-400"> {t('forecast.days')}</span></p>
+                                        <p className="text-xs text-gray-400 mt-1">{t('forecast.below_wilting')}</p>
                                     </div>
                                 </div>
 
                                 {/* Config Info */}
                                 <div className="grid grid-cols-2 gap-2 text-[10px]">
                                     <div className="bg-gray-50 p-3 rounded-xl">
-                                        <span className="text-gray-400">Soil Capacity</span>
+                                        <span className="text-gray-400">{t('forecast.soil_capacity')}</span>
                                         <p className="font-bold text-gray-700">{data.config.soilCapacity_mm}mm</p>
                                     </div>
                                     <div className="bg-gray-50 p-3 rounded-xl">
-                                        <span className="text-gray-400">Crop Water Use (Kc)</span>
+                                        <span className="text-gray-400">{t('forecast.crop_water_use')}</span>
                                         <p className="font-bold text-gray-700">{data.config.kc_peak}x baseline</p>
                                     </div>
                                 </div>
 
                                 <div className={`p-4 rounded-2xl border ${data.summary.firstStressDay ? 'bg-red-50/50 border-red-100' : 'bg-green-50/50 border-green-100'}`}>
                                     <p className={`text-xs leading-relaxed ${data.summary.firstStressDay ? 'text-red-800' : 'text-green-800'}`}>
-                                        <strong>Analysis:</strong> Planting
-                                        <span className="font-bold underline mx-1">{selectedCrop} Water Use</span> crops
+                                        <strong>{t('forecast.analysis')}:</strong> {t('forecast.planting')}
+                                        <span className="font-bold underline mx-1">{selectedCrop} {t('forecast.water_use_crops')}</span>
                                         {data.summary.firstStressDay
-                                            ? ` is RISKY. Water stress begins on Day ${data.summary.firstStressDay}. Consider irrigation or switching to a less thirsty crop.`
-                                            : ` is SAFE. Water levels stay above the danger zone for 6 months.`}
+                                            ? ` ${t('forecast.is_risky')} ${t('forecast.stress_begins')} ${data.summary.firstStressDay}. ${t('forecast.consider_irrigation')}`
+                                            : ` ${t('forecast.is_safe')} ${t('forecast.safe_msg')}`}
                                     </p>
                                 </div>
                             </>
                         ) : (
                             <div className="flex flex-col items-center justify-center py-20 text-gray-400">
                                 <AlertOctagon size={48} className="mb-4 text-gray-300" />
-                                <p className="font-medium">No Forecast Data</p>
-                                <p className="text-xs mt-2 max-w-[200px] text-center">Try checking your location permissions or internet connection.</p>
+                                <p className="font-medium">{t('forecast.no_data')}</p>
+                                <p className="text-xs mt-2 max-w-[200px] text-center">{t('forecast.check_connection')}</p>
                             </div>
                         )}
                     </div>

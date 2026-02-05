@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 import { Trophy, MapPin, Sprout } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface Ranking {
     user_id: string;
@@ -20,6 +21,7 @@ interface PriceTicker {
 }
 
 const Leaderboard: React.FC = () => {
+    const { t } = useLanguage();
     const [rankings, setRankings] = useState<Ranking[]>([]);
     const [loading, setLoading] = useState(true);
     const [userVillage, setUserVillage] = useState<string>('');
@@ -95,10 +97,10 @@ const Leaderboard: React.FC = () => {
             <div className="px-6 pt-6 pb-6">
                 <div className="flex justify-between items-end mb-2">
                     <div>
-                        <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Market & Efficiency</h1>
+                        <h1 className="text-3xl font-bold text-gray-900 tracking-tight">{t('leaderboard.market_efficiency')}</h1>
                         <p className="text-gray-500 text-sm font-medium mt-1 flex items-center gap-1">
                             <MapPin size={14} />
-                            {userVillage || 'Checking Location...'}
+                            {userVillage || t('dashboard.checking_location')}
                         </p>
                     </div>
                 </div>
@@ -107,30 +109,16 @@ const Leaderboard: React.FC = () => {
             {/* Personal Effiency Card */}
             <div className="px-4 space-y-4">
                 {loading ? (
-                    <div className="text-center py-10 text-gray-400">Loading your stats...</div>
+                    <div className="text-center py-10 text-gray-400">{t('leaderboard.loading_stats')}</div>
                 ) : rankings.find(r => r.user_id === (supabase.auth.getSession() as any)?.user?.id) || rankings[0] ? ( // Fallback to first if filtering works
                     (() => {
-                        // Find current user from the fetched list (or just take the first if backend filtered)
-                        // Actually, better to fetch just SELF from backend, but for now filtering list.
-                        // Wait, we can't easily get current user ID in render without state.
-                        // Let's assume the backend returned a list and we just show the "Your Score" card.
-                        // Since we filtered by village, we might see others. 
-                        // I will simple show the list BUT call it "Community Insights" without ranking numbers?
-                        // NO, User said "remove ranking system".
-                        // So I will just show the TOP card which matches the user. 
-
-                        // Actually, I need the User ID to filter. 
-                        // `rankings` contains `user_id`.
-                        // I need to know MY `user_id`. I'll fetch it in useEffect or use a hack.
-                        // Let's blindly show the first one if we can't find match, but that's risky.
-                        // I will update the fetch to set `currentUserId` state.
                         return null;
                     })() || (
                         <div className="bg-gradient-to-br from-green-50 to-white border border-green-100 p-6 rounded-3xl shadow-sm relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-4 opacity-10">
                                 <Trophy size={100} className="text-green-600" />
                             </div>
-                            <h3 className="text-gray-500 text-xs font-bold uppercase tracking-wider mb-2">Your Efficiency Score</h3>
+                            <h3 className="text-gray-500 text-xs font-bold uppercase tracking-wider mb-2">{t('leaderboard.your_efficiency_score')}</h3>
                             {rankings.length > 0 ? (
                                 <div>
                                     <div className="flex items-baseline gap-1">
@@ -138,12 +126,12 @@ const Leaderboard: React.FC = () => {
                                         <span className="text-lg font-bold text-green-600">₹ / kL</span>
                                     </div>
                                     <p className="text-sm text-gray-500 mt-2 max-w-[80%]">
-                                        For every 1000 Liters of water you use, you earn roughly <span className="font-bold text-gray-900">₹{rankings[0]?.score}</span> in profit.
+                                        {t('leaderboard.efficiency_explanation_1')} <span className="font-bold text-gray-900">₹{rankings[0]?.score}</span> {t('leaderboard.efficiency_explanation_2')}
                                     </p>
                                 </div>
                             ) : (
                                 <div className="py-4">
-                                    <p className="text-gray-400">Add crops to calculate your score!</p>
+                                    <p className="text-gray-400">{t('leaderboard.add_crops')}</p>
                                 </div>
                             )}
                         </div>

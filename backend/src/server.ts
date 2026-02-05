@@ -27,6 +27,8 @@ import waterRoutes from './routes/water';
 import farmRoutes from './routes/farm';
 import profileRoutes from './routes/profile';
 import leaderboardRoutes from './routes/leaderboard';
+import inferenceRoutes from './routes/inference';
+import sowingRoutes from './routes/sowing';
 
 // Supabase Client
 const supabaseUrl = process.env.SUPABASE_URL || '';
@@ -44,6 +46,8 @@ app.use('/api/water', waterRoutes);
 app.use('/api/farm', farmRoutes);
 app.use('/api/profile', profileRoutes);
 app.use('/api/leaderboard', leaderboardRoutes);
+app.use('/api/inference', inferenceRoutes);
+app.use('/api/sowing', sowingRoutes);
 
 // Test DB Connection Route
 app.get('/api/health', async (req: Request, res: Response) => {

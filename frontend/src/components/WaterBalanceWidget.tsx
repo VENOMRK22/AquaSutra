@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Droplets, RefreshCw, AlertTriangle, MapPin } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import WaterForecastModal from './WaterForecastModal';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface WaterData {
     balance_mm: number;
@@ -13,6 +14,7 @@ interface WaterData {
 }
 
 const WaterBalanceWidget: React.FC = () => {
+    const { t } = useLanguage();
     const [data, setData] = useState<WaterData | null>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -115,7 +117,7 @@ const WaterBalanceWidget: React.FC = () => {
                     <div>
                         <div className="flex items-center gap-2 mb-2">
                             <span className={`text-xs font-bold uppercase tracking-wider px-2 py-1 rounded-md ${data ? getStatusColor(data.status) : 'bg-gray-100 text-gray-500'}`}>
-                                {loading ? 'Updating...' : (data?.status || 'Live Status')}
+                                {loading ? t('dashboard.loading') : (data?.status || t('widget.live_status'))}
                             </span>
                             {data?.villageName && (
                                 <span className="flex items-center gap-0.5 text-[10px] text-gray-400">
@@ -124,7 +126,7 @@ const WaterBalanceWidget: React.FC = () => {
                             )}
                         </div>
 
-                        <h2 className="text-ios-subtext text-sm font-medium">Water Balance</h2>
+                        <h2 className="text-ios-subtext text-sm font-medium">{t('widget.water_balance')}</h2>
                     </div>
                     <div
                         onClick={(e) => { e.stopPropagation(); handleLocate(); }}
@@ -138,18 +140,18 @@ const WaterBalanceWidget: React.FC = () => {
                     <span className="text-4xl font-bold text-ios-text tracking-tight">
                         {data ? data.balance_mm : '---'}
                     </span>
-                    <span className="text-ios-subtext text-base font-medium">mm (Depth)</span>
+                    <span className="text-ios-subtext text-base font-medium">{t('widget.mm_depth')}</span>
                 </div>
 
                 <div className="mt-4 flex flex-col gap-2">
                     <div className="flex items-center justify-between text-sm">
-                        <span className="text-gray-500">{data?.message || "Connect GPS for analysis"}</span>
+                        <span className="text-gray-500">{data?.message || t('widget.connect_gps')}</span>
                     </div>
 
                     {data && (
                         <div className="flex items-center gap-2 p-2 bg-red-50 rounded-lg">
-                            <span className="text-ios-red text-xs font-semibold">🔥 Burn Rate:</span>
-                            <span className="text-ios-red text-xs">Soil losing ~{burnRate}mm/day</span>
+                            <span className="text-ios-red text-xs font-semibold">🔥 {t('widget.burn_rate')}:</span>
+                            <span className="text-ios-red text-xs">{t('widget.soil_losing')} ~{burnRate}mm/day</span>
                         </div>
                     )}
                 </div>
