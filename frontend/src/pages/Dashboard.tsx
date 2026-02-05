@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { Sprout, ChevronRight, Calendar, Droplets, TrendingUp } from 'lucide-react';
 import WaterBalanceWidget from '../components/WaterBalanceWidget';
 import SowingDispatcherWidget from '../components/SowingDispatcherWidget';
+
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -24,28 +26,28 @@ const Dashboard: React.FC = () => {
     const navigate = useNavigate();
 
     React.useEffect(() => {
-        const fetchScore = async () => {
+        const fetchData = async () => {
             try {
                 const { data: { user } } = await supabase.auth.getUser();
 
                 if (user) {
-                    const res = await fetch(`http://localhost:3000/api/leaderboard?userId=${user.id}`);
-                    const data = await res.json();
-                    console.log("[Dashboard] Fetched Score for", user.id, data);
-
-                    if (data.rankings && data.rankings.length > 0) {
-                        const s = data.rankings[0].score;
-                        if (s !== null && s !== undefined) {
-                            setScore(s.toString());
+                    // 1. Fetch Score
+                    try {
+                        const res = await fetch(`http://localhost:3000/api/leaderboard?userId=${user.id}`);
+                        const data = await res.json();
+                        if (data.rankings && data.rankings.length > 0) {
+                            setScore(data.rankings[0].score?.toString());
                         }
+                    } catch (err) {
+                        console.warn("Leaderboard fetch failed", err);
                     }
                 }
             } catch (e) {
-                console.error("Score fetch failed", e);
+                console.error("Auth check failed", e);
             }
             setLoading(false);
         };
-        fetchScore();
+        fetchData();
     }, []);
 
     const hasScore = score !== null && score !== undefined && score !== '';
@@ -113,10 +115,12 @@ const Dashboard: React.FC = () => {
                 {/* Featured Card (Water Balance) */}
                 <WaterBalanceWidget />
 
-                {/* PROACTIVE SOWING DISPATCHER (New Feature) */}
+                {/* PROACTIVE SOWING DISPATCHER (Season Command Centre) */}
                 <div className="animate-in slide-in-from-bottom-4 duration-700 delay-150">
                     <SowingDispatcherWidget />
                 </div>
+
+
 
                 {/* Additional Tools Grid */}
                 <div className="grid grid-cols-2 gap-4">

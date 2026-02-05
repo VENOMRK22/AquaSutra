@@ -29,11 +29,17 @@ const BottomNav: React.FC = () => {
                 </NavLink>
 
                 <NavLink
-                    to="/camera"
+                    to="/analysis"
                     className={({ isActive }) => `flex flex-col items-center justify-center w-full h-full space-y-[2px] ${isActive ? 'text-ios-blue' : 'text-ios-subtext hover:text-ios-gray'}`}
                 >
-                    <Camera size={26} strokeWidth={2} />
-                    <span className="text-[10px] font-medium">{t('nav.camera')}</span>
+                    <div className="relative">
+                        <TrendingUp size={26} strokeWidth={2} />
+                        <span className="absolute -top-1 -right-1 flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                    </div>
+                    <span className="text-[10px] font-medium">Analysis</span>
                 </NavLink>
 
                 <button onClick={() => navigate('/leaderboard')} className={`flex flex-col items-center gap-1 transition-colors w-full h-full ${location.pathname === '/leaderboard' ? 'text-green-600' : 'text-gray-400'}`}>

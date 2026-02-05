@@ -461,3 +461,136 @@
 [2026-02-05T19:14:20.637Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
 [2026-02-05T19:14:20.729Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
 [2026-02-05T19:14:20.729Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:19:54.596Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:19:55.029Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:19:55.030Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:19:55.065Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:19:55.218Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:19:55.218Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:21:36.219Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:21:36.623Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:21:36.624Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:21:36.659Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:21:36.763Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:21:36.764Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:21:52.790Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:21:53.221Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:21:53.253Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:21:53.351Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:21:55.444Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:21:55.753Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:21:55.754Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:21:55.792Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:21:56.277Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:21:56.277Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:26:15.391Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:26:15.775Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:26:15.776Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:26:15.826Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:26:16.280Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:26:16.280Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:27:57.051Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:27:57.478Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:27:57.478Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:27:57.526Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:27:57.906Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:27:57.906Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:29:39.298Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:29:39.395Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:29:39.396Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:29:39.427Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:29:39.889Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:29:39.889Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:31:56.914Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:31:57.025Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:31:57.025Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:31:57.062Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:31:57.154Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:31:57.155Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:35:53.017Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:35:53.471Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:35:53.471Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:36:07.869Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:36:08.274Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:36:08.274Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:36:08.312Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:36:08.804Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:36:08.804Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:36:14.667Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:36:15.013Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:36:15.013Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:36:15.047Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:36:15.154Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:36:15.154Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:36:34.810Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:36:35.136Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:36:35.137Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:36:35.172Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:36:35.257Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:36:35.257Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:37:20.780Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:37:20.894Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:37:20.894Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:37:20.929Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:37:21.047Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:37:21.047Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:37:40.875Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:37:41.272Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:37:41.272Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:37:41.304Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:37:41.404Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:37:41.404Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:38:23.469Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:38:23.799Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:38:23.799Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:39:17.376Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:39:17.755Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:39:17.756Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:39:17.797Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:39:18.159Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:39:18.159Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:40:08.401Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:40:08.509Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:40:08.509Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:40:08.551Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:40:08.656Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
+[2026-02-05T19:40:08.656Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:41:04.251Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:41:04.347Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
+[2026-02-05T19:41:04.348Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:41:04.383Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:41:04.500Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
+[2026-02-05T19:41:04.500Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:42:37.933Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:42:38.055Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
+[2026-02-05T19:42:38.056Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:42:38.087Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:42:38.486Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
+[2026-02-05T19:42:38.487Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:45:18.029Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:45:18.123Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
+[2026-02-05T19:45:18.123Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:45:18.156Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:45:18.502Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
+[2026-02-05T19:45:18.502Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:47:45.438Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:47:45.533Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
+[2026-02-05T19:47:45.533Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:47:45.682Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:47:45.767Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
+[2026-02-05T19:47:45.767Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:47:45.796Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:47:47.366Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
+[2026-02-05T19:47:47.366Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:48:13.889Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:48:13.984Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
+[2026-02-05T19:48:13.984Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:48:14.015Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:48:14.101Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
+[2026-02-05T19:48:14.101Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:50:55.500Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:50:55.596Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
+[2026-02-05T19:50:55.597Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[2026-02-05T19:50:55.627Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
+[2026-02-05T19:50:55.875Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
+[2026-02-05T19:50:55.875Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
