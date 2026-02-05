@@ -2,6 +2,8 @@
 import axios from 'axios';
 import { CGWBService } from './CGWBService';
 import { LocationService } from './LocationService';
+import { NASAGRACEService } from './NASAGRACEService';
+import { BlockInfo as PincodeBlockInfo } from './PincodeService';
 
 interface WaterBalanceResult {
     balance_mm: number;
@@ -10,39 +12,81 @@ interface WaterBalanceResult {
     status: 'Surplus' | 'Adequate' | 'Deficit' | 'Critical';
     message: string;
     villageName: string;
+    // CGWB Fields
+    cgwbClassification: 'Safe' | 'Semi-critical' | 'Critical' | 'Over-exploited' | 'Saline' | 'Unknown';
+    blockName: string;
+    actualWaterTableDepth: number; // meters
+    rechargeTrend: number; // % decline over 5 years
+    // GRACE Fields
+    graceAnomaly_cm?: number;
+    satelliteTrend_cm_yr?: number;
 }
 
 export const calculateWaterBalance = async (
     lat: number,
     lon: number,
-    soilType: string = 'Medium Black'
+    soilType: string = 'Medium Black',
+    contextBlockInfo?: PincodeBlockInfo | null
 ): Promise<WaterBalanceResult> => {
 
-    // 1. Resolve Admin Location (District/Block)
-    const blockInfo = await LocationService.getBlockFromCoords(lat, lon);
-    const villageLabel = blockInfo.block !== 'Unknown' ? `${blockInfo.block}, ${blockInfo.district}` : 'Unknown Village';
+    // 1. Resolve Admin Location & Hydro Data
+    let district = 'Unknown';
+    let block = 'Unknown';
+    let classification: any = 'Unknown';
+    let actualDepth = 10;
+    let villageLabel = 'Unknown Village';
 
-    // 2. Fetch Real Hydro-Geological Data
-    // Use specific Block Status if available, otherwise just use Lat/Lon depth
-    const blockStatus = await CGWBService.getBlockWaterStatus(blockInfo.district, blockInfo.block);
-    let aquiferDepth_m = await CGWBService.getGroundwaterLevel(lat, lon);
+    if (contextBlockInfo) {
+        // Fast Path: Use provided Pincode Data
+        console.log(`[WaterScore] Using Context Block: ${contextBlockInfo.block}`);
+        district = contextBlockInfo.district;
+        block = contextBlockInfo.block;
+        classification = contextBlockInfo.classification;
+        actualDepth = contextBlockInfo.waterTableDepth;
+        villageLabel = `${block}, ${district} (Pin: ${contextBlockInfo.pincode})`;
 
-    // Override depth if Block is known to be deeper according to CGWB records vs generic heatmap
-    if (blockStatus.waterTableDepth > aquiferDepth_m) {
-        aquiferDepth_m = blockStatus.waterTableDepth;
+    } else {
+        // Slow Path: Geocode coordinates
+        const locationInfo = await LocationService.getBlockFromCoords(lat, lon);
+        district = locationInfo.district;
+        block = locationInfo.block;
+        villageLabel = locationInfo.block !== 'Unknown' ? `${locationInfo.block}, ${locationInfo.district}` : 'Unknown Village';
+
+        // Fetch Hydro Data separately since not provided
+        const blockStatus = await CGWBService.getBlockWaterStatus(district, block);
+        classification = blockStatus.classification;
+
+        // Determine Actual Depth: Use local specific if known, otherwise API/Fallback
+        let localDepth = await CGWBService.getGroundwaterLevel(lat, lon);
+        if (blockStatus.waterTableDepth > localDepth) {
+            localDepth = blockStatus.waterTableDepth;
+        }
+        actualDepth = localDepth;
     }
+
+    // 2. Trend Analysis (CGWB Historical) - Common Path
+    let avgDeclinePercent = 0;
+    try {
+        const trends = await CGWBService.getHistoricalTrends(district, block, 5);
+        if (trends.length > 0) {
+            const totalDecline = trends.reduce((acc, t) => acc + (t.change > 0 ? t.change : 0), 0);
+            const initialLevel = trends[0].level;
+            avgDeclinePercent = (totalDecline / initialLevel) * 100;
+        }
+    } catch (e) {
+        console.warn("Failed to fetch trends", e);
+    }
+
+    // 3. Satellite Validation (NASA GRACE)
+    const graceData = NASAGRACEService.getGroundwaterAnomaly(lat, lon);
+    const satelliteTrend = NASAGRACEService.getAnomalyTrend(lat, lon);
 
     // Scientific Constants for Hard Rock (Basalt) Terrain
     const SPECIFIC_YIELD = 0.02; // 2% for Basalt/Hard Rock
     const CropWaterDemand_mm_per_day = 4; // Avg for Rabi crops
 
-    // 3. Determine Infiltration Factor (Rainfall -> Groundwater)
-    // Adjust based on "Over-exploited" status (Soil is likely harder/crusted or terrain is difficult)
+    // 4. Infiltration Tuning based on Block Status
     let infiltrationFactor = 0.10; // Default: Medium Black Soil
-
-    if (blockStatus.classification === 'Over-exploited' || blockStatus.classification === 'Critical') {
-        infiltrationFactor *= 0.8; // Reduce recharge potential in stressed areas (runoff is higher)
-    }
 
     const soilLower = soilType.toLowerCase();
     if (soilLower.includes('clay') || soilLower.includes('black')) {
@@ -51,17 +95,19 @@ export const calculateWaterBalance = async (
         infiltrationFactor = 0.15; // 15% recharge (Better Permeability)
     }
 
-    // 4. Fetch Hydrological Data (Rain + Evapotranspiration)
+    if (classification === 'Over-exploited') {
+        infiltrationFactor *= 0.7;
+    } else if (classification === 'Critical') {
+        infiltrationFactor *= 0.85;
+    }
+
+    // 5. Fetch Hydrological Data (Rain + ET0)
     const endDate = new Date();
     const startDate = new Date();
     startDate.setMonth(startDate.getMonth() - 6);
     const formatDate = (date: Date) => date.toISOString().split('T')[0];
 
     let totalRainfall = 0;
-
-    // We strictly need ET0 now for net calculation
-    let totalET0 = 0;
-
     try {
         const historyUrl = `https://archive-api.open-meteo.com/v1/archive`;
         const response = await axios.get(historyUrl, {
@@ -78,17 +124,14 @@ export const calculateWaterBalance = async (
         if (response.data.daily) {
             const rains: (number | null)[] = response.data.daily.precipitation_sum || [];
             totalRainfall = rains.reduce((acc: number, val) => acc + (val || 0), 0);
-
-            const et0s: (number | null)[] = response.data.daily.et0_fao_evapotranspiration || [];
-            totalET0 = et0s.reduce((acc: number, val) => acc + (val || 0), 0);
         }
     } catch (error) {
         console.error("Failed to fetch historical rain:", error);
         totalRainfall = 400; // Fallback
     }
 
-    // 5. Fetch Deep Soil Moisture (Proxy for GRACE / Aquifer Storage)
-    let soilMoistureIndex = 0.3; // Default
+    // 6. Fetch Deep Soil Moisture (Open Meteo)
+    let soilMoistureIndex = 0.3;
     try {
         const forecastUrl = `https://api.open-meteo.com/v1/forecast`;
         const response = await axios.get(forecastUrl, {
@@ -105,25 +148,47 @@ export const calculateWaterBalance = async (
         console.error("Failed to fetch soil moisture:", error);
     }
 
-    // 6. Calculate Net Water Balance (Scientific Formula)
-    // Step A: Inflow = (Rainfall * Infiltration)
+    // 7. Calculate Net Water Balance
     const groundwaterRecharge = totalRainfall * infiltrationFactor;
 
-    // Step B: Storage = Aquifer Depth * Specific Yield * Saturation
-    const aquiferDepth_mm = aquiferDepth_m * 1000;
-    const currentStorage_mm = aquiferDepth_mm * SPECIFIC_YIELD * soilMoistureIndex;
+    // Base Storage
+    const aquiferDepth_mm = actualDepth * 1000;
+    let currentStorage_mm = aquiferDepth_mm * SPECIFIC_YIELD * soilMoistureIndex;
 
-    // Total Available Groundwater (mm)
-    const netBalance_mm = Math.round(currentStorage_mm + groundwaterRecharge);
+    // Apply GRACE Correction (The "Invisible" Check)
+    if (graceData) {
+        const anomaly_mm = graceData.anomaly_cm * 10;
+        currentStorage_mm += anomaly_mm;
+        if (currentStorage_mm < 0) currentStorage_mm = 0;
+    }
 
-    // Step C: Days of Irrigation = Balance / Daily Demand
+    // Apply Trend Penalty (CGWB)
+    if (avgDeclinePercent > 10) {
+        const penaltyFactor = avgDeclinePercent / 100;
+        currentStorage_mm = currentStorage_mm * (1 - penaltyFactor);
+    }
+
+    let netBalance_mm = Math.round(currentStorage_mm + groundwaterRecharge);
     const daysLeft = Math.round(netBalance_mm / CropWaterDemand_mm_per_day);
 
-    // 7. Determine Status and Message
+    // 8. Determine Status and Message
     let status: WaterBalanceResult['status'] = 'Adequate';
     let message = `Sufficient for ~${daysLeft} days.`;
 
-    if (daysLeft > 150) {
+    // Priority: Government/Physical Reality > Theoretical Math
+    if (classification === 'Over-exploited') {
+        if (daysLeft > 90) {
+            status = 'Deficit';
+            message = `Govt Alert: Block is Over-exploited. Use water cautiously.`;
+        } else {
+            status = 'Critical';
+            message = `CRITICAL: Block is Over-exploited. Groundwater depletion imminent.`;
+        }
+    } else if (graceData && graceData.anomaly_cm < -10 && daysLeft < 60) {
+        // Satellite Double-Check
+        status = 'Critical';
+        message = `NASA Alert: Satellite detects severe depletion (${graceData.anomaly_cm}cm).`;
+    } else if (daysLeft > 150) {
         status = 'Surplus';
         message = `Excellent levels (${daysLeft} days). Safe for Sugarcane.`;
     } else if (daysLeft < 45) {
@@ -140,6 +205,13 @@ export const calculateWaterBalance = async (
         soil_moisture_index: soilMoistureIndex,
         status,
         message,
-        villageName: villageLabel
+        villageName: villageLabel,
+        cgwbClassification: classification,
+        blockName: block,
+        actualWaterTableDepth: actualDepth,
+        rechargeTrend: parseFloat(avgDeclinePercent.toFixed(1)),
+        // GRACE Fields
+        graceAnomaly_cm: graceData ? graceData.anomaly_cm : undefined,
+        satelliteTrend_cm_yr: satelliteTrend
     };
 };

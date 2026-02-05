@@ -1,41 +1,46 @@
 
 import { calculateWaterBalance } from '../services/waterScore';
 
+const testCases = [
+    { name: '1. Prayagraj (Chaka) - CRITICAL', lat: 25.4358, lon: 81.8463, desc: 'Known Critical Block, Deep Aquifer' },
+    { name: '2. Prayagraj (Sahson) - OVER-EXPLOITED', lat: 25.5500, lon: 81.9500, desc: 'Govt Over-exploited status, should trigger override' },
+    { name: '3. Pune - SAFE', lat: 18.5204, lon: 73.8567, desc: 'Standard Safe Zone, High Rainfall' },
+    { name: '4. Nagpur - MODERATE', lat: 21.1458, lon: 79.0882, desc: 'Central India (Vidarbha), Average conditions' },
+    { name: '5. Jaisalmer - DESERT', lat: 26.9157, lon: 70.9083, desc: 'Arid zone, low rainfall, should be Deficit' }
+];
+
 async function runTest() {
-    console.log("--- STARTING WATER BALANCE TEST ---");
+    console.log("--- STARTING COMPREHENSIVE WATER BALANCE TEST ---\n");
 
-    // 1. Test Prayagraj (Critical Zone)
-    // Lat/Lon for Chaka, Prayagraj
-    const prayagrajLat = 25.4358;
-    const prayagrajLon = 81.8463;
-    console.log(`\nTesting Prayagraj (Lat: ${prayagrajLat}, Lon: ${prayagrajLon})...`);
-    try {
-        const resultPrayagraj = await calculateWaterBalance(prayagrajLat, prayagrajLon);
-        console.log("Prayagraj Result:", resultPrayagraj);
-        // We expect lower balance due to deeper aquifer (logic inverse? Actually deeper aquifer usually holds more, 
-        // BUT assuming 'active' depth vs 'water table depth'. 
-        // Logic in waterScore is: Storage = Aquifer Depth * Specific Yield.
-        // Wait, if Aquifer Depth is 'Depth to Water Table', then deeper = LESS water?
-        // Let's check waterScore.ts logic again.
-        // const aquiferDepth_mm = aquiferDepth_m * 1000;
-        // const currentStorage_mm = aquiferDepth_mm * SPECIFIC_YIELD * soilMoistureIndex;
+    for (const test of testCases) {
+        console.log(`\n🔹 TESTING: ${test.name}`);
+        console.log(`   Context: ${test.desc}`);
+        try {
+            const result = await calculateWaterBalance(test.lat, test.lon);
+            console.log(`   > Location Resolved: ${result.villageName}`);
+            console.log(`   > Status: ${result.status.toUpperCase()}`);
+            console.log(`   > Message: ${result.message}`);
+            console.log(`   > Net Balance: ${result.balance_mm} mm`);
+            console.log(`   > Days Left: ${Math.round(result.balance_mm / 4)} days`);
 
-        // Actually currently `aquiferDepth_m` is treated as "Thickness of Aquifer".
-        // If getting "Groundwater Level" (bgl), that is depth FROM surface.
-        // We probably need (Total Depth - BGL) to get "Saturated Thickness".
-        // But for this test, we just want to see the INPUT changed.
-    } catch (e) { console.error(e); }
+            if ((result as any).actualWaterTableDepth) {
+                console.log(`   > Aquifer Depth: ${(result as any).actualWaterTableDepth}m`);
+            }
+            if ((result as any).cgwbClassification) {
+                console.log(`   > CGWB Class: ${(result as any).cgwbClassification}`);
+            }
+            if ((result as any).graceAnomaly_cm !== undefined) {
+                console.log(`   > NASA GRACE Anomaly: ${(result as any).graceAnomaly_cm} cm`);
+            }
+            if ((result as any).satelliteTrend_cm_yr !== undefined) {
+                console.log(`   > Sat Trend: ${(result as any).satelliteTrend_cm_yr} cm/yr`);
+            }
 
-    // 2. Test Pune (Safe Zone - Default)
-    const puneLat = 18.5204;
-    const puneLon = 73.8567;
-    console.log(`\nTesting Pune (Lat: ${puneLat}, Lon: ${puneLon})...`);
-    try {
-        const resultPune = await calculateWaterBalance(puneLat, puneLon);
-        console.log("Pune Result:", resultPune);
-    } catch (e) { console.error(e); }
-
-    console.log("\n--- TEST COMPLETE ---");
+        } catch (error) {
+            console.error(`   ❌ Failed:`, error);
+        }
+        console.log("-----------------------------------------");
+    }
 }
 
 runTest();
