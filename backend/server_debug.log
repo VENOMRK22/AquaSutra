@@ -203,3 +203,160 @@
 [2026-02-06T10:46:54.654Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
 [2026-02-06T10:49:13.052Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
 [2026-02-06T10:49:13.493Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T10:49:23.219Z] POST /api/inference/crop-recommendation
+[Inference] 2026-02-06T10:49:23.221Z Request received. Body: {"pincode":"421503","previousCropId":"Sugarcane","userIntentCropId":"Sugarcane","totalLandArea":10,"lat":19.045577311483267,"lon":72.88947970548456,"soilType":"Medium"}
+[HydroEngine] 2026-02-06T10:49:23.223Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T10:49:23.223Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T10:49:23.649Z MarketPriceService returned
+[HydroEngine] 2026-02-06T10:49:23.649Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T10:49:23.650Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T10:49:23.651Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T10:49:23.651Z STEP 5: User Intent
+[ProfitCalc] Sugarcane (Adsali): Yield=2.25T, Price=44250, Rev=99563, Cost=62386 (Input=50000 + Water=12386), Net=37177
+[ProfitCalc] Bt Cotton: Yield=0.93T, Price=62000, Rev=57660, Cost=35691 (Input=28000 + Water=7691), Net=21969
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=48000, Rev=48000, Cost=18909 (Input=12000 + Water=6909), Net=29091
+[ProfitCalc] Red Onion: Yield=12T, Price=10000, Rev=120000, Cost=47065 (Input=40000 + Water=7065), Net=72935
+[ProfitCalc] Tomato (Hybrid): Yield=25T, Price=6500, Rev=162500, Cost=67378 (Input=60000 + Water=7378), Net=95122
+[2026-02-06T10:54:36.536Z] POST /api/inference/compare-crops
+[2026-02-06T10:54:36.537Z] POST /api/inference/compare-crops
+[2026-02-06T10:54:39.143Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T10:54:39.146Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T10:54:39.264Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T10:54:40.306Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T10:54:40.643Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T10:55:14.215Z] POST /api/inference/compare-crops
+[2026-02-06T10:55:14.216Z] POST /api/inference/compare-crops
+[2026-02-06T10:56:01.370Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T10:56:01.774Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T10:56:12.789Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T10:56:12.792Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T10:56:12.923Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T10:56:33.926Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T10:56:33.928Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T10:56:33.929Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:00:33.582Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:00:33.584Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T11:00:33.587Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:02:55.230Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:02:55.705Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:02:58.810Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T11:05:11.275Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:05:11.277Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T11:05:11.278Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:06:14.285Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:06:14.350Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T11:06:14.807Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:07:30.189Z] POST /api/inference/compare-crops
+[2026-02-06T11:07:30.191Z] POST /api/inference/compare-crops
+[2026-02-06T11:09:12.003Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:09:12.484Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:09:20.531Z] POST /api/inference/compare-crops
+[2026-02-06T11:09:20.532Z] POST /api/inference/compare-crops
+[2026-02-06T11:09:30.496Z] POST /api/inference/compare-crops
+[2026-02-06T11:10:18.787Z] POST /api/inference/compare-crops
+[2026-02-06T11:10:18.788Z] POST /api/inference/compare-crops
+[2026-02-06T11:13:17.635Z] GET /api/water/score?lat=19.045621099779382&lon=72.88945405719589&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:13:17.663Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045621099779382&lon=72.88945405719589
+[2026-02-06T11:13:17.976Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:13:18.341Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045621099779382&lon=72.88945405719589
+[2026-02-06T11:13:19.264Z] GET /api/water/score?lat=19.045621099779382&lon=72.88945405719589&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:13:37.754Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:21:37.175Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:21:37.687Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:21:38.042Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:21:38.446Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:21:41.593Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045621099779382&lon=72.88945405719589
+[2026-02-06T11:21:41.596Z] GET /api/water/score?lat=19.045621099779382&lon=72.88945405719589&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:21:42.290Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045621099779382&lon=72.88945405719589
+[2026-02-06T11:21:42.979Z] GET /api/water/score?lat=19.045621099779382&lon=72.88945405719589&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:22:20.126Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=High&interventions=
+[2026-02-06T11:22:25.553Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=Moderate&interventions=
+[2026-02-06T11:23:01.692Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=Moderate&interventions=drip
+[2026-02-06T11:23:04.014Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=Moderate&interventions=drip,mulch
+[2026-02-06T11:23:51.308Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=Moderate&interventions=drip,mulch
+[2026-02-06T11:24:26.148Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:24:26.636Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:24:46.639Z] POST /api/farm
+[2026-02-06T11:25:09.969Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:25:10.386Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:25:14.187Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045688601991667&lon=72.88946182657598
+[2026-02-06T11:25:14.189Z] GET /api/water/score?lat=19.045688601991667&lon=72.88946182657598&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:25:14.828Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045688601991667&lon=72.88946182657598
+[2026-02-06T11:25:15.524Z] GET /api/water/score?lat=19.045688601991667&lon=72.88946182657598&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:25:35.415Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:25:35.418Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:25:35.585Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T11:25:38.871Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:25:39.187Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:25:42.343Z] GET /api/water/score?lat=19.045688601991667&lon=72.88946182657598&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:25:42.370Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045688601991667&lon=72.88946182657598
+[2026-02-06T11:25:42.373Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:25:42.760Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:25:43.021Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045688601991667&lon=72.88946182657598
+[2026-02-06T11:25:44.251Z] GET /api/water/score?lat=19.045688601991667&lon=72.88946182657598&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:27:35.642Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:27:35.897Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:27:48.638Z] POST /api/inference/crop-recommendation
+[Inference] 2026-02-06T11:27:48.639Z Request received. Body: {"pincode":"421503","previousCropId":"Sugarcane","userIntentCropId":"Sugarcane","totalLandArea":10,"lat":19.04553872225128,"lon":72.88940621824295,"soilType":"Medium"}
+[HydroEngine] 2026-02-06T11:27:48.641Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T11:27:48.642Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T11:27:48.642Z MarketPriceService returned
+[HydroEngine] 2026-02-06T11:27:48.642Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T11:27:48.643Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T11:27:48.643Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T11:27:48.643Z STEP 5: User Intent
+[ProfitCalc] Sugarcane (Adsali): Yield=2.25T, Price=2900, Rev=6525, Cost=62386 (Input=50000 + Water=12386), Net=-55861
+[ProfitCalc] Bt Cotton: Yield=0.93T, Price=62000, Rev=57660, Cost=35691 (Input=28000 + Water=7691), Net=21969
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=48000, Rev=48000, Cost=18909 (Input=12000 + Water=6909), Net=29091
+[ProfitCalc] Red Onion: Yield=12T, Price=10000, Rev=120000, Cost=47065 (Input=40000 + Water=7065), Net=72935
+[ProfitCalc] Tomato (Hybrid): Yield=25T, Price=11000, Rev=275000, Cost=67378 (Input=60000 + Water=7378), Net=207622
+[2026-02-06T11:28:47.030Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:28:47.032Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T11:28:47.033Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:29:05.035Z] GET /api/market/search?q=ri&state=Maharashtra
+[2026-02-06T11:29:05.759Z] GET /api/market/search?q=rice&state=Maharashtra
+[2026-02-06T11:29:28.952Z] GET /api/water/score?lat=19.045696751938365&lon=72.88945628456983&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:29:28.982Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045696751938365&lon=72.88945628456983
+[2026-02-06T11:29:28.989Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:29:29.621Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045696751938365&lon=72.88945628456983
+[2026-02-06T11:29:29.879Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:29:30.173Z] GET /api/water/score?lat=19.045696751938365&lon=72.88945628456983&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:30:10.484Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:30:11.356Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:30:16.316Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045701461678277&lon=72.88945802065355
+[2026-02-06T11:30:16.318Z] GET /api/water/score?lat=19.045701461678277&lon=72.88945802065355&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:30:16.950Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045701461678277&lon=72.88945802065355
+[2026-02-06T11:30:17.666Z] GET /api/water/score?lat=19.045701461678277&lon=72.88945802065355&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:31:35.962Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:31:35.964Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T11:31:35.966Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:31:44.197Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:31:44.688Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:32:34.230Z] POST /api/inference/crop-recommendation
+[Inference] 2026-02-06T11:32:34.231Z Request received. Body: {"pincode":"421503","previousCropId":"Sugarcane","userIntentCropId":"Sugarcane","totalLandArea":10,"lat":19.045629237649532,"lon":72.88944951498279,"soilType":"Medium"}
+[HydroEngine] 2026-02-06T11:32:34.232Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T11:32:34.232Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T11:32:34.233Z MarketPriceService returned
+[HydroEngine] 2026-02-06T11:32:34.234Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T11:32:34.234Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T11:32:34.234Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T11:32:34.234Z STEP 5: User Intent
+[ProfitCalc] Sugarcane (Adsali): Yield=2.25T, Price=2900, Rev=6525, Cost=62386 (Input=50000 + Water=12386), Net=-55861
+[ProfitCalc] Bt Cotton: Yield=0.93T, Price=62000, Rev=57660, Cost=35691 (Input=28000 + Water=7691), Net=21969
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=48000, Rev=48000, Cost=18909 (Input=12000 + Water=6909), Net=29091
+[ProfitCalc] Red Onion: Yield=12T, Price=10000, Rev=120000, Cost=47065 (Input=40000 + Water=7065), Net=72935
+[ProfitCalc] Tomato (Hybrid): Yield=25T, Price=11000, Rev=275000, Cost=67378 (Input=60000 + Water=7378), Net=207622
+[2026-02-06T11:32:42.713Z] POST /api/inference/compare-crops
+[2026-02-06T11:32:42.714Z] POST /api/inference/compare-crops
+[2026-02-06T11:32:49.597Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:32:50.242Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:32:57.276Z] POST /api/inference/compare-crops
+[2026-02-06T11:32:57.277Z] POST /api/inference/compare-crops
+[2026-02-06T11:34:43.890Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:34:44.409Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:40:13.331Z] GET /api/water/score?lat=19.045704485307827&lon=72.88946979638908&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:40:13.360Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045704485307827&lon=72.88946979638908
+[2026-02-06T11:40:13.669Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:40:13.985Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045704485307827&lon=72.88946979638908
+[2026-02-06T11:40:14.224Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:40:14.655Z] GET /api/water/score?lat=19.045704485307827&lon=72.88946979638908&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db

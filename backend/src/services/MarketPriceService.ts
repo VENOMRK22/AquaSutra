@@ -131,16 +131,14 @@ export class MarketPriceService {
             console.warn('[MarketPrice] Agmarknet API failed, using full mock data');
         }
 
-        // STRATEGY 2: Skipped (User requested no fake data)
+        // STRATEGY 2: No Mock Data - Using real API with calculated changePercent
+        // Mock data disabled because changePercent is now calculated from price spread
         // const mockCrops = MOCK_COMMODITIES.map(c => generateMockPrice(c, state));
 
-        // STRATEGY 3: Merge (Real data takes precedence)
+        // STRATEGY 3: Use only real API data
         const mergedCropsMap = new Map<string, CropPrice>();
 
-        // 1. No Mock Data - Purely API or MSP based
-        // mockCrops.forEach(crop => mergedCropsMap.set(crop.commodity.toLowerCase(), crop));
-
-        // 2. Add real API data
+        // Only real API data (no mock data needed)
         apiCrops.forEach(crop => mergedCropsMap.set(crop.commodity.toLowerCase(), crop));
 
         const allCrops = Array.from(mergedCropsMap.values());
@@ -230,19 +228,38 @@ export class MarketPriceService {
             console.log('[API DEBUG] Sample commodities:', records.slice(0, 5).map((r: any) => r.commodity).join(', '));
 
             // Transform API data
-            const allCrops: CropPrice[] = records.map((record: any) => ({
-                commodity: record.commodity,
-                market: record.market,
-                state: record.state,
-                modalPrice: parseFloat(record.modal_price),
-                minPrice: parseFloat(record.min_price),
-                maxPrice: parseFloat(record.max_price),
-                arrivalQuantity: parseFloat(record.arrival_quantity || record.arrivals || 0),
-                date: new Date(record.arrival_date),
-                trend: this.calculateTrend(record),
-                changePercent: 0, // Would need historical data
-                demand: parseFloat(record.arrival_quantity || record.arrivals || 0) > 1000 ? 'HIGH' : 'MEDIUM'
-            }));
+            const allCrops: CropPrice[] = records.map((record: any) => {
+                const modal = parseFloat(record.modal_price) || 0;
+                const min = parseFloat(record.min_price) || 0;
+                const max = parseFloat(record.max_price) || 0;
+
+                // Calculate changePercent from price spread (max vs modal for upside potential)
+                // This represents market volatility/opportunity
+                const upside = modal > 0 ? ((max - modal) / modal) * 100 : 0;
+                const downside = modal > 0 ? ((min - modal) / modal) * 100 : 0;
+
+                const trend = this.calculateTrend(record);
+                // Use upside for growing, downside for depreciating
+                const changePercent = trend === 'GROWING' ? upside :
+                    trend === 'DEPRECIATING' ? downside : 0;
+
+                return {
+                    commodity: record.commodity,
+                    market: record.market,
+                    state: record.state,
+                    modalPrice: modal,
+                    minPrice: min,
+                    maxPrice: max,
+                    arrivalQuantity: parseFloat(record.arrival_quantity || record.arrivals || 0),
+                    date: new Date(record.arrival_date),
+                    trend,
+                    changePercent: parseFloat(changePercent.toFixed(1)),
+                    // Use price volatility as proxy for demand (API doesn't provide arrival_quantity)
+                    // High volatility = high trading activity = high demand
+                    demand: modal > 0 && ((max - min) / modal) > 0.15 ? 'HIGH' :
+                        modal > 0 && ((max - min) / modal) > 0.05 ? 'MEDIUM' : 'LOW'
+                };
+            });
 
             // Categorize
             return {
@@ -261,14 +278,20 @@ export class MarketPriceService {
     }
 
     private static calculateTrend(record: any): 'GROWING' | 'DEPRECIATING' | 'STABLE' {
-        // Simple heuristic: if max > modal significantly, growing demand
-        const modal = parseFloat(record.modal_price);
-        const max = parseFloat(record.max_price);
-        if (!modal || !max) return 'STABLE';
+        const modal = parseFloat(record.modal_price) || 0;
+        const max = parseFloat(record.max_price) || 0;
+        const min = parseFloat(record.min_price) || 0;
+        if (!modal) return 'STABLE';
 
-        const spread = (max - modal) / modal;
-        if (spread > 0.02) return 'GROWING';
-        if (spread < -0.02) return 'DEPRECIATING';
+        // Upside potential: how much higher than modal the max price is
+        const upside = (max - modal) / modal;
+        // Downside risk: how much lower than modal the min price is
+        const downside = (modal - min) / modal;
+
+        // If upside potential is significant and greater than downside, it's growing
+        if (upside > 0.05) return 'GROWING';
+        // If downside risk is significant, it's depreciating
+        if (downside > 0.05) return 'DEPRECIATING';
         return 'STABLE';
     }
 
