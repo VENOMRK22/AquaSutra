@@ -118,6 +118,38 @@ const localTranslations: Record<Language, Record<string, string>> = {
         'wizard.prev_crop_label': 'Previous Crop (For Soil Health)',
         'wizard.intent_label': 'What do you want to plant?',
         'wizard.intent_hint': 'We will compare this with smarter options.',
+
+        // Landing Page
+        'landing.now_offline': 'Works Offline',
+        'landing.hero_title': 'Every Drop Counts, Every Harvest Grows',
+        'landing.hero_subtitle': 'AI-powered water insights that help Indian farmers boost yields while saving every precious drop.',
+        'landing.start_farming': 'Start Farming Smarter',
+        'landing.watch_demo': 'Watch Demo',
+        'landing.features_title': 'Grow Smarter, Not Harder',
+        'landing.features_subtitle': 'Everything you need to optimize water usage and maximize your harvest',
+
+        // Features
+        'feature.smart_irrigation': 'Smart Irrigation',
+        'feature.smart_irrigation_desc': 'AI-powered water management for optimal crop growth',
+        'feature.weather_insights': 'Weather Insights',
+        'feature.weather_insights_desc': '180-day forecasts tailored to your farm location',
+        'feature.crop_health': 'Crop Health',
+        'feature.crop_health_desc': 'Monitor and optimize your harvest potential',
+        'feature.works_offline': 'Low Connectivity Ready',
+        'feature.works_offline_desc': 'Works in areas with poor connectivity and syncs when connected',
+
+        // Auth
+        'auth.welcome_back': 'Welcome Back',
+        'auth.join_community': 'Join the Community',
+        'auth.login_desc': 'Sign in to continue your farming journey',
+        'auth.join_desc': 'Create an account to start saving water',
+        'auth.username': 'Username',
+        'auth.email': 'Email',
+        'auth.password': 'Password',
+        'auth.sign_in': 'Sign In',
+        'auth.create_account': 'Create Account',
+        'auth.already_have': 'Already have an account? Sign in',
+        'auth.new_here': 'New here? Create an account',
     },
     mr: {
         // Navigation
@@ -232,6 +264,38 @@ const localTranslations: Record<Language, Record<string, string>> = {
         'wizard.prev_crop_label': 'मागील पीक (माती आरोग्यासाठी)',
         'wizard.intent_label': 'तुम्हाला काय लावायचे आहे?',
         'wizard.intent_hint': 'आम्ही याची तुलना हुशार पर्यायांशी करू.',
+
+        // Landing Page
+        'landing.now_offline': 'ऑफलाइन काम करते',
+        'landing.hero_title': 'पाणी वाचवा, जास्त कमवा',
+        'landing.hero_subtitle': 'भारतीय शेतकऱ्यांना प्रत्येक मौल्यवान थेंब वाचवताना नफा वाढवण्यास मदत करणारी स्मार्ट सिंचन माहिती.',
+        'landing.start_farming': 'स्मार्ट शेती सुरू करा',
+        'landing.watch_demo': 'डेमो पहा',
+        'landing.features_title': 'हुशारीने शेती करा, कष्टाने नव्हे',
+        'landing.features_subtitle': 'पाण्याचा वापर इष्टतम करण्यासाठी आणि तुमचे पीक वाढवण्यासाठी सर्व काही',
+
+        // Features
+        'feature.smart_irrigation': 'स्मार्ट सिंचन',
+        'feature.smart_irrigation_desc': 'उत्तम पीक वाढीसाठी AI-संचालित पाणी व्यवस्थापन',
+        'feature.weather_insights': 'हवामान माहिती',
+        'feature.weather_insights_desc': 'तुमच्या शेतासाठी 180-दिवसांचे हवामान अंदाज',
+        'feature.crop_health': 'पीक आरोग्य',
+        'feature.crop_health_desc': 'तुमच्या कापणीची क्षमता निरीक्षण करा आणि वाढवा',
+        'feature.works_offline': 'ऑफलाइन काम करते',
+        'feature.works_offline_desc': 'इंटरनेट नाही लागत - कनेक्ट झाल्यावर सिंक होते',
+
+        // Auth
+        'auth.welcome_back': 'पुन्हा स्वागत आहे',
+        'auth.join_community': 'समुदायात सामील व्हा',
+        'auth.login_desc': 'तुमचा शेती प्रवास सुरू ठेवण्यासाठी साइन इन करा',
+        'auth.join_desc': 'पाणी वाचवायला सुरुवात करण्यासाठी खाते तयार करा',
+        'auth.username': 'वापरकर्ता नाव',
+        'auth.email': 'ईमेल',
+        'auth.password': 'पासवर्ड',
+        'auth.sign_in': 'साइन इन करा',
+        'auth.create_account': 'खाते तयार करा',
+        'auth.already_have': 'आधीच खाते आहे? साइन इन करा',
+        'auth.new_here': 'नवीन आहात? खाते तयार करा',
     },
     hi: {
         // Navigation
@@ -346,6 +410,38 @@ const localTranslations: Record<Language, Record<string, string>> = {
         'wizard.prev_crop_label': 'पिछली फसल (मिट्टी के स्वास्थ्य के लिए)',
         'wizard.intent_label': 'आप क्या लगाना चाहते हैं?',
         'wizard.intent_hint': 'हम इसकी तुलना स्मार्ट विकल्पों से करेंगे।',
+
+        // Landing Page
+        'landing.now_offline': 'ऑफलाइन काम करता है',
+        'landing.hero_title': 'पानी बचाओ, ज्यादा कमाओ',
+        'landing.hero_subtitle': 'भारतीय किसानों को हर कीमती बूंद बचाते हुए मुनाफा बढ़ाने में मदद करने वाली स्मार्ट सिंचाई जानकारी।',
+        'landing.start_farming': 'स्मार्ट खेती शुरू करें',
+        'landing.watch_demo': 'डेमो देखें',
+        'landing.features_title': 'स्मार्ट तरीके से खेती करें, मेहनत से नहीं',
+        'landing.features_subtitle': 'पानी की बचत और अपनी फसल बढ़ाने के लिए सब कुछ',
+
+        // Features
+        'feature.smart_irrigation': 'स्मार्ट सिंचाई',
+        'feature.smart_irrigation_desc': 'उत्तम फसल विकास के लिए AI-संचालित पानी प्रबंधन',
+        'feature.weather_insights': 'मौसम जानकारी',
+        'feature.weather_insights_desc': 'आपके खेत के लिए 180-दिन का मौसम अनुमान',
+        'feature.crop_health': 'फसल स्वास्थ्य',
+        'feature.crop_health_desc': 'अपनी फसल क्षमता की निगरानी और सुधार करें',
+        'feature.works_offline': 'ऑफलाइन काम करता है',
+        'feature.works_offline_desc': 'इंटरनेट नहीं चाहिए - कनेक्ट होने पर सिंक होता है',
+
+        // Auth
+        'auth.welcome_back': 'वापस स्वागत है',
+        'auth.join_community': 'समुदाय में शामिल हों',
+        'auth.login_desc': 'अपनी खेती यात्रा जारी रखने के लिए साइन इन करें',
+        'auth.join_desc': 'पानी बचाना शुरू करने के लिए खाता बनाएं',
+        'auth.username': 'उपयोगकर्ता नाम',
+        'auth.email': 'ईमेल',
+        'auth.password': 'पासवर्ड',
+        'auth.sign_in': 'साइन इन करें',
+        'auth.create_account': 'खाता बनाएं',
+        'auth.already_have': 'पहले से खाता है? साइन इन करें',
+        'auth.new_here': 'नए हैं? खाता बनाएं',
     }
 };
 
