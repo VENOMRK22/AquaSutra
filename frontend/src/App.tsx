@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Login from './pages/Login';
+import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
 import FarmDashboard from './pages/FarmDashboard';
 import Leaderboard from './pages/Leaderboard';
@@ -22,7 +22,7 @@ const App: React.FC = () => {
             {/* Mobile-first constraints: Max width for "App" feel on desktop, full width on mobile. No bezel. */}
             <div className="w-full max-w-md min-h-screen bg-ios-bg relative shadow-2xl overflow-x-hidden">
               <Routes>
-                <Route path="/login" element={<Login />} />
+                <Route path="/login" element={<Landing />} />
                 <Route path="/auth/callback" element={<AuthCallback />} />
 
                 {/* Protected Routes */}

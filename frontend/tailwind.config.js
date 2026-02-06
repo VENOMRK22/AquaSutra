@@ -28,6 +28,13 @@ export default {
         aqua: {
           500: '#30B0C7', // Use iOS Teal as main brand or similar
         },
+        // WOW Brand Colors - Vibrant and Premium
+        wow: {
+          green: '#22C55E',      // Primary action color
+          teal: '#14B8A6',       // Secondary accent
+          navy: '#0F172A',       // Dark backgrounds
+          gold: '#F59E0B',       // Premium highlights
+        },
       },
       fontFamily: {
         sans: [
