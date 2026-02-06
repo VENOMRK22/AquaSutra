@@ -3,6 +3,7 @@ import React from 'react';
 import { Sprout, ChevronRight, Calendar, Droplets, TrendingUp } from 'lucide-react';
 import WaterBalanceWidget from '../components/WaterBalanceWidget';
 import SowingDispatcherWidget from '../components/SowingDispatcherWidget';
+import { API_BASE_URL } from '../lib/config';
 
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
@@ -33,7 +34,7 @@ const Dashboard: React.FC = () => {
                 if (user) {
                     // 1. Fetch Score
                     try {
-                        const res = await fetch(`http://localhost:3000/api/leaderboard?userId=${user.id}`);
+                        const res = await fetch(`${API_BASE_URL}/api/leaderboard?userId=${user.id}`);
                         const data = await res.json();
                         if (data.rankings && data.rankings.length > 0) {
                             setScore(data.rankings[0].score?.toString());

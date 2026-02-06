@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { API_BASE_URL } from '../lib/config';
 import { Search, RefreshCw, ArrowUpRight, ArrowDownRight, MapPin } from 'lucide-react';
 
 interface MarketPrice {
@@ -80,7 +81,7 @@ const Marketplace: React.FC = () => {
     const fetchMarketSnapshot = async (state: string) => {
         setLoading(true);
         try {
-            const res = await fetch(`http://localhost:3000/api/market/snapshot?state=${encodeURIComponent(state)}`);
+            const res = await fetch(`${API_BASE_URL}/api/market/snapshot?state=${encodeURIComponent(state)}`);
             const data = await res.json();
             if (data.success) setOverview(data.data);
         } catch (error) {
@@ -92,7 +93,7 @@ const Marketplace: React.FC = () => {
 
     const handleSearch = async () => {
         try {
-            const res = await fetch(`http://localhost:3000/api/market/search?q=${searchQuery}&state=${encodeURIComponent(locationState)}`);
+            const res = await fetch(`${API_BASE_URL}/api/market/search?q=${searchQuery}&state=${encodeURIComponent(locationState)}`);
             const data = await res.json();
             if (data.success) setSearchResults(data.data);
         } catch (error) {

@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ProfitPerDropChart } from '../components/ProfitPerDropChart';
+import { API_BASE_URL } from '../lib/config';
 import { BarChart2, RefreshCw, X, AlertCircle } from 'lucide-react';
 
 
@@ -28,7 +29,7 @@ const ProfitAnalysis: React.FC = () => {
             try {
                 // We use market-prices endpoint to get the list of supported crops
                 // Use a default district to get the list
-                const res = await fetch('http://localhost:3000/api/inference/market-prices?district=Ahmednagar');
+                const res = await fetch(`${API_BASE_URL}/api/inference/market-prices?district=Ahmednagar`);
                 const data = await res.json();
 
                 if (data.success && data.prices) {
@@ -69,7 +70,7 @@ const ProfitAnalysis: React.FC = () => {
         setError(null);
         try {
             console.log("Fetching comparison data for:", selectedCrops);
-            const res = await fetch('http://localhost:3000/api/inference/compare-crops', {
+            const res = await fetch(`${API_BASE_URL}/api/inference/compare-crops`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

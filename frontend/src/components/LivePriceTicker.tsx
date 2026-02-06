@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TrendingUp, TrendingDown } from 'lucide-react';
+import { API_BASE_URL } from '../lib/config';
 
 interface TickerItem {
     commodity: string;
@@ -19,7 +20,7 @@ export const LivePriceTicker: React.FC = () => {
 
     const fetchTicker = async () => {
         try {
-            const res = await fetch('http://localhost:3000/api/market/ticker');
+            const res = await fetch(`${API_BASE_URL}/api/market/ticker`);
             const data = await res.json();
             if (data.success) {
                 setTicker(data.data);

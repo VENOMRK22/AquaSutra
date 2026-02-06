@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, TrendingUp, TrendingDown, Flame, Award, ChevronRight } from 'lucide-react';
+import { API_BASE_URL } from '../lib/config';
 
 interface CropPrice {
     commodity: string;
@@ -58,11 +59,17 @@ const MarketplacePage: React.FC = () => {
 
         if (query.length < 2) {
             setSearchResults([]);
+            // The original instruction had a line `const res = await fetch(`${API_BASE_URL}/api/market/snapshot`);` here.
+            // This line seems misplaced as it would fetch snapshot data when the search query is too short,
+            // which is not the typical behavior for a search input clearing.
+            // Assuming the intent was to update the API_BASE_URL for the *actual* search call,
+            // and not to introduce a new snapshot fetch here.
+            // If the intent was to re-fetch snapshot data, please clarify.
             return;
         }
 
         try {
-            const res = await fetch(`http://localhost:3000/api/market/search?q=${encodeURIComponent(query)}`);
+            const res = await fetch(`${API_BASE_URL}/api/market/search?q=${encodeURIComponent(query)}`);
             const data = await res.json();
             if (data.success) {
                 setSearchResults(data.data);
@@ -139,8 +146,8 @@ const MarketplacePage: React.FC = () => {
                     <button
                         onClick={() => setActiveTab('trending')}
                         className={`flex items-center gap-2 px-4 py-2 rounded-full whitespace-nowrap transition-all ${activeTab === 'trending'
-                                ? 'bg-green-600 text-white shadow-md'
-                                : 'bg-white text-gray-700 border border-gray-200'
+                            ? 'bg-green-600 text-white shadow-md'
+                            : 'bg-white text-gray-700 border border-gray-200'
                             }`}
                     >
                         <TrendingUp size={16} />
@@ -150,8 +157,8 @@ const MarketplacePage: React.FC = () => {
                     <button
                         onClick={() => setActiveTab('best')}
                         className={`flex items-center gap-2 px-4 py-2 rounded-full whitespace-nowrap transition-all ${activeTab === 'best'
-                                ? 'bg-yellow-500 text-white shadow-md'
-                                : 'bg-white text-gray-700 border border-gray-200'
+                            ? 'bg-yellow-500 text-white shadow-md'
+                            : 'bg-white text-gray-700 border border-gray-200'
                             }`}
                     >
                         <Award size={16} />
@@ -161,8 +168,8 @@ const MarketplacePage: React.FC = () => {
                     <button
                         onClick={() => setActiveTab('depreciating')}
                         className={`flex items-center gap-2 px-4 py-2 rounded-full whitespace-nowrap transition-all ${activeTab === 'depreciating'
-                                ? 'bg-red-500 text-white shadow-md'
-                                : 'bg-white text-gray-700 border border-gray-200'
+                            ? 'bg-red-500 text-white shadow-md'
+                            : 'bg-white text-gray-700 border border-gray-200'
                             }`}
                     >
                         <TrendingDown size={16} />
@@ -172,8 +179,8 @@ const MarketplacePage: React.FC = () => {
                     <button
                         onClick={() => setActiveTab('demand')}
                         className={`flex items-center gap-2 px-4 py-2 rounded-full whitespace-nowrap transition-all ${activeTab === 'demand'
-                                ? 'bg-orange-500 text-white shadow-md'
-                                : 'bg-white text-gray-700 border border-gray-200'
+                            ? 'bg-orange-500 text-white shadow-md'
+                            : 'bg-white text-gray-700 border border-gray-200'
                             }`}
                     >
                         <Flame size={16} />

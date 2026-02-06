@@ -4,6 +4,7 @@ import { Plus, Trash2, Sprout, Tractor, Pencil, X } from 'lucide-react';
 import WaterForecastModal from '../components/WaterForecastModal';
 import CropPlanWizard from '../components/CropPlanWizard'; // Import
 import { useLanguage } from '../contexts/LanguageContext';
+import { API_BASE_URL } from '../lib/config';
 
 interface Crop {
     id: string;
@@ -198,7 +199,7 @@ const FarmDashboard: React.FC = () => {
             soilType: 'Medium' // Mock for now, would come from Map later
         };
 
-        const res = await fetch('http://localhost:3000/api/inference/crop-recommendation', {
+        const res = await fetch(`${API_BASE_URL}/api/inference/crop-recommendation`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)

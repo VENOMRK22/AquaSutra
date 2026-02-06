@@ -3,6 +3,7 @@ import { Droplets, RefreshCw, AlertTriangle, MapPin } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import WaterForecastModal from './WaterForecastModal';
 import { useLanguage } from '../contexts/LanguageContext';
+import { API_BASE_URL } from '../lib/config';
 
 interface WaterData {
     balance_mm: number;
@@ -31,7 +32,7 @@ const WaterBalanceWidget: React.FC = () => {
             if (!token || !userId) throw new Error("User not authenticated");
 
             // Use relative URL (Vite proxy should handle /api -> localhost:3000)
-            const response = await fetch(`/api/water/score?lat=${lat}&lon=${lon}&userId=${userId}`, {
+            const response = await fetch(`${API_BASE_URL}/api/water/score?lat=${lat}&lon=${lon}&userId=${userId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'

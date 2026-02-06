@@ -3,6 +3,7 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { X, CloudRain, AlertOctagon } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useLanguage } from '../contexts/LanguageContext';
+import { API_BASE_URL } from '../lib/config';
 
 interface SimulationData {
     day: number;
@@ -76,7 +77,7 @@ const WaterForecastModal: React.FC<Props> = ({ isOpen, onClose, lat, lon, crop }
 
             console.log(`Fetching forecast for ${selectedCrop} with [${interventions.join(',')}]`);
 
-            const res = await fetch(`/api/water/forecast?lat=${lat}&lon=${lon}&crop=${selectedCrop}&interventions=${interventions.join(',')}`, {
+            const res = await fetch(`${API_BASE_URL}/api/water/forecast?lat=${lat}&lon=${lon}&crop=${selectedCrop}&interventions=${interventions.join(',')}`, {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             const json = await res.json();

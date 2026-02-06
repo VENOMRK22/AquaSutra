@@ -953,3 +953,41 @@
 [ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
 [ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
 [ProfitCalc] Cotton (Bt Hybrid): Yield=1.2T, Price=65000, Rev=78000, Cost=27691 (Input=20000 + Water=7691), Net=50309
+[2026-02-06T20:12:53.071Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:12:53.812Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.179871&lon=72.946167
+[2026-02-06T20:12:53.814Z] GET /api/water/score?lat=19.179871&lon=72.946167&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:12:54.314Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:12:54.368Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.179871&lon=72.946167
+[2026-02-06T20:12:55.372Z] GET /api/water/score?lat=19.179871&lon=72.946167&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:13:19.298Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:13:19.302Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:14:05.525Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T20:14:05.526Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T20:14:05.527Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T20:14:05.528Z MarketPriceService returned
+[HydroEngine] 2026-02-06T20:14:05.529Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T20:14:05.529Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T20:14:05.530Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T20:14:05.530Z STEP 5: User Intent
+[ProfitCalc] Rice (Indrayani/Kolam): Yield=1.54T, Price=32950, Rev=50743, Cost=30943 (Input=22000 + Water=8943), Net=19800
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24250, Rev=43650, Cost=24909 (Input=18000 + Water=6909), Net=18741
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Watermelon (Sugar Baby): Yield=20T, Price=8000, Rev=160000, Cost=31909 (Input=25000 + Water=6909), Net=128091
+[2026-02-06T20:14:43.570Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T20:14:43.572Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T20:14:46.037Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T20:14:49.494Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:14:49.498Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:14:50.202Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T20:14:50.205Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T20:14:50.324Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T20:14:50.618Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:14:50.621Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:14:53.786Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:14:54.435Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:15:10.185Z] GET /api/water/score?lat=19.179871&lon=72.946167&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:15:10.217Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.179871&lon=72.946167
+[2026-02-06T20:15:10.625Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:15:10.862Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.179871&lon=72.946167
+[2026-02-06T20:15:11.429Z] GET /api/water/score?lat=19.179871&lon=72.946167&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:15:11.646Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db

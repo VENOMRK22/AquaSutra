@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { CloudRain, ThermometerSun, Tractor, ThumbsUp, ThumbsDown, AlertCircle, CheckCircle2 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+import { API_BASE_URL } from '../lib/config';
 
 type DispatchState = 'WAITING' | 'POLLING' | 'DISPATCH_URGENT' | 'DISPATCH_STANDARD' | 'POST_SOWING';
 
@@ -33,13 +34,13 @@ const SowingDispatcherWidget: React.FC = () => {
             // Get location (Mock or Real)
             navigator.geolocation.getCurrentPosition(async (pos) => {
                 const { latitude, longitude } = pos.coords;
-                const res = await fetch(`/api/sowing/status?userId=${user.id}&lat=${latitude}&lon=${longitude}`);
+                const res = await fetch(`${API_BASE_URL}/api/sowing/status?userId=${user.id}&lat=${latitude}&lon=${longitude}`);
                 const data = await res.json();
                 setStatus(data);
                 setLoading(false);
             }, async () => {
                 // Fallback Lat/Lon (Pune)
-                const res = await fetch(`/api/sowing/status?userId=${user.id}&lat=18.52&lon=73.85`);
+                const res = await fetch(`${API_BASE_URL}/api/sowing/status?userId=${user.id}&lat=18.52&lon=73.85`);
                 const data = await res.json();
                 setStatus(data);
                 setLoading(false);
