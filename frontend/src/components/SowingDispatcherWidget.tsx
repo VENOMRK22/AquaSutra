@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { CloudRain, ThermometerSun, Tractor, ThumbsUp, ThumbsDown, AlertCircle, CheckCircle2 } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
 import { supabase } from '../lib/supabase';
 
 type DispatchState = 'WAITING' | 'POLLING' | 'DISPATCH_URGENT' | 'DISPATCH_STANDARD' | 'POST_SOWING';
@@ -17,7 +16,7 @@ interface SowingStatus {
 }
 
 const SowingDispatcherWidget: React.FC = () => {
-    const { t } = useLanguage();
+    // const { t } = useLanguage();
     const [config, setConfig] = useState<{ soil: 'Light' | 'Heavy'; tractor: 'Owner' | 'Renter' } | null>(null);
     const [status, setStatus] = useState<SowingStatus | null>(null);
     const [loading, setLoading] = useState(true);
@@ -100,15 +99,15 @@ const SowingDispatcherWidget: React.FC = () => {
                     <div>
                         <label className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1 block">Soil Type</label>
                         <div className="grid grid-cols-2 gap-2">
-                            <button onClick={() => saveConfig('Light', config?.tractor || 'Renter')} className="p-2 border rounded-lg text-sm hover:bg-gray-50">Light (Sandy)</button>
-                            <button onClick={() => saveConfig('Heavy', config?.tractor || 'Renter')} className="p-2 border rounded-lg text-sm hover:bg-gray-50">Heavy (Clay/Black)</button>
+                            <button onClick={() => saveConfig('Light', 'Renter')} className="p-2 border rounded-lg text-sm hover:bg-gray-50">Light (Sandy)</button>
+                            <button onClick={() => saveConfig('Heavy', 'Renter')} className="p-2 border rounded-lg text-sm hover:bg-gray-50">Heavy (Clay/Black)</button>
                         </div>
                     </div>
                     <div>
                         <label className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1 block">Tractor Access</label>
                         <div className="grid grid-cols-2 gap-2">
-                            <button onClick={() => saveConfig(config?.soil || 'Heavy', 'Owner')} className="p-2 border rounded-lg text-sm hover:bg-gray-50">I Own One</button>
-                            <button onClick={() => saveConfig(config?.soil || 'Heavy', 'Renter')} className="p-2 border rounded-lg text-sm hover:bg-gray-50">I Rent One</button>
+                            <button onClick={() => saveConfig('Heavy', 'Owner')} className="p-2 border rounded-lg text-sm hover:bg-gray-50">I Own One</button>
+                            <button onClick={() => saveConfig('Heavy', 'Renter')} className="p-2 border rounded-lg text-sm hover:bg-gray-50">I Rent One</button>
                         </div>
                     </div>
                 </div>

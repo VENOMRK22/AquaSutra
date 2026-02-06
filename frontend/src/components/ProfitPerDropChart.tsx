@@ -1,7 +1,6 @@
 
-import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { TrendingUp, TrendingDown, AlertTriangle, CheckCircle } from 'lucide-react';
+import { TrendingUp, CheckCircle, AlertTriangle } from 'lucide-react';
 
 interface CropRecommendation {
     cropId: string;
@@ -17,6 +16,9 @@ interface CropRecommendation {
     marketPrice: number;
     priceTrend: 'UP' | 'DOWN' | 'STABLE';
     waterCostRupees: number;
+    roi: number; // New
+    dailyEarning: number; // New
+    durationDays?: number; // New optional
 }
 
 interface Props {
@@ -24,48 +26,17 @@ interface Props {
     userIntent?: string;
 }
 
-export function ProfitPerDropChart({ crops, userIntent }: Props) {
+export function ProfitPerDropChart({ crops }: Props) {
 
-    const getRiskColor = (level: string) => {
-        switch (level) {
-            case 'LOW': return '#10b981';
-            case 'MEDIUM': return '#f59e0b';
-            case 'HIGH': return '#ef4444';
-            case 'EXTREME': return '#991b1b';
-            default: return '#6b7280';
-        }
-    };
 
-    const getRiskBadge = (level: string) => {
-        const colors: Record<string, string> = {
-            'LOW': 'bg-green-100 text-green-800',
-            'MEDIUM': 'bg-yellow-100 text-yellow-800',
-            'HIGH': 'bg-red-100 text-red-800',
-            'EXTREME': 'bg-red-200 text-red-900'
-        };
-        return colors[level] || 'bg-gray-100 text-gray-800';
-    };
 
-    const topCrops = crops.slice(0, 6); // Show top 6
+    const topCrops = crops.slice(0, 10); // Show up to 10
 
     return (
         <div className="space-y-8">
 
-            {/* Header */}
-            <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg border border-blue-200">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    💧 Water Productivity Analysis
-                </h2>
-                <p className="text-gray-600">
-                    Comparing crops by profit per mm of water used. Higher is better.
-                </p>
-                {userIntent && (
-                    <div className="mt-3 inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full text-sm">
-                        <span className="text-gray-600">Your selection:</span>
-                        <span className="font-semibold text-blue-600">{userIntent}</span>
-                    </div>
-                )}
-            </div>
+
+
 
             {/* Chart 1: Profit Per Drop Bar Chart */}
             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -97,7 +68,8 @@ export function ProfitPerDropChart({ crops, userIntent }: Props) {
                                                 ₹{data.profitPerDrop}/mm
                                             </p>
                                             <div className="mt-2 text-sm space-y-1">
-                                                <p>Water: {data.waterRequired}mm</p>
+                                                <p>ROI: <span className="font-bold text-blue-600">{data.roi}%</span></p>
+                                                <p>Daily: ₹{data.dailyEarning}/day</p>
                                                 <p>Total Profit: ₹{data.totalProfit.toLocaleString()}</p>
                                                 <p>Risk: <span className={`font-semibold ${data.riskLevel === 'LOW' ? 'text-green-600' :
                                                     data.riskLevel === 'MEDIUM' ? 'text-yellow-600' : 'text-red-600'
@@ -156,157 +128,117 @@ export function ProfitPerDropChart({ crops, userIntent }: Props) {
                 </p>
             </div>
 
-            {/* Detailed Comparison Table */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="px-6 py-4 bg-gray-50 border-b">
-                    <h3 className="text-lg font-semibold">Detailed Comparison</h3>
-                </div>
-                <div className="overflow-x-auto">
-                    <table className="min-w-full divide-y divide-gray-200">
-                        <thead className="bg-gray-50">
-                            <tr>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Crop
-                                </th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    ₹/mm
-                                </th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Water (mm)
-                                </th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Water Cost
-                                </th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Total Profit
-                                </th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Yield
-                                </th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Price
-                                </th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    Risk
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody className="bg-white divide-y divide-gray-200">
-                            {topCrops.map((crop, index) => (
-                                <tr
-                                    key={crop.cropId}
-                                    className={`${crop.isSmartSwap ? 'bg-green-50 border-l-4 border-green-500' : ''
-                                        } ${index === 0 ? 'bg-blue-50' : ''} hover:bg-gray-50 transition-colors`}
-                                >
-                                    <td className="px-6 py-4 whitespace-nowrap">
-                                        <div className="flex items-center gap-2">
-                                            {index === 0 && (
-                                                <span className="text-xl" title="Top Recommendation">🏆</span>
-                                            )}
-                                            {crop.isSmartSwap && (
-                                                <TrendingUp className="w-4 h-4 text-green-600" />
-                                            )}
-                                            <div>
-                                                <div className="text-sm font-medium text-gray-900">
-                                                    {crop.name}
-                                                </div>
-                                                {crop.priceTrend !== 'STABLE' && (
-                                                    <div className="flex items-center gap-1 mt-1">
-                                                        {crop.priceTrend === 'UP' ? (
-                                                            <TrendingUp className="w-3 h-3 text-green-600" />
-                                                        ) : (
-                                                            <TrendingDown className="w-3 h-3 text-red-600" />
-                                                        )}
-                                                        <span className={`text-xs ${crop.priceTrend === 'UP' ? 'text-green-600' : 'text-red-600'
-                                                            }`}>
-                                                            Price {crop.priceTrend.toLowerCase()}
-                                                        </span>
-                                                    </div>
-                                                )}
-                                            </div>
+            {/* 5-Point Analysis (Scrollable Card Deck) */}
+            <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-blue-600" />
+                    5-Point Economic Analysis
+                </h3>
+
+                {/* Scrollable Container (Hide scrollbar for clean look) */}
+                <div className="flex overflow-x-auto pb-8 gap-4 snap-x snap-mandatory px-4 -mx-4 items-stretch" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                    {topCrops.map((crop, index) => (
+                        <div
+                            key={crop.cropId}
+                            className={`flex-none w-[280px] md:w-[320px] snap-center relative bg-white rounded-2xl transition-all duration-300 transform
+                                ${index === 0 ? 'ring-2 ring-blue-500 shadow-xl scale-[1.02] z-10' : 'border border-gray-200 shadow-md hover:shadow-lg opacity-90 hover:opacity-100'}
+                                ${crop.isSmartSwap ? 'bg-gradient-to-b from-green-50 to-white' : ''}
+                            `}
+                        >
+                            {/* Card Header */}
+                            <div className={`p-5 rounded-t-2xl ${index === 0 ? 'bg-blue-600 text-white' : 'bg-gray-50 text-gray-800'}`}>
+                                <div className="flex justify-between items-start">
+                                    <div>
+                                        <h4 className="text-xl font-bold truncate">{crop.name}</h4>
+                                        <p className={`text-xs ${index === 0 ? 'text-blue-100' : 'text-gray-500'}`}>
+                                            {crop.durationDays || 120} days cycle
+                                        </p>
+                                    </div>
+                                    <span className={`px-2 py-1 text-[10px] font-bold uppercase tracking-wider rounded-md bg-white/20 backdrop-blur-md border border-white/20`}>
+                                        {crop.riskLevel} Risk
+                                    </span>
+                                </div>
+                                {index === 0 && (
+                                    <div className="mt-2 inline-flex items-center gap-1 bg-white/20 px-2 py-0.5 rounded text-xs font-medium backdrop-blur-sm">
+                                        <span>🏆 Top Recommendation</span>
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Card Body */}
+                            <div className="p-5 space-y-5">
+                                {/* Metric 1: Profit per Drop */}
+                                <div>
+                                    <div className="flex justify-between text-sm mb-1">
+                                        <span className="text-gray-500">Water Efficiency</span>
+                                        <span className="font-bold text-gray-900">₹{crop.profitPerDrop}/mm</span>
+                                    </div>
+                                    <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                                        <div
+                                            className="h-full bg-blue-500 rounded-full"
+                                            style={{ width: `${Math.min(100, (crop.profitPerDrop / 1000) * 100)}%` }}
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* Metric 2: Net Profit */}
+                                <div>
+                                    <div className="flex justify-between text-sm mb-1">
+                                        <span className="text-gray-500">Net Profit / Acre</span>
+                                        <span className="font-bold text-gray-900">₹{crop.totalProfit.toLocaleString()}</span>
+                                    </div>
+                                    <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                                        <div
+                                            className="h-full bg-green-500 rounded-full"
+                                            style={{ width: `${Math.min(100, (crop.totalProfit / 200000) * 100)}%` }}
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* Metric 3: ROI & Daily Combined */}
+                                <div className="grid grid-cols-2 gap-3">
+                                    <div className="bg-gray-50 p-3 rounded-lg text-center border border-gray-100">
+                                        <div className="text-xs text-gray-500 uppercase tracking-wide">ROI</div>
+                                        <div className={`text-lg font-bold ${crop.roi > 150 ? 'text-green-600' : 'text-gray-800'}`}>
+                                            {crop.roi}%
                                         </div>
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap">
-                                        <span className="text-lg font-bold text-green-600">
-                                            ₹{crop.profitPerDrop}
-                                        </span>
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                                        {crop.waterRequired} mm
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                                        ₹{crop.waterCostRupees?.toLocaleString() || 'N/A'}
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap">
-                                        <span className="text-sm font-semibold text-gray-900">
-                                            ₹{crop.totalProfit.toLocaleString()}
-                                        </span>
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap">
-                                        <div className="text-sm">
-                                            <div className="font-medium">{crop.adjustedYield}t</div>
-                                            {crop.yieldReduction > 0 && (
-                                                <div className="text-xs text-red-600">
-                                                    -{crop.yieldReduction.toFixed(0)}% stress
-                                                </div>
-                                            )}
+                                    </div>
+                                    <div className="bg-gray-50 p-3 rounded-lg text-center border border-gray-100">
+                                        <div className="text-xs text-gray-500 uppercase tracking-wide">Daily</div>
+                                        <div className="text-lg font-bold text-gray-800">₹{crop.dailyEarning}</div>
+                                    </div>
+                                </div>
+
+                                {/* Metric 4: Stability */}
+                                <div>
+                                    <div className="flex justify-between text-sm mb-1">
+                                        <span className="text-gray-500">Market Stability</span>
+                                        <span className="font-bold text-gray-900">{100 - crop.riskScore}%</span>
+                                    </div>
+                                    <div className="flex gap-1">
+                                        {[1, 2, 3, 4, 5].map(dot => (
+                                            <div
+                                                key={dot}
+                                                className={`h-1.5 flex-1 rounded-full ${dot <= Math.ceil((100 - crop.riskScore) / 20)
+                                                    ? (crop.riskScore < 30 ? 'bg-green-500' : 'bg-yellow-500')
+                                                    : 'bg-gray-200'
+                                                    }`}
+                                            />
+                                        ))}
+                                    </div>
+                                    {crop.priceTrend === 'UP' && (
+                                        <div className="text-xs text-green-600 mt-2 flex items-center gap-1 font-medium bg-green-50 px-2 py-1 rounded w-fit">
+                                            <TrendingUp size={10} /> Market Rising
                                         </div>
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                                        ₹{(crop.marketPrice / 10).toLocaleString()}/q
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap">
-                                        <span className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getRiskBadge(crop.riskLevel)
-                                            }`}>
-                                            {crop.riskLevel}
-                                        </span>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
 
-            {/* Key Insights */}
-            <div className="grid md:grid-cols-3 gap-4">
-                <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                    <div className="flex items-center gap-2 mb-2">
-                        <CheckCircle className="w-5 h-5 text-green-600" />
-                        <h4 className="font-semibold text-green-900">Best Choice</h4>
-                    </div>
-                    <p className="text-2xl font-bold text-green-700">{topCrops[0]?.name}</p>
-                    <p className="text-sm text-green-600 mt-1">
-                        ₹{topCrops[0]?.profitPerDrop}/mm water productivity
-                    </p>
-                </div>
 
-                <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                    <div className="flex items-center gap-2 mb-2">
-                        <TrendingUp className="w-5 h-5 text-blue-600" />
-                        <h4 className="font-semibold text-blue-900">Highest Profit</h4>
-                    </div>
-                    <p className="text-2xl font-bold text-blue-700">
-                        ₹{Math.max(...topCrops.map(c => c.totalProfit)).toLocaleString()}
-                    </p>
-                    <p className="text-sm text-blue-600 mt-1">
-                        {topCrops.find(c => c.totalProfit === Math.max(...topCrops.map(x => x.totalProfit)))?.name}
-                    </p>
-                </div>
-
-                <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
-                    <div className="flex items-center gap-2 mb-2">
-                        <AlertTriangle className="w-5 h-5 text-purple-600" />
-                        <h4 className="font-semibold text-purple-900">Safest Option</h4>
-                    </div>
-                    <p className="text-2xl font-bold text-purple-700">
-                        {topCrops.reduce((min, c) => c.riskScore < min.riskScore ? c : min)?.name}
-                    </p>
-                    <p className="text-sm text-purple-600 mt-1">
-                        {Math.min(...topCrops.map(c => c.riskScore))} risk score
-                    </p>
-                </div>
-            </div>
 
         </div>
     );

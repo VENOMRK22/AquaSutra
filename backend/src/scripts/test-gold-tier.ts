@@ -26,7 +26,7 @@ async function runGoldTierTest() {
 
     // 1. Market Price Service
     console.log("--- 1. MARKET INTELLIGENCE ---");
-    const priceData = await MarketPriceService.getLivePrice('Sugarcane', SCENARIO.market);
+    const priceData = await MarketPriceService.getCropPrice('Sugarcane', SCENARIO.market);
     // Mock if API fails / returns null in test env without key
     const currentPriceQuintal = priceData ? priceData.modalPrice : 360;
     const currentPriceTon = currentPriceQuintal * 10;
@@ -90,7 +90,7 @@ async function runGoldTierTest() {
             blockClassification: SCENARIO.blockClass,
             waterAvailability: SCENARIO.waterAvailable,
             soilType: 'Black Soil',
-            marketTrend: priceData ? priceData.trend : 'STABLE',
+            marketTrend: priceData ? (priceData.trend === 'GROWING' ? 'UP' : priceData.trend === 'DEPRECIATING' ? 'DOWN' : 'STABLE') : 'STABLE',
             marketVolatility: 5,
             waterTableDepth: SCENARIO.waterDepth
         }

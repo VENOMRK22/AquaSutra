@@ -8,21 +8,9 @@ import { CGWBService } from './CGWBService';
 import { LocationService } from './LocationService';
 import fs from 'fs';
 import path from 'path';
+import { CROP_DATABASE, CropConfig } from '../data/CropDatabase';
 
-export interface CropConfig {
-    id: string;
-    name: string;
-    durationDays: number;
-    waterConsumptionMm: number; // Total water needed per acre in mm
-    minTemp: number;
-    maxTemp: number;
-    baseYieldTons: number; // Avg yield per acre
-    baseMarketPrice: number; // INR per ton
-    inputCost: number; // INR per acre
-    soilTypes: string[]; // Compatible soil types
-    zones: string[]; // Preferred Agro-Climatic Zones
-    isLegume: boolean; // For soil recovery logic
-}
+
 
 export interface FarmContext {
     pincode: string;
@@ -91,108 +79,8 @@ export interface RecommendationResult {
     };
 }
 
-// EXTENDED CROP DATABASE (20+ Crops)
-export const CROP_DATABASE: CropConfig[] = [
-    // --- FIBER & CASH CROPS ---
-    {
-        id: 'sugarcane_1',
-        name: 'Sugarcane (Adsali)',
-        durationDays: 365,
-        waterConsumptionMm: 2200,
-        minTemp: 15,
-        maxTemp: 40,
-        baseYieldTons: 45,
-        baseMarketPrice: 2900,
-        inputCost: 50000,
-        soilTypes: ['Black', 'Loamy', 'Clay'],
-        zones: ['Western Maharashtra', 'Marathwada'],
-        isLegume: false
-    },
-    {
-        id: 'cotton_bt',
-        name: 'Bt Cotton',
-        durationDays: 160,
-        waterConsumptionMm: 700,
-        minTemp: 20,
-        maxTemp: 42,
-        baseYieldTons: 1.0,
-        baseMarketPrice: 62000,
-        inputCost: 28000,
-        soilTypes: ['Black', 'Medium'],
-        zones: ['Vidarbha', 'Marathwada', 'Northern Maharashtra', 'Western Maharashtra'], // Added Western Maharashtra for demo
-        isLegume: false
-    },
-    {
-        id: 'wheat_lokwan',
-        name: 'Wheat (Lokwan)',
-        durationDays: 120,
-        waterConsumptionMm: 450,
-        minTemp: 10,
-        maxTemp: 35,
-        baseYieldTons: 1.8,
-        baseMarketPrice: 24000,
-        inputCost: 18000,
-        soilTypes: ['Black', 'Alluvial', 'Loamy', 'Sandy Loam'],
-        zones: ['General'],
-        isLegume: false
-    },
-    {
-        id: 'gram_chana',
-        name: 'Gram (Chana)',
-        durationDays: 110,
-        waterConsumptionMm: 300,
-        minTemp: 15,
-        maxTemp: 35,
-        baseYieldTons: 0.8,
-        baseMarketPrice: 52000,
-        inputCost: 15000,
-        soilTypes: ['Black', 'Loamy', 'Sandy Loam'],
-        zones: ['General'],
-        isLegume: true
-    },
-    {
-        id: 'soybean_js335',
-        name: 'Soybean (JS-335)',
-        durationDays: 100,
-        waterConsumptionMm: 450,
-        minTemp: 20,
-        maxTemp: 35,
-        baseYieldTons: 1.0,
-        baseMarketPrice: 48000, // Adjusted to INR/Ton (was 4800/Quintal)
-        inputCost: 12000,
-        soilTypes: ['Black', 'Medium', 'Loamy'],
-        zones: ['General'],
-        isLegume: true
-    },
-    {
-        id: 'onion_red',
-        name: 'Red Onion',
-        durationDays: 120,
-        waterConsumptionMm: 500,
-        minTemp: 15,
-        maxTemp: 35,
-        baseYieldTons: 12,
-        baseMarketPrice: 18000, // Adjusted to INR/Ton (was 1800/Quintal)
-        inputCost: 40000,
-        soilTypes: ['Medium', 'Loamy', 'Silt'],
-        zones: ['General'],
-        isLegume: false
-    },
-    {
-        id: 'tomato_hybrid',
-        name: 'Tomato (Hybrid)',
-        durationDays: 140,
-        waterConsumptionMm: 600,
-        minTemp: 15,
-        maxTemp: 35,
-        baseYieldTons: 25,
-        baseMarketPrice: 15000,
-        inputCost: 60000,
-        soilTypes: ['Medium', 'Loamy', 'Black'],
-        zones: ['General'],
-        isLegume: false
-    }
-];
+
+
 
 export class HydroEconomicEngine {
 
@@ -331,7 +219,8 @@ export class HydroEconomicEngine {
 
     public async getRecommendations(
         ctx: FarmContext,
-        userIntentName?: string
+        userIntentName?: string,
+        limitToCrops?: string[] // NEW: specific crops to evaluate (bypassing filters)
     ): Promise<RecommendationResult[]> {
 
         console.log(`🔍 [HydroEconomic] Starting enhanced recommendations for ${ctx.pincode || 'unknown location'}`);
@@ -445,10 +334,20 @@ export class HydroEconomicEngine {
         const results: RecommendationResult[] = [];
 
         for (const crop of CROP_DATABASE) {
+            // OPTIMIZATION: If specific crops requested, skip others
+            if (limitToCrops && !limitToCrops.includes(crop.id)) continue;
+
             const isZoneMatch = crop.zones.length === 0 || crop.zones.includes(zone) || crop.zones.includes('General') || zone === 'General';
-            if (!isZoneMatch) continue;
-            if (!this.checkClimateStress(crop, ctx.lat)) continue;
-            if (!crop.soilTypes.includes(ctx.soilType)) continue;
+
+            // STRICT FILTERS (Only apply if NOT in "Force/Compare" mode)
+            if (!limitToCrops) {
+                if (!isZoneMatch) continue;
+                if (!this.checkClimateStress(crop, ctx.lat)) continue;
+                if (!crop.soilTypes.includes(ctx.soilType)) continue;
+            } else {
+                // If force-comparing, we still record the mismatch logic later in Risk Assessment
+                // We just don't 'continue' here
+            }
 
             // 1. GET PRICE
             const priceData = marketPrices[crop.id];

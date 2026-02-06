@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { CROP_DATABASE } from './HydroEconomicEngine';
+import { CROP_DATABASE } from '../data/CropDatabase';
 
 // ============================================================================
 // INTERFACES
@@ -128,7 +128,25 @@ export class MarketPriceService {
                 apiCrops = apiSnapshot.allCrops;
             }
         } catch (error) {
-            console.warn('[MarketPrice] Agmarknet API failed, using full mock data');
+            console.warn('[MarketPrice] Agmarknet API failed, falling back to CROP_DATABASE');
+        }
+
+        // FALLBACK: If API returned no data, use CROP_DATABASE
+        if (apiCrops.length === 0) {
+            console.log('[MarketPrice] Using CROP_DATABASE for market data');
+            apiCrops = CROP_DATABASE.map(c => ({
+                commodity: c.name,
+                market: 'General Market',
+                state: state,
+                modalPrice: c.baseMarketPrice / 10, // Tons to Quintal (approx)
+                minPrice: (c.baseMarketPrice / 10) * 0.9,
+                maxPrice: (c.baseMarketPrice / 10) * 1.1,
+                arrivalQuantity: 1000,
+                date: new Date(),
+                trend: 'STABLE',
+                changePercent: 0,
+                demand: 'MEDIUM'
+            }));
         }
 
         // STRATEGY 2: No Mock Data - Using real API with calculated changePercent

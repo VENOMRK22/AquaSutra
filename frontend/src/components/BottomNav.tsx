@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
-import { House, Tractor, Camera, User, TrendingUp } from 'lucide-react';
+import { House, Tractor, User, TrendingUp } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const BottomNav: React.FC = () => {

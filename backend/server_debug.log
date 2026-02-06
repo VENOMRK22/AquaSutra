@@ -366,3 +366,562 @@
 [2026-02-06T11:43:01.607Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045563498828628&lon=72.88946355781471
 [2026-02-06T11:43:02.272Z] GET /api/water/score?lat=19.045563498828628&lon=72.88946355781471&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
 [2026-02-06T11:43:02.417Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:45:18.186Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:45:18.987Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:45:21.910Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.04561974805512&lon=72.88945665916559
+[2026-02-06T11:45:22.608Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.04561974805512&lon=72.88945665916559
+[2026-02-06T11:45:31.433Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.04561974805512&lon=72.88945665916559
+[2026-02-06T11:45:31.465Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:45:31.466Z] GET /api/water/score?lat=19.04561974805512&lon=72.88945665916559&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:45:32.061Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.04561974805512&lon=72.88945665916559
+[2026-02-06T11:45:32.172Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:45:32.714Z] GET /api/water/score?lat=19.04561974805512&lon=72.88945665916559&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:45:33.765Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:45:33.768Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T11:45:33.911Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T11:45:42.429Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:45:42.497Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:45:51.898Z] POST /api/inference/crop-recommendation
+[Inference] 2026-02-06T11:45:51.899Z Request received. Body: {"pincode":"421503","previousCropId":"Sugarcane","userIntentCropId":"Sugarcane","totalLandArea":10,"lat":19.04561974805512,"lon":72.88945665916559,"soilType":"Medium"}
+[HydroEngine] 2026-02-06T11:45:51.900Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T11:45:51.901Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T11:45:51.902Z MarketPriceService returned
+[HydroEngine] 2026-02-06T11:45:51.902Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T11:45:51.903Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T11:45:51.903Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T11:45:51.903Z STEP 5: User Intent
+[ProfitCalc] Sugarcane (Adsali): Yield=2.25T, Price=2900, Rev=6525, Cost=62386 (Input=50000 + Water=12386), Net=-55861
+[ProfitCalc] Bt Cotton: Yield=0.93T, Price=62000, Rev=57660, Cost=35691 (Input=28000 + Water=7691), Net=21969
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=48000, Rev=48000, Cost=18909 (Input=12000 + Water=6909), Net=29091
+[ProfitCalc] Red Onion: Yield=12T, Price=10000, Rev=120000, Cost=47065 (Input=40000 + Water=7065), Net=72935
+[ProfitCalc] Tomato (Hybrid): Yield=25T, Price=11000, Rev=275000, Cost=67378 (Input=60000 + Water=7378), Net=207622
+[2026-02-06T11:46:06.147Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:46:07.282Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:46:10.618Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045621099779382&lon=72.88945405719589
+[2026-02-06T11:46:10.620Z] GET /api/water/score?lat=19.045621099779382&lon=72.88945405719589&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:46:11.304Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045621099779382&lon=72.88945405719589
+[2026-02-06T11:46:11.929Z] GET /api/water/score?lat=19.045621099779382&lon=72.88945405719589&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T11:46:31.080Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=High&interventions=
+[2026-02-06T11:46:32.724Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=High&interventions=drip
+[2026-02-06T11:46:34.312Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=Very%20Low&interventions=drip
+[2026-02-06T11:46:38.914Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=Very%20Low&interventions=drip,mulch
+[2026-02-06T11:47:06.362Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=Low&interventions=drip,mulch
+[2026-02-06T11:47:07.713Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=Very%20Low&interventions=drip,mulch
+[2026-02-06T11:47:15.218Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=Moderate&interventions=drip,mulch
+[2026-02-06T11:47:18.625Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=High&interventions=drip,mulch
+[2026-02-06T11:47:22.396Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=Low&interventions=drip,mulch
+[2026-02-06T11:47:25.279Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=High&interventions=drip,mulch
+[2026-02-06T11:47:27.125Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=Moderate&interventions=drip,mulch
+[2026-02-06T11:47:29.542Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=High&interventions=drip,mulch
+[2026-02-06T11:47:33.633Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=Moderate&interventions=drip,mulch
+[2026-02-06T11:47:36.158Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=Very%20Low&interventions=drip,mulch
+[2026-02-06T11:47:37.095Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=Low&interventions=drip,mulch
+[2026-02-06T11:47:37.676Z] GET /api/water/forecast?lat=19.045621099779382&lon=72.88945405719589&crop=High&interventions=drip,mulch
+[2026-02-06T19:06:40.565Z] GET /api/water/score?lat=19.178458&lon=72.9476815&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T19:06:40.591Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.178458&lon=72.9476815
+[2026-02-06T19:06:41.159Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T19:06:41.598Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.178458&lon=72.9476815
+[2026-02-06T19:06:42.518Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T19:06:43.543Z] GET /api/water/score?lat=19.178458&lon=72.9476815&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T19:06:58.249Z] POST /api/inference/compare-crops
+[2026-02-06T19:06:58.251Z] POST /api/inference/compare-crops
+[2026-02-06T19:07:00.402Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T19:07:00.641Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T19:07:00.975Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T19:07:01.511Z] POST /api/inference/compare-crops
+[2026-02-06T19:07:01.512Z] POST /api/inference/compare-crops
+[2026-02-06T19:07:16.847Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T19:07:17.641Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.178458&lon=72.9476815
+[2026-02-06T19:07:17.644Z] GET /api/water/score?lat=19.178458&lon=72.9476815&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T19:07:18.117Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T19:07:18.566Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.178458&lon=72.9476815
+[2026-02-06T19:07:19.248Z] GET /api/water/score?lat=19.178458&lon=72.9476815&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T19:07:19.958Z] GET /api/water/forecast?lat=19.178458&lon=72.9476815&crop=High&interventions=
+[2026-02-06T19:07:23.537Z] GET /api/water/forecast?lat=19.178458&lon=72.9476815&crop=Moderate&interventions=
+[2026-02-06T19:07:27.079Z] GET /api/water/forecast?lat=19.178458&lon=72.9476815&crop=Very%20Low&interventions=
+[2026-02-06T19:07:32.029Z] GET /api/water/forecast?lat=19.178458&lon=72.9476815&crop=Very%20Low&interventions=drip
+[2026-02-06T19:07:38.495Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T19:07:38.498Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T19:07:38.500Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T19:07:41.089Z] POST /api/inference/compare-crops
+[2026-02-06T19:07:41.090Z] POST /api/inference/compare-crops
+[2026-02-06T19:08:51.845Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:08:51.847Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:08:51.847Z Calling MarketPriceService.getAllCropPrices
+[2026-02-06T19:08:51.872Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:08:51.873Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:08:51.873Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:08:53.483Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:08:53.484Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:08:53.484Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:08:53.484Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:08:53.485Z STEP 5: User Intent
+[ProfitCalc] Sugarcane (Adsali): Yield=2.88T, Price=2900, Rev=8352, Cost=62386 (Input=50000 + Water=12386), Net=-54034
+[ProfitCalc] Bt Cotton: Yield=1T, Price=62000, Rev=62000, Cost=35691 (Input=28000 + Water=7691), Net=26309
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24250, Rev=43650, Cost=24909 (Input=18000 + Water=6909), Net=18741
+[ProfitCalc] Gram (Chana): Yield=0.8T, Price=68000, Rev=54400, Cost=21439 (Input=15000 + Water=6439), Net=32961
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=48000, Rev=48000, Cost=18909 (Input=12000 + Water=6909), Net=29091
+[ProfitCalc] Tomato (Hybrid): Yield=25T, Price=10500, Rev=262500, Cost=67378 (Input=60000 + Water=7378), Net=195122
+[HydroEngine] 2026-02-06T19:08:53.492Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:08:53.492Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:08:53.492Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:08:53.493Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:08:53.493Z STEP 5: User Intent
+[ProfitCalc] Sugarcane (Adsali): Yield=2.88T, Price=2900, Rev=8352, Cost=62386 (Input=50000 + Water=12386), Net=-54034
+[ProfitCalc] Bt Cotton: Yield=1T, Price=62000, Rev=62000, Cost=35691 (Input=28000 + Water=7691), Net=26309
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24250, Rev=43650, Cost=24909 (Input=18000 + Water=6909), Net=18741
+[ProfitCalc] Gram (Chana): Yield=0.8T, Price=68000, Rev=54400, Cost=21439 (Input=15000 + Water=6439), Net=32961
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=48000, Rev=48000, Cost=18909 (Input=12000 + Water=6909), Net=29091
+[ProfitCalc] Tomato (Hybrid): Yield=25T, Price=10500, Rev=262500, Cost=67378 (Input=60000 + Water=7378), Net=195122
+[2026-02-06T19:10:22.588Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:10:22.589Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:10:22.589Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:10:22.589Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:10:22.589Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:10:22.590Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:10:22.590Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:10:22.590Z STEP 5: User Intent
+[ProfitCalc] Sugarcane (Adsali): Yield=2.88T, Price=2900, Rev=8352, Cost=62386 (Input=50000 + Water=12386), Net=-54034
+[ProfitCalc] Bt Cotton: Yield=1T, Price=62000, Rev=62000, Cost=35691 (Input=28000 + Water=7691), Net=26309
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24250, Rev=43650, Cost=24909 (Input=18000 + Water=6909), Net=18741
+[ProfitCalc] Gram (Chana): Yield=0.8T, Price=68000, Rev=54400, Cost=21439 (Input=15000 + Water=6439), Net=32961
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=48000, Rev=48000, Cost=18909 (Input=12000 + Water=6909), Net=29091
+[ProfitCalc] Tomato (Hybrid): Yield=25T, Price=10500, Rev=262500, Cost=67378 (Input=60000 + Water=7378), Net=195122
+[2026-02-06T19:10:33.075Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:10:33.075Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:10:33.076Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:10:33.076Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:10:33.076Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:10:33.076Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:10:33.076Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:10:33.077Z STEP 5: User Intent
+[ProfitCalc] Sugarcane (Adsali): Yield=2.88T, Price=2900, Rev=8352, Cost=62386 (Input=50000 + Water=12386), Net=-54034
+[ProfitCalc] Bt Cotton: Yield=1T, Price=62000, Rev=62000, Cost=35691 (Input=28000 + Water=7691), Net=26309
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24250, Rev=43650, Cost=24909 (Input=18000 + Water=6909), Net=18741
+[ProfitCalc] Gram (Chana): Yield=0.8T, Price=68000, Rev=54400, Cost=21439 (Input=15000 + Water=6439), Net=32961
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=48000, Rev=48000, Cost=18909 (Input=12000 + Water=6909), Net=29091
+[ProfitCalc] Tomato (Hybrid): Yield=25T, Price=10500, Rev=262500, Cost=67378 (Input=60000 + Water=7378), Net=195122
+[2026-02-06T19:24:55.875Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:26:51.757Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:26:51.760Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:28:02.995Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:28:02.997Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:28:02.997Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:28:02.998Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:28:02.998Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:28:02.998Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:28:02.999Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:28:02.999Z STEP 5: User Intent
+[ProfitCalc] Sugarcane (Adsali): Yield=2.88T, Price=2900, Rev=8352, Cost=62386 (Input=50000 + Water=12386), Net=-54034
+[ProfitCalc] Bt Cotton: Yield=1T, Price=62000, Rev=62000, Cost=35691 (Input=28000 + Water=7691), Net=26309
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24250, Rev=43650, Cost=24909 (Input=18000 + Water=6909), Net=18741
+[ProfitCalc] Gram (Chana): Yield=0.8T, Price=68000, Rev=54400, Cost=21439 (Input=15000 + Water=6439), Net=32961
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=48000, Rev=48000, Cost=18909 (Input=12000 + Water=6909), Net=29091
+[ProfitCalc] Tomato (Hybrid): Yield=25T, Price=10500, Rev=262500, Cost=67378 (Input=60000 + Water=7378), Net=195122
+[2026-02-06T19:33:18.691Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:33:18.693Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:33:19.677Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:33:19.679Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:37:52.541Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:37:52.547Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:38:22.724Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:38:22.726Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:40:43.735Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:41:01.868Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:41:01.869Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:41:43.598Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:41:43.601Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:00.467Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:00.469Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:26.550Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:28.536Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:50.730Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:50.732Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:54.328Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:54.330Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:54.869Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:54.872Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:55.074Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:55.076Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:55.272Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:55.274Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:55.468Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:55.470Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:55.613Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:55.614Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:55.796Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:55.797Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:55.962Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:42:55.963Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:43:23.319Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:43:23.321Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:43:30.484Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:44:16.326Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:45:17.655Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:45:50.830Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:45:50.833Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:45:53.018Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:45:53.021Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:46:14.985Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:46:14.986Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:46:14.987Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:46:14.988Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:46:14.988Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:46:14.989Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:46:14.989Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:46:14.989Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:46:16.117Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:46:16.117Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:46:16.118Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:46:16.118Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:46:16.119Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:46:16.119Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:46:16.119Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:46:16.120Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:46:17.149Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:46:17.150Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:46:17.150Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:46:17.151Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:46:17.151Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:46:17.152Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:46:17.152Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:46:17.152Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:46:18.002Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:46:18.003Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:46:18.004Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:46:18.004Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:46:18.005Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:46:18.005Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:46:18.006Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:46:18.006Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:46:18.777Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:46:18.777Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:46:18.778Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:46:18.778Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:46:18.778Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:46:18.779Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:46:18.779Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:46:18.779Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:46:19.458Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:46:19.459Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:46:19.460Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:46:19.460Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:46:19.461Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:46:19.461Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:46:19.461Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:46:19.462Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:46:20.225Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:46:20.226Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:46:20.226Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:46:20.227Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:46:20.228Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:46:20.228Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:46:20.229Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:46:20.229Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:46:20.843Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:46:20.845Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:46:20.845Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:46:20.846Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:46:20.846Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:46:20.847Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:46:20.847Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:46:20.847Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:46:21.107Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:46:21.108Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:46:21.109Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:46:21.109Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:46:21.110Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:46:21.110Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:46:21.110Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:46:21.110Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:46:21.305Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:46:21.307Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:46:21.307Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:46:21.309Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:46:21.309Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:46:21.309Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:46:21.310Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:46:21.310Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:46:21.503Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:46:21.504Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:46:21.505Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:46:21.506Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:46:21.506Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:46:21.507Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:46:21.507Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:46:21.507Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:46:21.924Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:46:21.925Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:46:21.926Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:46:21.926Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:46:21.927Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:46:21.927Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:46:21.927Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:46:21.928Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:46:40.557Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:46:40.558Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:46:40.559Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:46:40.560Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:46:40.560Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:46:40.561Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:46:40.561Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:46:40.561Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:47:05.072Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:47:05.072Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:47:05.073Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:47:05.073Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:47:05.074Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:47:05.074Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:47:05.074Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:47:05.074Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:47:37.501Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:47:37.502Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:47:37.503Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:47:37.504Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:47:37.504Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:47:37.505Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:47:37.505Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:47:37.506Z STEP 5: User Intent
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24000, Rev=43200, Cost=24909 (Input=18000 + Water=6909), Net=18291
+[ProfitCalc] Wheat (Sharbati): Yield=1.5T, Price=24000, Rev=36000, Cost=27065 (Input=20000 + Water=7065), Net=8935
+[ProfitCalc] Jowar (Sorghum): Yield=1.2T, Price=28000, Rev=33600, Cost=18596 (Input=12000 + Water=6596), Net=15004
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=55000, Rev=49500, Cost=20439 (Input=14000 + Water=6439), Net=29061
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Sugarcane (Seasonal): Yield=7.65T, Price=3150, Rev=24098, Cost=51760 (Input=40000 + Water=11760), Net=-27662
+[ProfitCalc] Turmeric (Selam): Yield=4.55T, Price=7000, Rev=31850, Cost=50195 (Input=40000 + Water=10195), Net=-18345
+[ProfitCalc] Chili (Green): Yield=8T, Price=30000, Rev=240000, Cost=47691 (Input=40000 + Water=7691), Net=192309
+[2026-02-06T19:49:32.448Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:49:32.450Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:49:32.451Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:49:33.476Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:49:33.476Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:49:33.477Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:49:33.477Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:49:33.477Z STEP 5: User Intent
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Cotton (Bt Hybrid): Yield=1.2T, Price=65000, Rev=78000, Cost=27691 (Input=20000 + Water=7691), Net=50309
+[ProfitCalc] Tomato (Hybrid): Yield=25T, Price=10500, Rev=262500, Cost=52378 (Input=45000 + Water=7378), Net=210122
+[2026-02-06T19:49:39.530Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:49:39.533Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:50:17.432Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:50:17.435Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:50:26.121Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:50:26.122Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:50:26.122Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:50:26.123Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:50:26.123Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:50:26.124Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:50:26.124Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:50:26.124Z STEP 5: User Intent
+[ProfitCalc] Rice (Basmati): Yield=1.11T, Price=32950, Rev=36575, Cost=34256 (Input=25000 + Water=9256), Net=2319
+[ProfitCalc] Rice (Indrayani/Kolam): Yield=1.54T, Price=32950, Rev=50743, Cost=30943 (Input=22000 + Water=8943), Net=19800
+[ProfitCalc] Wheat (Lokwan): Yield=1.8T, Price=24250, Rev=43650, Cost=24909 (Input=18000 + Water=6909), Net=18741
+[ProfitCalc] Bajra (Pearl Millet): Yield=1T, Price=18500, Rev=18500, Cost=16283 (Input=10000 + Water=6283), Net=2217
+[2026-02-06T19:55:04.846Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:55:04.849Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:56:06.058Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:56:06.059Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:56:06.059Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:56:06.060Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:56:06.060Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:56:06.060Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:56:06.060Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:56:06.061Z STEP 5: User Intent
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Cotton (Bt Hybrid): Yield=1.2T, Price=65000, Rev=78000, Cost=27691 (Input=20000 + Water=7691), Net=50309
+[2026-02-06T19:57:16.092Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T19:57:16.436Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T19:57:21.075Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T19:57:21.079Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T19:57:21.287Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T19:58:23.728Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:58:23.730Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T19:58:25.180Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T19:58:25.182Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T19:58:25.182Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T19:58:25.183Z MarketPriceService returned
+[HydroEngine] 2026-02-06T19:58:25.184Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T19:58:25.184Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T19:58:25.184Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T19:58:25.184Z STEP 5: User Intent
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Cotton (Bt Hybrid): Yield=1.2T, Price=65000, Rev=78000, Cost=27691 (Input=20000 + Water=7691), Net=50309
+[2026-02-06T20:00:46.229Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:00:47.221Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:00:50.619Z] GET /api/water/score?lat=19.178458&lon=72.9476815&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:00:50.648Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.178458&lon=72.9476815
+[2026-02-06T20:00:50.787Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:00:51.362Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.178458&lon=72.9476815
+[2026-02-06T20:00:51.498Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:00:52.046Z] GET /api/water/score?lat=19.178458&lon=72.9476815&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:02:02.948Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:02:02.951Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:02:05.068Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:02:05.071Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:02:06.013Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:02:06.017Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:02:07.389Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T20:02:07.390Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T20:02:07.391Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T20:02:07.392Z MarketPriceService returned
+[HydroEngine] 2026-02-06T20:02:07.392Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T20:02:07.393Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T20:02:07.393Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T20:02:07.394Z STEP 5: User Intent
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Cotton (Bt Hybrid): Yield=1.2T, Price=65000, Rev=78000, Cost=27691 (Input=20000 + Water=7691), Net=50309
+[2026-02-06T20:03:55.842Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:09:37.492Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T20:09:37.492Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T20:09:37.493Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T20:09:37.493Z MarketPriceService returned
+[HydroEngine] 2026-02-06T20:09:37.493Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T20:09:37.494Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T20:09:37.494Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T20:09:37.494Z STEP 5: User Intent
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=68000, Rev=61200, Cost=20439 (Input=14000 + Water=6439), Net=40761
+[ProfitCalc] Moong (Summer): Yield=0.5T, Price=80000, Rev=40000, Cost=14439 (Input=8000 + Water=6439), Net=25561
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Cotton (Bt Hybrid): Yield=1.2T, Price=65000, Rev=78000, Cost=27691 (Input=20000 + Water=7691), Net=50309
+[2026-02-06T20:10:00.517Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T20:10:00.519Z] GET /api/market/snapshot?state=Uttar%20Pradesh
+[2026-02-06T20:10:02.623Z] GET /api/market/snapshot?state=Maharashtra
+[2026-02-06T20:10:12.095Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:10:12.486Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:10:14.589Z] GET /api/water/score?lat=19.178458&lon=72.9476815&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:10:14.622Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.178458&lon=72.9476815
+[2026-02-06T20:10:14.744Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:10:15.405Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.178458&lon=72.9476815
+[2026-02-06T20:10:15.521Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:10:16.203Z] GET /api/water/score?lat=19.178458&lon=72.9476815&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db

@@ -14,15 +14,17 @@ const context: FarmContext = {
 
 const userIntent = 'Sugarcane';
 
-console.log(`\n--- DEBUGGING SMART SWAP FOR: ${userIntent} ---`);
-const results = engine.getRecommendations(context, userIntent);
+(async () => {
+    console.log(`\n--- DEBUGGING SMART SWAP FOR: ${userIntent} ---`);
+    const results = await engine.getRecommendations(context, userIntent);
 
-const topResult = results[0];
-console.log('Top Recommendation:', topResult.name);
-console.log('Is Smart Swap:', topResult.isSmartSwap);
-console.log('Impact Object:', JSON.stringify(topResult.impact, null, 2));
+    const topResult = results[0];
+    console.log('Top Recommendation:', topResult.name);
+    console.log('Is Smart Swap:', topResult.isSmartSwap);
+    console.log('Impact Object:', JSON.stringify(topResult.impact, null, 2));
 
-if (!topResult.isSmartSwap) {
-    console.log('\nWhy not Smart Swap?');
-    // ... logic trace manually if needed ...
-}
+    if (!topResult.isSmartSwap) {
+        console.log('\nWhy not Smart Swap?');
+        // ... logic trace manually if needed ...
+    }
+})();

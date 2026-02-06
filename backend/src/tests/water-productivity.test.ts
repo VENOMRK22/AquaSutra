@@ -3,7 +3,7 @@ import { MarketPriceService } from '../services/MarketPriceService';
 import { WaterCostCalculator } from '../services/WaterCostCalculator';
 import { YieldAdjustmentService } from '../services/YieldAdjustmentService';
 import { CropRiskAssessment } from '../services/CropRiskAssessment';
-import { CROP_DATABASE } from '../services/HydroEconomicEngine';
+import { CROP_DATABASE } from '../data/CropDatabase';
 
 // --- Lightweight Test Runner Shim ---
 async function describe(name: string, fn: () => Promise<void> | void) {
