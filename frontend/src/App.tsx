@@ -6,6 +6,7 @@ import FarmDashboard from './pages/FarmDashboard';
 import Leaderboard from './pages/Leaderboard';
 import Profile from './pages/Profile';
 import ProfitAnalysis from './pages/ProfitAnalysis'; // New Page
+import MarketplacePage from './pages/MarketplacePage';
 import MainLayout from './layouts/MainLayout';
 import ProtectedRoute from './components/ProtectedRoute';
 import AuthCallback from './pages/AuthCallback';
@@ -30,6 +31,7 @@ const App: React.FC = () => {
                     <Route path="/" element={<Dashboard />} />
                     <Route path="/farm" element={<FarmDashboard />} />
                     <Route path="/leaderboard" element={<Leaderboard />} />
+                    <Route path="/market" element={<MarketplacePage />} />
                     <Route path="/interviews" element={<div className="p-6 text-center text-ios-subtext">Interviews (Coming Soon)</div>} />
                     <Route path="/analysis" element={<ProfitAnalysis />} />
                     <Route path="/profile" element={<Profile />} />

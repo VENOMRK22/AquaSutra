@@ -29,6 +29,7 @@ import profileRoutes from './routes/profile';
 import leaderboardRoutes from './routes/leaderboard';
 import inferenceRoutes from './routes/inference';
 import sowingRoutes from './routes/sowing';
+import marketRoutes from './routes/market';
 
 // Supabase Client
 const supabaseUrl = process.env.SUPABASE_URL || '';
@@ -48,6 +49,7 @@ app.use('/api/profile', profileRoutes);
 app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/inference', inferenceRoutes);
 app.use('/api/sowing', sowingRoutes);
+app.use('/api/market', marketRoutes);
 
 // Test DB Connection Route
 app.get('/api/health', async (req: Request, res: Response) => {
@@ -57,3 +59,5 @@ app.get('/api/health', async (req: Request, res: Response) => {
 app.listen(Number(port), '0.0.0.0', () => {
     console.log(`[server]: Server is running at http://127.0.0.1:${port}`);
 });
+
+// Trigger reload

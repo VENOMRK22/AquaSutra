@@ -1,155 +1,263 @@
 import React, { useEffect, useState } from 'react';
-import { supabase } from '../lib/supabase';
-import { Trophy, MapPin, Sprout } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { Search, TrendingUp, TrendingDown, Award, Activity, MapPin, RefreshCw } from 'lucide-react';
 
-interface Ranking {
-    user_id: string;
-    name: string;
-    village: string;
-    avatar: string;
-    score: number; // ₹/Liter
-    revenue: number;
-    water: number;
-    crops: string;
+interface MarketPrice {
+    commodity: string;
+    market: string;
+    state: string;
+    modalPrice: number;
+    minPrice: number;
+    maxPrice: number;
+    arrivalQuantity: number;
+    date: string;
+    trend: 'GROWING' | 'DEPRECIATING' | 'STABLE';
+    changePercent: number;
+    demand: 'HIGH' | 'MEDIUM' | 'LOW';
 }
 
-interface PriceTicker {
-    crop: string;
-    price: number;
-    trend: 'up' | 'down' | 'stable';
+interface MarketSnapshot {
+    trending: MarketPrice[];
+    allTimeBest: MarketPrice[];
+    depreciating: MarketPrice[];
+    highDemand: MarketPrice[];
 }
 
-const Leaderboard: React.FC = () => {
-    const { t } = useLanguage();
-    const [rankings, setRankings] = useState<Ranking[]>([]);
+const Marketplace: React.FC = () => {
+    const [overview, setOverview] = useState<MarketSnapshot | null>(null);
     const [loading, setLoading] = useState(true);
-    const [userVillage, setUserVillage] = useState<string>('');
-    const [prices, setPrices] = useState<PriceTicker[]>([]);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [searchResults, setSearchResults] = useState<MarketPrice[]>([]);
+    const [isSearching, setIsSearching] = useState(false);
+
+    // Location State
+    const [locationName, setLocationName] = useState('Prayagraj (Default)');
+    const [locationState, setLocationState] = useState('Uttar Pradesh');
+    const [isLocating, setIsLocating] = useState(false);
 
     useEffect(() => {
-        fetchData();
-        // Mock Ticker Data (Since API is handled in backend, we can also fetch it to show ticker)
-        // Or backend leaderboard could return it.
-        // For now, let's hardcode ticker for visual effect or fetch from backend if I added an endpoint.
-        // I'll simulate ticker for UI smoothness.
-        setPrices([
-            { crop: 'Sugarcane', price: 3200, trend: 'up' },
-            { crop: 'Cotton', price: 7150, trend: 'down' },
-            { crop: 'Wheat', price: 2350, trend: 'stable' },
-            { crop: 'Soybean', price: 4800, trend: 'up' }
-        ]);
+        // Try to get live location on mount
+        detectLocation();
     }, []);
 
-    const fetchData = async () => {
+    // When locationState changes, fetch new data
+    useEffect(() => {
+        if (locationState) {
+            fetchMarketSnapshot(locationState);
+        }
+    }, [locationState]);
+
+    useEffect(() => {
+        const delayDebounceFn = setTimeout(() => {
+            if (searchQuery.trim()) {
+                handleSearch();
+            } else {
+                setSearchResults([]);
+                setIsSearching(false);
+            }
+        }, 500);
+
+        return () => clearTimeout(delayDebounceFn);
+    }, [searchQuery]);
+
+    const detectLocation = () => {
+        if (!navigator.geolocation) {
+            console.warn("Geolocation is not supported by this browser.");
+            fetchMarketSnapshot('Uttar Pradesh'); // Fallback
+            return;
+        }
+
+        setIsLocating(true);
+        navigator.geolocation.getCurrentPosition(async (position) => {
+            const { latitude, longitude } = position.coords;
+            try {
+                // Reverse Geocoding to get State Name
+                const res = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`);
+                const data = await res.json();
+
+                // data.principalSubdivision is usually the State name
+                const detectedState = data.principalSubdivision || 'Uttar Pradesh';
+                const detectedCity = data.city || data.locality || 'Unknown Location';
+
+                setLocationState(detectedState);
+                setLocationName(`${detectedCity}, ${detectedState}`);
+            } catch (error) {
+                console.error("Reverse geocoding failed", error);
+                // Fallback
+                setLocationName("Uttar Pradesh (Fallback)");
+                fetchMarketSnapshot('Uttar Pradesh');
+            } finally {
+                setIsLocating(false);
+            }
+        }, (error) => {
+            console.error("Geolocation error:", error);
+            setIsLocating(false);
+            // Fallback
+            setLocationName("Prayagraj (Default)");
+            fetchMarketSnapshot('Uttar Pradesh');
+        });
+    };
+
+    const fetchMarketSnapshot = async (state: string) => {
+        setLoading(true);
         try {
-            const { data: { user } } = await supabase.auth.getUser();
-            let villageParam = '';
-            if (user) {
-                // Get User Profile for Village
-                const { data: profile } = await supabase.from('profiles').select('village').eq('id', user.id).single();
-                if (profile) {
-                    villageParam = profile.village || '';
-                    setUserVillage(villageParam);
-                }
+            const res = await fetch(`http://localhost:3000/api/market/snapshot?state=${encodeURIComponent(state)}`);
+            const data = await res.json();
+            if (data.success) {
+                setOverview(data.data);
             }
-
-            // Fetch Leaderboard
-            const res = await fetch(`http://localhost:3000/api/leaderboard?village=${villageParam}`);
-            const json = await res.json();
-
-            if (json.success) {
-                setRankings(json.rankings);
-            }
-        } catch (err) {
-            console.error(err);
+        } catch (error) {
+            console.error("Failed to fetch market snapshot", error);
         } finally {
             setLoading(false);
         }
     };
 
+    const handleSearch = async () => {
+        if (!searchQuery.trim()) return;
+        setIsSearching(true);
+        try {
+            const res = await fetch(`http://localhost:3000/api/market/search?q=${searchQuery}&state=${encodeURIComponent(locationState)}`);
+            const data = await res.json();
+            if (data.success) {
+                setSearchResults(data.data);
+            }
+        } catch (error) {
+            console.error("Search failed", error);
+        }
+    };
+
+    const renderCropCard = (crop: MarketPrice, index: number) => (
+        <div key={`${crop.commodity}-${index}`} className="min-w-[160px] bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden group">
+            <div className="absolute top-0 right-0 p-2 opacity-5 group-hover:opacity-10 transition-opacity">
+                <Activity size={40} />
+            </div>
+
+            <div>
+                <div className="flex justify-between items-start mb-2">
+                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wider truncate max-w-[80px]" title={crop.market}>{crop.market}</span>
+                    <span className={`text-xs font-bold px-1.5 py-0.5 rounded flex items-center gap-0.5 ${crop.trend === 'GROWING' ? 'bg-green-100 text-green-700' :
+                        crop.trend === 'DEPRECIATING' ? 'bg-red-100 text-red-700' : 'bg-gray-100 text-gray-600'
+                        }`}>
+                        {crop.trend === 'GROWING' ? <TrendingUp size={10} /> : crop.trend === 'DEPRECIATING' ? <TrendingDown size={10} /> : '-'}
+                    </span>
+                </div>
+                <h3 className="font-bold text-gray-900 truncate" title={crop.commodity}>{crop.commodity}</h3>
+                <p className="text-xs text-gray-500 truncate">{new Date(crop.date).toLocaleDateString()}</p>
+            </div>
+
+            <div className="mt-3">
+                <div className="flex items-baseline gap-1">
+                    <p className="text-lg font-black text-gray-900">₹{crop.modalPrice}</p>
+                </div>
+                <p className="text-xs text-gray-400">per quintal</p>
+            </div>
+        </div>
+    );
+
+    const renderSection = (title: string, icon: React.ReactNode, data: MarketPrice[], color: string) => {
+        if (!data || data.length === 0) return null;
+
+        return (
+            <div className="mb-8">
+                <div className="flex items-center gap-2 mb-4 px-6">
+                    <div className={`p-2 rounded-lg ${color} text-white`}>
+                        {icon}
+                    </div>
+                    <h2 className="text-xl font-bold text-gray-900">{title}</h2>
+                </div>
+                <div className="flex overflow-x-auto pb-4 gap-4 px-6 snap-x">
+                    {data.map((crop, i) => (
+                        <div key={i} className="snap-start contents">
+                            {renderCropCard(crop, i)}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+    };
+
     return (
         <div className="bg-gray-50 min-h-screen pb-24">
-            {/* Market Ticker */}
-            <div className="bg-black text-white py-2 overflow-hidden relative whitespace-nowrap">
-                <div className="animate-marquee inline-block">
-                    {prices.map((p, i) => (
-                        <span key={i} className="mx-4 text-xs font-mono font-bold tracking-wider">
-                            {p.crop.toUpperCase()}: ₹{p.price}
-                            <span className={`ml-1 ${p.trend === 'up' ? 'text-green-400' : p.trend === 'down' ? 'text-red-400' : 'text-gray-400'}`}>
-                                {p.trend === 'up' ? '▲' : p.trend === 'down' ? '▼' : '-'}
-                            </span>
-                        </span>
-                    ))}
-                    {/* Duplicate for seamless loop */}
-                    {prices.map((p, i) => (
-                        <span key={`dup-${i}`} className="mx-4 text-xs font-mono font-bold tracking-wider">
-                            {p.crop.toUpperCase()}: ₹{p.price}
-                            <span className={`ml-1 ${p.trend === 'up' ? 'text-green-400' : p.trend === 'down' ? 'text-red-400' : 'text-gray-400'}`}>
-                                {p.trend === 'up' ? '▲' : p.trend === 'down' ? '▼' : '-'}
-                            </span>
-                        </span>
-                    ))}
-                </div>
-            </div>
-
-            {/* Header */}
-            <div className="px-6 pt-6 pb-6">
-                <div className="flex justify-between items-end mb-2">
+            {/* Header & Search */}
+            <div className="sticky top-0 bg-gray-50/95 backdrop-blur-sm z-10 pt-6 px-6 pb-4 border-b border-gray-100">
+                <div className="flex justify-between items-end mb-4">
                     <div>
-                        <h1 className="text-3xl font-bold text-gray-900 tracking-tight">{t('leaderboard.market_efficiency')}</h1>
-                        <p className="text-gray-500 text-sm font-medium mt-1 flex items-center gap-1">
-                            <MapPin size={14} />
-                            {userVillage || t('dashboard.checking_location')}
-                        </p>
+                        <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Marketplace</h1>
+                        <button
+                            onClick={detectLocation}
+                            className="text-gray-500 text-sm font-medium mt-1 flex items-center gap-1 hover:text-green-600 transition-colors"
+                        >
+                            <MapPin size={14} className={isLocating ? "animate-bounce" : ""} />
+                            {isLocating ? "Detecting location..." : `${locationName} (Live)`}
+                            <RefreshCw size={12} className="ml-1 opacity-50" />
+                        </button>
                     </div>
                 </div>
+
+                <div className="relative">
+                    <input
+                        type="text"
+                        placeholder="Search crops (e.g. Potato, Wheat)..."
+                        className="w-full bg-white border border-gray-200 text-gray-900 rounded-2xl py-3 pl-12 pr-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:border-green-500 transition-all font-medium placeholder-gray-400"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                    <Search className="absolute left-4 top-3.5 text-gray-400" size={20} />
+                </div>
             </div>
 
-            {/* Personal Effiency Card */}
-            <div className="px-4 space-y-4">
-                {loading ? (
-                    <div className="text-center py-10 text-gray-400">{t('leaderboard.loading_stats')}</div>
-                ) : rankings.find(r => r.user_id === (supabase.auth.getSession() as any)?.user?.id) || rankings[0] ? ( // Fallback to first if filtering works
-                    (() => {
-                        return null;
-                    })() || (
-                        <div className="bg-gradient-to-br from-green-50 to-white border border-green-100 p-6 rounded-3xl shadow-sm relative overflow-hidden">
-                            <div className="absolute top-0 right-0 p-4 opacity-10">
-                                <Trophy size={100} className="text-green-600" />
+            {/* Content */}
+            <div className="pt-4 space-y-2">
+                {isSearching ? (
+                    <div className="px-6">
+                        <h2 className="text-lg font-bold text-gray-900 mb-4">Search Results</h2>
+                        {searchResults.length > 0 ? (
+                            <div className="grid grid-cols-2 gap-4">
+                                {searchResults.map((crop, i) => renderCropCard(crop, i))}
                             </div>
-                            <h3 className="text-gray-500 text-xs font-bold uppercase tracking-wider mb-2">{t('leaderboard.your_efficiency_score')}</h3>
-                            {rankings.length > 0 ? (
-                                <div>
-                                    <div className="flex items-baseline gap-1">
-                                        <span className="text-5xl font-black text-gray-900">{rankings.find(r => r.name !== 'Unknown')?.score || '0'}</span>
-                                        <span className="text-lg font-bold text-green-600">₹ / kL</span>
-                                    </div>
-                                    <p className="text-sm text-gray-500 mt-2 max-w-[80%]">
-                                        {t('leaderboard.efficiency_explanation_1')} <span className="font-bold text-gray-900">₹{rankings[0]?.score}</span> {t('leaderboard.efficiency_explanation_2')}
-                                    </p>
+                        ) : (
+                            <div className="text-center py-12 text-gray-400">
+                                <p>{searchQuery ? 'No crops found.' : 'Type to search...'}</p>
+                            </div>
+                        )}
+                    </div>
+                ) : loading ? (
+                    <div className="flex justify-center py-20">
+                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div>
+                    </div>
+                ) : overview ? (
+                    <>
+                        {renderSection("Growing Fast", <TrendingUp size={20} />, overview.trending, "bg-green-500")}
+                        {renderSection("All Time Best", <Award size={20} />, overview.allTimeBest, "bg-yellow-500")}
+                        {renderSection("High Demand", <Activity size={20} />, overview.highDemand, "bg-blue-500")}
+                        {renderSection("Depreciating", <TrendingDown size={20} />, overview.depreciating, "bg-red-500")}
+
+                        <div className="px-6 py-4">
+                            <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-6 text-white shadow-lg relative overflow-hidden">
+                                <div className="relative z-10">
+                                    <h3 className="font-bold text-lg mb-1">Need specific insights?</h3>
+                                    <p className="text-indigo-100 text-sm mb-3">Get detailed price forecasts for your upcoming harvest.</p>
+                                    <button className="bg-white text-indigo-600 px-4 py-2 rounded-lg text-sm font-bold shadow-sm active:scale-95 transition-transform">
+                                        Analyze Profit
+                                    </button>
                                 </div>
-                            ) : (
-                                <div className="py-4">
-                                    <p className="text-gray-400">{t('leaderboard.add_crops')}</p>
+                                <div className="absolute -bottom-8 -right-8 opacity-20 rotate-12">
+                                    <Activity size={150} />
                                 </div>
-                            )}
+                            </div>
                         </div>
-                    )
-                ) : null}
+                    </>
+                ) : (
+                    <div className="text-center text-gray-400 py-10 px-6">
+                        <p className="mb-2">Failed to load market data for {locationState}.</p>
+                        <button onClick={() => fetchMarketSnapshot(locationState)} className="text-green-600 font-bold hover:underline">Retry</button>
+                    </div>
+                )}
             </div>
 
-            <style>{`
-                @keyframes marquee {
-                    0% { transform: translateX(0); }
-                    100% { transform: translateX(-50%); }
-                }
-                .animate-marquee {
-                    animation: marquee 20s linear infinite;
-                }
-            `}</style>
+
         </div>
     );
 };
 
-export default Leaderboard;
+export default Marketplace;

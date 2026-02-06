@@ -1,249 +1,264 @@
-
 import axios from 'axios';
 
-export interface MarketPrice {
+// ============================================================================
+// INTERFACES
+// ============================================================================
+
+export interface CropPrice {
     commodity: string;
     market: string;
-    modalPrice: number;        // ₹/quintal (most common price)
+    state: string;
+    modalPrice: number;        // ₹/quintal
     minPrice: number;
     maxPrice: number;
+    arrivalQuantity: number;   // quintals
     date: Date;
-    trend: 'UP' | 'DOWN' | 'STABLE';
-    confidence: number;        // 0-100 (data reliability)
-    arrivals: number;          // Quantity arrived at mandi (quintals)
+    trend: 'GROWING' | 'DEPRECIATING' | 'STABLE';
+    changePercent: number;     // % change in last 7 days
+    demand: 'HIGH' | 'MEDIUM' | 'LOW';
 }
 
-export interface PriceHistory {
-    commodity: string;
-    prices: Array<{
-        date: Date;
-        price: number;
-    }>;
-    averagePrice30Days: number;
-    volatility: number;        // Standard deviation
+export interface MarketSnapshot {
+    trending: CropPrice[];      // Growing prices
+    allTimeBest: CropPrice[];   // Highest profits historically
+    depreciating: CropPrice[];  // Falling prices
+    highDemand: CropPrice[];    // High arrival quantities
+    allCrops: CropPrice[];      // Complete list for search
+    lastUpdated: Date;
 }
 
-export interface CropPriceMap {
-    [cropId: string]: {
-        currentPrice: number;     // ₹/ton (Converted from Quintal)
-        msp: number | null;       // Minimum Support Price
-        trend: 'UP' | 'DOWN' | 'STABLE';
-        lastUpdated: Date;
+// ============================================================================
+// CACHE
+// ============================================================================
+
+interface CacheEntry {
+    data: MarketSnapshot;
+    timestamp: number;
+}
+
+class MarketCache {
+    private cache: CacheEntry | null = null;
+    private TTL_MS = 6 * 60 * 60 * 1000; // 6 hours
+
+    set(data: MarketSnapshot): void {
+        this.cache = {
+            data,
+            timestamp: Date.now()
+        };
+    }
+
+    get(): MarketSnapshot | null {
+        if (!this.cache) return null;
+        if (Date.now() - this.cache.timestamp > this.TTL_MS) {
+            this.cache = null;
+            return null;
+        }
+        return this.cache.data;
+    }
+
+    clear(): void {
+        this.cache = null;
+    }
+}
+
+const marketCache = new MarketCache();
+
+// ============================================================================
+// MOCK DATA (Fallback - Replace with real API)
+// ============================================================================
+
+const MOCK_COMMODITIES = [
+    'Cotton', 'Wheat', 'Paddy', 'Soybean', 'Maize', 'Jowar', 'Bajra',
+    'Sugarcane', 'Onion', 'Potato', 'Tomato', 'Chilli', 'Turmeric',
+    'Groundnut', 'Sunflower', 'Mustard', 'Gram', 'Tur', 'Moong',
+    'Urad', 'Masoor', 'Pomegranate', 'Grapes', 'Banana', 'Mango',
+    'Rice', 'Orange', 'Apple', 'Garlic', 'Ginger', 'Cabbage',
+    'Cauliflower', 'Brinjal', 'Okra', 'Coconut', 'Papaya', 'Guava',
+    'Spinach', 'Fenugreek', 'Coriander', 'Lemon', 'Mosambi'
+];
+
+function generateMockPrice(commodity: string, state: string = 'Uttar Pradesh'): CropPrice {
+    const basePrice = Math.floor(Math.random() * 5000) + 1500;
+    const change = (Math.random() - 0.5) * 20; // -10% to +10%
+    const arrival = Math.floor(Math.random() * 50000) + 1000;
+
+    return {
+        commodity,
+        market: `${state.split(' ')[0]} Mandi`,
+        state: state,
+        modalPrice: basePrice,
+        minPrice: basePrice * 0.9,
+        maxPrice: basePrice * 1.1,
+        arrivalQuantity: arrival,
+        date: new Date(),
+        trend: change > 3 ? 'GROWING' : change < -3 ? 'DEPRECIATING' : 'STABLE',
+        changePercent: parseFloat(change.toFixed(2)),
+        demand: arrival > 30000 ? 'HIGH' : arrival > 15000 ? 'MEDIUM' : 'LOW'
     };
 }
 
-export class MarketPriceService {
-    private static API_KEY = process.env.DATA_GOV_IN_API_KEY || ''; // Ensure this is set in .env
-    private static BASE_URL = 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070';
+// ============================================================================
+// MARKET PRICE SERVICE
+// ============================================================================
 
-    // In-memory cache: Key = "commodity_market_date", Value = MarketPrice
-    private static cache = new Map<string, { data: MarketPrice, expires: number }>();
-    private static CACHE_TTL = 6 * 60 * 60 * 1000; // 6 Hours
+export class MarketPriceService {
+    private static API_KEY = '579b464db66ec23bdd0000011b2fcab683764ffe7055911229777786';
 
     /**
-     * Get Live Price for a Commodity (e.g., "Wheat", "Paddy(Dhan)")
+     * Get complete market snapshot with categorized crops
      */
-    static async getLivePrice(commodity: string, market: string = 'Prayagraj'): Promise<MarketPrice | null> {
-        const today = new Date().toISOString().split('T')[0];
-        const cacheKey = `price_${commodity}_${market}_${today}`;
+    static async getMarketSnapshot(state: string = 'Uttar Pradesh'): Promise<MarketSnapshot> {
 
-        // 1. Check Cache
-        const cached = this.cache.get(cacheKey);
-        if (cached && cached.expires > Date.now()) {
-            return cached.data;
+        // Check cache
+        const cached = marketCache.get();
+        if (cached) {
+            console.log('[MarketPrice] Returning cached snapshot');
+            return cached;
         }
 
+        console.log('[MarketPrice] Fetching fresh market data...');
+
+        let apiCrops: CropPrice[] = [];
+
         try {
-            // 2. Fetch from Agmarknet API
-            // Note: In a real scenario, we might need more complex filtering if the API format changes
-            const response = await axios.get(this.BASE_URL, {
+            // STRATEGY 1: Fetch from Agmarknet API
+            const apiSnapshot = await this.fetchFromAgmarknet(state);
+            if (apiSnapshot) {
+                apiCrops = apiSnapshot.allCrops;
+            }
+        } catch (error) {
+            console.warn('[MarketPrice] Agmarknet API failed, using full mock data');
+        }
+
+        // STRATEGY 2: Generate Mock Data for gaps
+        const mockCrops = MOCK_COMMODITIES.map(c => generateMockPrice(c, state));
+
+        // STRATEGY 3: Merge (Real data takes precedence)
+        const mergedCropsMap = new Map<string, CropPrice>();
+
+        // 1. Add all mock crops first
+        mockCrops.forEach(crop => mergedCropsMap.set(crop.commodity.toLowerCase(), crop));
+
+        // 2. Overwrite with real API data where available
+        apiCrops.forEach(crop => mergedCropsMap.set(crop.commodity.toLowerCase(), crop));
+
+        const allCrops = Array.from(mergedCropsMap.values());
+
+        const snapshot: MarketSnapshot = {
+            trending: allCrops.filter(c => c.trend === 'GROWING').slice(0, 10),
+            allTimeBest: allCrops.sort((a, b) => b.modalPrice - a.modalPrice).slice(0, 10),
+            depreciating: allCrops.filter(c => c.trend === 'DEPRECIATING').slice(0, 10),
+            highDemand: allCrops.filter(c => c.demand === 'HIGH').slice(0, 10),
+            allCrops: allCrops.sort((a, b) => a.commodity.localeCompare(b.commodity)),
+            lastUpdated: new Date()
+        };
+
+        marketCache.set(snapshot);
+        return snapshot;
+    }
+
+    /**
+     * Search crops by name
+     */
+    static async searchCrops(query: string, state: string = 'Uttar Pradesh'): Promise<CropPrice[]> {
+        const snapshot = await this.getMarketSnapshot(state);
+        const lowerQuery = query.toLowerCase();
+
+        return snapshot.allCrops.filter(crop =>
+            crop.commodity.toLowerCase().includes(lowerQuery)
+        );
+    }
+
+    /**
+     * Get single crop price
+     */
+    static async getCropPrice(commodity: string, state: string = 'Uttar Pradesh'): Promise<CropPrice | null> {
+        const snapshot = await this.getMarketSnapshot(state);
+        return snapshot.allCrops.find(c =>
+            c.commodity.toLowerCase() === commodity.toLowerCase()
+        ) || null;
+    }
+
+    /**
+     * Get live ticker data (top 5 crops)
+     */
+    static async getLiveTicker(state: string = 'Uttar Pradesh'): Promise<CropPrice[]> {
+        const snapshot = await this.getMarketSnapshot(state);
+
+        // Mix of growing and high-value crops
+        const growing = snapshot.trending.slice(0, 2);
+        const highValue = snapshot.allTimeBest.slice(0, 3);
+
+        return [...growing, ...highValue].slice(0, 5);
+    }
+
+    // ==========================================================================
+    // PRIVATE: Agmarknet API Integration
+    // ==========================================================================
+
+    private static async fetchFromAgmarknet(state: string): Promise<MarketSnapshot | null> {
+        try {
+            // Agmarknet API endpoint (requires API key)
+            const url = 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070';
+
+            const response = await axios.get(url, {
                 params: {
                     'api-key': this.API_KEY,
-                    format: 'json',
-                    limit: 30, // Get enough records to calculate trend if needed
-                    'filters[commodity_name]': commodity,
-                    // 'filters[market_name]': market, // Optional: Filter by specific market or get average
-                    'sort[arrival_date]': 'desc'
+                    'format': 'json',
+                    'filters[state]': state,
+                    'limit': 100
                 },
-                timeout: 5000
+                timeout: 10000
             });
 
+            if (!response.data || !response.data.records || response.data.records.length === 0) {
+                throw new Error('No data received');
+            }
+
             const records = response.data.records;
-            if (!records || records.length === 0) return null;
 
-            // 3. Process Data
-            // Find record for the requested market, or fallback to the first record (nearest available)
-            const record = records.find((r: any) => r.market_name?.toLowerCase() === market.toLowerCase()) || records[0];
-
-            const trend = this.calculateTrend(records);
-
-            const marketPrice: MarketPrice = {
-                commodity: record.commodity_name,
-                market: record.market_name,
+            // Transform API data
+            const allCrops: CropPrice[] = records.map((record: any) => ({
+                commodity: record.commodity,
+                market: record.market,
+                state: record.state,
                 modalPrice: parseFloat(record.modal_price),
                 minPrice: parseFloat(record.min_price),
                 maxPrice: parseFloat(record.max_price),
+                arrivalQuantity: parseFloat(record.arrival_quantity || record.arrivals || 0),
                 date: new Date(record.arrival_date),
-                trend: trend,
-                confidence: 85, // Simple static confidence for now
-                arrivals: parseFloat(record.arrival_quantity || '0')
+                trend: this.calculateTrend(record),
+                changePercent: 0, // Would need historical data
+                demand: parseFloat(record.arrival_quantity || record.arrivals || 0) > 1000 ? 'HIGH' : 'MEDIUM'
+            }));
+
+            // Categorize
+            return {
+                trending: allCrops.filter(c => c.trend === 'GROWING').slice(0, 10),
+                allTimeBest: allCrops.sort((a, b) => b.modalPrice - a.modalPrice).slice(0, 10),
+                depreciating: allCrops.filter(c => c.trend === 'DEPRECIATING').slice(0, 10),
+                highDemand: allCrops.filter(c => c.demand === 'HIGH').slice(0, 10),
+                allCrops: allCrops,
+                lastUpdated: new Date()
             };
 
-            // 4. Update Cache
-            this.cache.set(cacheKey, {
-                data: marketPrice,
-                expires: Date.now() + this.CACHE_TTL
-            });
-
-            return marketPrice;
-
         } catch (error) {
-            console.warn(`[MarketPriceService] Failed to fetch price for ${commodity}:`, error);
+            console.error('[MarketPrice] Agmarknet error:', error);
             return null;
         }
     }
 
-    /**
-     * Get Price History & Volatility
-     */
-    static async getPriceHistory(commodity: string, days: number = 90): Promise<PriceHistory> {
-        // In a real implementation, we would query a historical database or make a wider API call.
-        // For prototype, we will return a simulated history based on current price if API fails 
-        // or a limited history from the live fetch if available.
+    private static calculateTrend(record: any): 'GROWING' | 'DEPRECIATING' | 'STABLE' {
+        // Simple heuristic: if max > modal significantly, growing demand
+        const modal = parseFloat(record.modal_price);
+        const max = parseFloat(record.max_price);
+        if (!modal || !max) return 'STABLE';
 
-        // Mocking logic for stability in this phase:
-        const current = await this.getLivePrice(commodity) || { modalPrice: 2200 }; // Default fallback
-        const basePrice = current.modalPrice;
-
-        const history: Array<{ date: Date; price: number }> = [];
-        let runningSum = 0;
-        const prices: number[] = [];
-
-        for (let i = 0; i < 30; i++) {
-            const d = new Date();
-            d.setDate(d.getDate() - i);
-            // Simulate slight volatility
-            const variance = (Math.random() - 0.5) * (basePrice * 0.1);
-            const p = basePrice + variance;
-            history.push({ date: d, price: p });
-            prices.push(p);
-            runningSum += p;
-        }
-
-        const avg = runningSum / 30;
-        const varianceSum = prices.reduce((acc, val) => acc + Math.pow(val - avg, 2), 0);
-        const volatility = Math.sqrt(varianceSum / 30);
-
-        return {
-            commodity,
-            prices: history,
-            averagePrice30Days: parseFloat(avg.toFixed(2)),
-            volatility: parseFloat(volatility.toFixed(2))
-        };
-    }
-
-    /**
-     * Bulk fetch prices for multiple crops
-     */
-    static async getAllCropPrices(district: string, cropIds: string[]): Promise<CropPriceMap> {
-        const resultMap: CropPriceMap = {};
-
-        const promises = cropIds.map(async (cropId) => {
-            const commodityName = this.mapCropIdToCommodity(cropId);
-            const liveData = await this.getLivePrice(commodityName, district); // Use district as market proxy
-
-            const currentPriceQuintal = liveData ? liveData.modalPrice : this.getFallbackPrice(cropId);
-            const currentPriceTon = currentPriceQuintal * 10; // Convert ₹/Quintal to ₹/Ton
-
-            resultMap[cropId] = {
-                currentPrice: currentPriceTon,
-                msp: this.getMSP(cropId), // Already returns value in ₹/Ton if implemented, or we fix below
-                trend: liveData ? liveData.trend : 'STABLE',
-                lastUpdated: new Date()
-            };
-        });
-
-        await Promise.all(promises);
-        return resultMap;
-    }
-
-    /**
-     * Get Government Minimum Support Price (₹/Quintal converted to ₹/Ton)
-     */
-    static getMSP(cropId: string, year: number = 2024): number | null {
-        // Hardcoded Government MSP Data (2024-25) in ₹/Quintal
-        const mspDatabase: Record<string, number> = {
-            'wheat_lokwan': 2275,
-            'paddy_basmati': 2300,
-            'paddy_common': 2183,
-            'sugarcane_1': 340, // FRP (Fair Remunerative Price)
-            'cotton_bt': 6620, // Medium Staple
-            'soybean_js': 4600,
-            'gram_chana': 5440,
-            'tur_arhar': 7000,
-            'moong': 8558,
-            'maize_rabbi': 2090,
-            'jowar_hybrid': 3180,
-            'bajra': 2500
-        };
-
-        const priceQuintal = mspDatabase[cropId];
-        if (!priceQuintal) return null;
-
-        return priceQuintal * 10; // Return in ₹/Ton
-    }
-
-    // --- Private Helpers ---
-
-    private static calculateTrend(records: any[]): 'UP' | 'DOWN' | 'STABLE' {
-        if (records.length < 14) return 'STABLE';
-
-        // Simple moving average comparison
-        const recent = records.slice(0, 7);
-        const older = records.slice(7, 14);
-
-        const avgRecent = recent.reduce((sum: number, r: any) => sum + parseFloat(r.modal_price), 0) / recent.length;
-        const avgOlder = older.reduce((sum: number, r: any) => sum + parseFloat(r.modal_price), 0) / older.length;
-
-        const changePercent = ((avgRecent - avgOlder) / avgOlder) * 100;
-
-        if (changePercent > 5) return 'UP';
-        if (changePercent < -5) return 'DOWN';
+        const spread = (max - modal) / modal;
+        if (spread > 0.02) return 'GROWING';
+        if (spread < -0.02) return 'DEPRECIATING';
         return 'STABLE';
     }
-
-    private static mapCropIdToCommodity(cropId: string): string {
-        // Map internal Crop IDs to Agmarknet Commodity Names
-        // This mapping needs to be accurate for API hits
-        const map: Record<string, string> = {
-            'wheat_lokwan': 'Wheat',
-            'sugarcane_1': 'Sugarcane',
-            'paddy_basmati': 'Paddy(Dhan)(Basmati)',
-            'cotton_bt': 'Cotton',
-            'gram_chana': 'Gram Raw(Chholia)',
-            'soybean_js': 'Soyabean',
-            'jowar_hybrid': 'Jowar(Sorgum)',
-            'bajra': 'Bajra(Pearl Millet/Cumbu)',
-            'maize_rabbi': 'Maize',
-            'onion_red': 'Onion',
-            'tomato_hybrid': 'Tomato',
-            'potato_agra': 'Potato'
-        };
-
-        return map[cropId] || 'Wheat'; // Default fallback
-    }
-
-    private static getFallbackPrice(cropId: string): number {
-        // Fallback prices in ₹/Quintal if API fails
-        const fallback: Record<string, number> = {
-            'wheat_lokwan': 2300,
-            'sugarcane_1': 350,
-            'paddy_basmati': 2500,
-            'cotton_bt': 6800,
-            'gram_chana': 5600,
-            'soybean_js': 4700,
-            'default': 2000
-        };
-        return fallback[cropId] || fallback['default'];
-    }
 }
+
+export default MarketPriceService;
