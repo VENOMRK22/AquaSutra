@@ -925,3 +925,31 @@
 [2026-02-06T20:10:15.405Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.178458&lon=72.9476815
 [2026-02-06T20:10:15.521Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
 [2026-02-06T20:10:16.203Z] GET /api/water/score?lat=19.178458&lon=72.9476815&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T20:11:44.223Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:11:44.227Z] GET /api/inference/market-prices?district=Ahmednagar
+[2026-02-06T20:11:48.175Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T20:11:48.176Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T20:11:48.176Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T20:11:48.177Z MarketPriceService returned
+[HydroEngine] 2026-02-06T20:11:48.178Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T20:11:48.178Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T20:11:48.178Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T20:11:48.179Z STEP 5: User Intent
+[ProfitCalc] Maize (Rabi): Yield=3.5T, Price=18500, Rev=64750, Cost=25065 (Input=18000 + Water=7065), Net=39685
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=68000, Rev=61200, Cost=20439 (Input=14000 + Water=6439), Net=40761
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Cotton (Bt Hybrid): Yield=1.2T, Price=65000, Rev=78000, Cost=27691 (Input=20000 + Water=7691), Net=50309
+[2026-02-06T20:11:50.464Z] POST /api/inference/compare-crops
+[HydroEngine] 2026-02-06T20:11:50.465Z STEP 1: Fetching Market Prices
+[HydroEngine] 2026-02-06T20:11:50.466Z Calling MarketPriceService.getAllCropPrices
+[HydroEngine] 2026-02-06T20:11:50.467Z MarketPriceService returned
+[HydroEngine] 2026-02-06T20:11:50.467Z STEP 2: Groundwater Depth
+[HydroEngine] 2026-02-06T20:11:50.467Z STEP 3: Block Classification
+[HydroEngine] 2026-02-06T20:11:50.467Z STEP 4: Available Water
+[HydroEngine] 2026-02-06T20:11:50.468Z STEP 5: User Intent
+[ProfitCalc] Maize (Rabi): Yield=3.5T, Price=18500, Rev=64750, Cost=25065 (Input=18000 + Water=7065), Net=39685
+[ProfitCalc] Gram (Chana): Yield=0.9T, Price=68000, Rev=61200, Cost=20439 (Input=14000 + Water=6439), Net=40761
+[ProfitCalc] Soybean (JS-335): Yield=1T, Price=46000, Rev=46000, Cost=22909 (Input=16000 + Water=6909), Net=23091
+[ProfitCalc] Sugarcane (Adsali): Yield=6T, Price=3150, Rev=18900, Cost=63325 (Input=50000 + Water=13325), Net=-44425
+[ProfitCalc] Cotton (Bt Hybrid): Yield=1.2T, Price=65000, Rev=78000, Cost=27691 (Input=20000 + Water=7691), Net=50309
