@@ -1,596 +1,2612 @@
-[2026-02-04T18:39:47.712Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:39:48.151Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 253000 | Water: 10924200 | Score: 23.159590633639077
-[2026-02-04T18:39:48.184Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:39:48.282Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 240000 | Water: 10924200 | Score: 21.96957214258252
-[2026-02-04T18:39:57.972Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:39:58.317Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 253000 | Water: 10924200 | Score: 23.159590633639077
-[2026-02-04T18:39:58.358Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:39:58.753Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 253000 | Water: 10924200 | Score: 23.159590633639077
-[2026-02-04T18:40:03.427Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:40:03.517Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 240000 | Water: 10924200 | Score: 21.96957214258252
-[2026-02-04T18:40:03.555Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:40:03.652Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 240000 | Water: 10924200 | Score: 21.96957214258252
-[2026-02-04T18:41:17.317Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:41:18.152Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 6554520 | Score: 21.96957214258252
-[2026-02-04T18:41:18.239Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:41:18.615Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 6554520 | Score: 21.96957214258252
-[2026-02-04T18:41:20.670Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:41:20.963Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 6554520 | Score: 21.96957214258252
-[2026-02-04T18:41:21.009Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:41:21.295Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 6554520 | Score: 21.96957214258252
-[2026-02-04T18:41:25.265Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:41:25.674Z] [Leaderboard] Farm 8dd464ba-c680-44a2-b3c7-995e5934bf91 (User: 4bc7acb3-81b1-42db-9a81-4296a009f2db) SKIPPED: No Crops
-[2026-02-04T18:41:25.727Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:41:26.317Z] [Leaderboard] Farm 8dd464ba-c680-44a2-b3c7-995e5934bf91 (User: 4bc7acb3-81b1-42db-9a81-4296a009f2db) SKIPPED: No Crops
-[2026-02-04T18:41:27.217Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:41:27.296Z] [Leaderboard] Farm 8dd464ba-c680-44a2-b3c7-995e5934bf91 (User: 4bc7acb3-81b1-42db-9a81-4296a009f2db) SKIPPED: No Crops
-[2026-02-04T18:41:27.324Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:41:27.419Z] [Leaderboard] Farm 8dd464ba-c680-44a2-b3c7-995e5934bf91 (User: 4bc7acb3-81b1-42db-9a81-4296a009f2db) SKIPPED: No Crops
-[2026-02-04T18:41:42.152Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:41:42.247Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:41:42.279Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:41:42.387Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:42:51.354Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:42:51.478Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:42:51.478Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:42:51.512Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:42:52.029Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:42:52.030Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:45:20.799Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:45:21.165Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:45:21.165Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:45:21.195Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:45:21.503Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:45:21.503Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:45:53.789Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:45:54.143Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:45:54.143Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:45:54.183Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:45:54.273Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:45:54.273Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:48:21.125Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:48:24.247Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:48:24.247Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:48:24.279Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:48:24.643Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:48:24.643Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:49:38.694Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:49:39.096Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:49:39.097Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:49:39.132Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:49:39.628Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:49:39.628Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:49:42.776Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:49:43.148Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:49:43.149Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:49:43.183Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:49:45.648Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:49:45.649Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:50:00.611Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:50:01.024Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:50:01.024Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:50:01.062Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:50:01.152Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:50:01.153Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:51:20.172Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:51:20.525Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:51:20.525Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:51:20.561Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:51:20.868Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:51:20.868Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:51:40.686Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:51:40.794Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:51:40.794Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:51:40.861Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:51:41.288Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:51:41.289Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:52:46.599Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:52:46.959Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:52:46.960Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:52:46.995Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:52:47.379Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:52:47.379Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:53:38.369Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:53:38.715Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:53:38.715Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:53:38.753Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:53:38.856Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:53:38.856Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:54:21.073Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:54:21.180Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:54:21.180Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:54:21.211Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:54:21.308Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:54:21.309Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:54:34.724Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:54:35.100Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:54:35.130Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:54:35.432Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:54:37.261Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:54:37.365Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:54:37.366Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:54:37.409Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:54:37.499Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:54:37.499Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T18:54:48.455Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:54:48.556Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T18:54:48.590Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T18:54:48.989Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:11:26.025Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:11:26.173Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:11:26.173Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T19:11:26.215Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:11:26.308Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:11:26.308Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T19:11:54.511Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:11:54.707Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:11:54.707Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T19:11:54.817Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:11:55.171Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:11:55.171Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T19:12:38.546Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:12:38.963Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:12:38.963Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T19:12:39.035Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:12:39.163Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:12:39.164Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T19:15:07.088Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:15:22.145Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:15:26.281Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:15:26.282Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T19:15:26.377Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:15:39.192Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:15:40.071Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:15:43.219Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:15:43.632Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:15:43.633Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T19:15:43.663Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:15:44.080Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:15:44.080Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T19:15:46.746Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:15:46.747Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T19:15:47.433Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:15:47.434Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T19:15:47.457Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:15:47.762Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:15:47.795Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:15:48.107Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:15:49.490Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:15:49.862Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:15:49.862Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-04T19:15:49.891Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-04T19:15:50.302Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-04T19:15:50.303Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:39:57.881Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:39:58.382Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:39:58.383Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:39:58.435Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:39:58.807Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:39:58.807Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:40:56.640Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:40:56.782Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:40:56.782Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:40:56.826Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:40:57.243Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:40:57.243Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:41:39.834Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:41:39.960Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:41:39.960Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:41:40.001Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:41:40.381Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:41:40.381Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:41:48.444Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:41:48.558Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:41:48.558Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:41:48.601Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:41:48.995Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:41:48.995Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:42:14.024Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:42:14.117Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:42:14.153Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:42:14.569Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:42:16.003Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:42:16.429Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:42:16.429Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:42:16.466Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:42:16.583Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:42:16.584Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:42:47.084Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:42:47.194Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:42:47.229Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:42:47.598Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:46:53.016Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:46:53.427Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:46:53.428Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:46:53.469Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:46:53.579Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:46:53.580Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:47:26.654Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:47:26.761Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:47:26.788Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:47:26.898Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:47:29.277Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:47:29.412Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:47:29.412Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:47:29.446Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:47:29.822Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:47:29.822Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:47:37.835Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:47:38.171Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:47:38.172Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:47:38.206Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:47:38.299Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:47:38.299Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:50:57.694Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:50:57.970Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:50:58.006Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:50:58.335Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:54:07.226Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:54:07.480Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:54:07.480Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:54:07.531Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:54:07.783Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:54:07.783Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:54:12.583Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:54:12.869Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:54:12.870Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T12:54:12.907Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T12:54:13.829Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T12:54:13.829Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T14:08:07.503Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T14:08:08.197Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T14:08:08.197Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T14:08:08.313Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T14:08:08.766Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T14:08:08.766Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T14:09:43.794Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T14:09:43.923Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T14:09:43.924Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T14:09:44.175Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T14:09:44.284Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T14:09:44.284Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T14:10:08.979Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T14:10:09.091Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T14:10:09.091Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T14:10:09.126Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T14:10:09.251Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T14:10:09.251Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T14:10:12.569Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T14:10:12.948Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T14:10:12.948Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T14:10:12.980Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T14:10:13.081Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T14:10:13.081Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T14:10:30.981Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T14:10:31.077Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T14:10:31.116Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T14:10:31.215Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T14:10:36.251Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T14:10:36.365Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T14:10:36.365Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T14:10:36.403Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T14:10:36.763Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T14:10:36.764Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T16:15:50.770Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T16:15:50.937Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T16:15:50.937Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T16:15:50.974Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T16:15:51.074Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T16:15:51.075Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:10:41.593Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:10:41.770Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:10:41.770Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:10:41.844Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:10:41.977Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:10:41.977Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:10:53.534Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:10:53.657Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:10:53.658Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:10:53.697Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:10:53.830Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:10:53.831Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:14:50.393Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:14:50.790Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:14:50.790Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:14:50.825Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:14:50.920Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:14:50.920Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:15:59.804Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:16:00.870Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:16:00.871Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:16:00.913Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:16:01.033Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:16:01.033Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:23:30.083Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:23:30.208Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:23:30.209Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:23:30.251Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:23:30.671Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:23:30.671Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:31:12.911Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:31:13.395Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:31:13.395Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:31:13.451Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:31:13.607Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:31:13.607Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:37:18.359Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:37:27.479Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:37:27.479Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:37:27.978Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:37:28.691Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:37:28.692Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:38:19.135Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:38:20.105Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:38:20.105Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:38:20.215Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:38:20.394Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:38:20.394Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:39:47.431Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:39:47.544Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:39:47.544Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:39:47.623Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:39:47.713Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:39:47.713Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:39:57.909Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:39:58.341Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:39:58.341Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:39:58.370Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:39:58.730Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:39:58.731Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:44:40.380Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:44:40.953Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:44:40.954Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:44:41.000Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:44:41.436Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:44:41.437Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:47:30.177Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:47:30.546Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:47:30.546Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:47:30.583Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:47:30.976Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:47:30.977Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:50:28.252Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:50:28.370Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:50:28.370Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:50:28.460Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:50:28.814Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:50:28.815Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:54:17.120Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:54:17.223Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:54:17.224Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T17:54:17.258Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T17:54:17.540Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T17:54:17.540Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:19:50.259Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:19:50.479Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:19:50.480Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:19:50.517Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:19:50.640Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:19:50.640Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:20:08.395Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:20:08.778Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:20:08.779Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:20:08.884Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:20:08.999Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:20:09.000Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:24:50.522Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:24:50.912Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:24:50.913Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:24:50.965Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:24:51.340Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:24:51.340Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:25:31.862Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:25:32.236Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:25:32.309Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:25:32.652Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:25:34.834Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:25:34.931Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:25:34.932Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:25:34.962Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:25:35.323Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:25:35.323Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:26:41.201Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:26:41.378Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:26:41.379Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:26:41.422Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:26:41.530Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:26:41.530Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:29:05.674Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:29:06.029Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:29:06.029Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:29:06.324Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:29:06.430Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:29:06.430Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:30:07.838Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:30:08.312Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:30:08.312Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:30:08.345Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:30:08.709Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:30:08.709Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:31:05.938Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:31:06.053Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:31:06.054Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:31:06.086Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:31:06.328Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:31:06.329Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:33:48.287Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:33:48.418Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:33:48.418Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:33:48.478Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:33:48.903Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:33:48.903Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:42:38.592Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:42:39.005Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:42:39.006Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:42:39.045Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:42:39.434Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:42:39.434Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:48:48.173Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:48:48.346Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:48:48.347Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:48:48.386Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:48:48.791Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:48:48.791Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:52:24.479Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:52:24.881Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:52:24.882Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T18:52:24.937Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T18:52:25.375Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T18:52:25.375Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:06:45.988Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:06:46.474Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:06:46.474Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:06:46.591Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:06:47.179Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:06:47.180Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:06:54.811Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:06:54.949Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:06:54.950Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:06:55.015Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:06:55.478Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:06:55.478Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:13:47.347Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:13:47.461Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:13:47.462Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:13:47.500Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:13:47.889Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:13:47.890Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:14:20.171Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:14:20.583Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:14:20.584Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:14:20.637Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:14:20.729Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:14:20.729Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:19:54.596Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:19:55.029Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:19:55.030Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:19:55.065Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:19:55.218Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:19:55.218Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:21:36.219Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:21:36.623Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:21:36.624Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:21:36.659Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:21:36.763Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:21:36.764Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:21:52.790Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:21:53.221Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:21:53.253Z] [Leaderboard] Request(UserId=ALL) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:21:53.351Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:21:55.444Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:21:55.753Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:21:55.754Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:21:55.792Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:21:56.277Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:21:56.277Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:26:15.391Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:26:15.775Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:26:15.776Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:26:15.826Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:26:16.280Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:26:16.280Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:27:57.051Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:27:57.478Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:27:57.478Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:27:57.526Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:27:57.906Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:27:57.906Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:29:39.298Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:29:39.395Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:29:39.396Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:29:39.427Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:29:39.889Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:29:39.889Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:31:56.914Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:31:57.025Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:31:57.025Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:31:57.062Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:31:57.154Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:31:57.155Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:35:53.017Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:35:53.471Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:35:53.471Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:36:07.869Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:36:08.274Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:36:08.274Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:36:08.312Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:36:08.804Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:36:08.804Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:36:14.667Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:36:15.013Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:36:15.013Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:36:15.047Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:36:15.154Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:36:15.154Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:36:34.810Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:36:35.136Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:36:35.137Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:36:35.172Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:36:35.257Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:36:35.257Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:37:20.780Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:37:20.894Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:37:20.894Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:37:20.929Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:37:21.047Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:37:21.047Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:37:40.875Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:37:41.272Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:37:41.272Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:37:41.304Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:37:41.404Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:37:41.404Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:38:23.469Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:38:23.799Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:38:23.799Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:39:17.376Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:39:17.755Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:39:17.756Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:39:17.797Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:39:18.159Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:39:18.159Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:40:08.401Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:40:08.509Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:40:08.509Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:40:08.551Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:40:08.656Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 564000 | Water: 34957440 | Score: 16.133904542209038
-[2026-02-05T19:40:08.656Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:41:04.251Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:41:04.347Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T19:41:04.348Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:41:04.383Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:41:04.500Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T19:41:04.500Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:42:37.933Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:42:38.055Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T19:42:38.056Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:42:38.087Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:42:38.486Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T19:42:38.487Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:45:18.029Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:45:18.123Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T19:45:18.123Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:45:18.156Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:45:18.502Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T19:45:18.502Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:47:45.438Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:47:45.533Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T19:47:45.533Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:47:45.682Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:47:45.767Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T19:47:45.767Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:47:45.796Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:47:47.366Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T19:47:47.366Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:48:13.889Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:48:13.984Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T19:48:13.984Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:48:14.015Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:48:14.101Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T19:48:14.101Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:50:55.500Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:50:55.596Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T19:50:55.597Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
-[2026-02-05T19:50:55.627Z] [Leaderboard] Request(UserId=4bc7acb3-81b1-42db-9a81-4296a009f2db) - Fetched 1 farms. IDs: 8dd464ba-c680-44a2-b3c7-995e5934bf91
-[2026-02-05T19:50:55.875Z] [Math] User 4bc7acb3-81b1-42db-9a81-4296a009f2db | Rev: 144000 | Water: 8739360 | Score: 16.47717910693689
-[2026-02-05T19:50:55.875Z] [Filter] Keeping User 4bc7acb3-81b1-42db-9a81-4296a009f2db (Matched Query ID)
+[dotenv@17.2.3] injecting env (11) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[server]: Server is running at http://127.0.0.1:3000
+[2026-02-06T04:17:12.730Z] GET /api/health
+[2026-02-06T04:18:04.885Z] POST /api/inference/compare-crops
+🔍 [HydroEconomic] Starting enhanced recommendations for 413709
+[MarketPriceService] Failed to fetch price for Onion: AxiosError: Request failed with status code 403
+    at settle (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\core\settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\adapters\http.js:798:11)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\core\Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MarketPriceService.getLivePrice (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:59:30)
+    at async <anonymous> (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:153:30)
+    at async Promise.all (index 5)
+    at async MarketPriceService.getAllCropPrices (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:166:9)
+    at async HydroEconomicEngine.getRecommendations (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\HydroEconomicEngine.ts:335:28)
+    at async <anonymous> (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\routes\inference.ts:73:36) {
+  isAxiosError: true,
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 5000,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.13.4',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    params: {
+      'api-key': 'your_api_key_here_get_from_data.gov.in',
+      format: 'json',
+      limit: 30,
+      'filters[commodity_name]': 'Onion',
+      'sort[arrival_date]': 'desc'
+    },
+    method: 'get',
+    url: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Onion&sort%5Barrival_date%5D=desc HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'User-Agent: axios/1.13.4\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: api.data.gov.in\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      options: [Object: null prototype],
+      defaultPort: 443,
+      protocol: 'https:',
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 7,
+      agentKeepAliveTimeoutBuffer: 1000,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Onion&sort%5Barrival_date%5D=desc',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 403,
+      statusMessage: 'Forbidden',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Onion&sort%5Barrival_date%5D=desc',
+      redirects: [],
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 10,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'api.data.gov.in',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Onion&sort%5Barrival_date%5D=desc',
+      _timeout: null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false
+    },
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false,
+    Symbol(kBytesWritten): 0,
+    Symbol(kNeedDrain): false,
+    Symbol(corked): 0,
+    Symbol(kChunkedBuffer): [],
+    Symbol(kChunkedLength): 0,
+    Symbol(kSocket): TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'api.data.gov.in',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'api.data.gov.in',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      Symbol(alpncallback): null,
+      Symbol(res): [TLSWrap],
+      Symbol(verified): true,
+      Symbol(pendingSession): null,
+      Symbol(async_id_symbol): -1,
+      Symbol(kHandle): [TLSWrap],
+      Symbol(lastWriteQueueSize): 0,
+      Symbol(timeout): Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 124540,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        Symbol(refed): false,
+        Symbol(kHasPrimitive): false,
+        Symbol(asyncId): 162,
+        Symbol(triggerId): 160,
+        Symbol(kAsyncContextFrame): undefined
+      },
+      Symbol(kBuffer): null,
+      Symbol(kBufferCb): null,
+      Symbol(kBufferGen): null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kSetNoDelay): false,
+      Symbol(kSetKeepAlive): true,
+      Symbol(kSetKeepAliveInitialDelay): 1,
+      Symbol(kBytesRead): 0,
+      Symbol(kBytesWritten): 0,
+      Symbol(connect-options): [Object]
+    },
+    Symbol(kOutHeaders): [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    Symbol(errored): null,
+    Symbol(kHighWaterMark): 16384,
+    Symbol(kRejectNonStandardBodyWrites): false,
+    Symbol(kUniqueHeaders): null
+  },
+  response: {
+    status: 403,
+    statusText: 'Forbidden',
+    headers: Object [AxiosHeaders] {
+      'content-length': '37',
+      'content-type': 'application/json',
+      date: 'Fri, 06 Feb 2026 04:18:04 GMT',
+      'x-generator': 'tyk.io',
+      'set-cookie': [Array]
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 5000,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      params: [Object],
+      method: 'get',
+      url: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070',
+      allowAbsoluteUrls: true,
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Onion&sort%5Barrival_date%5D=desc HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.13.4\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.data.gov.in\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Onion&sort%5Barrival_date%5D=desc',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.data.gov.in',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kUniqueHeaders): null
+    },
+    data: { error: 'Key not authorised' }
+  },
+  status: 403
+}
+[MarketPriceService] Failed to fetch price for Wheat: AxiosError: Request failed with status code 403
+    at settle (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\core\settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\adapters\http.js:798:11)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\core\Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MarketPriceService.getLivePrice (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:59:30)
+    at async <anonymous> (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:153:30)
+    at async Promise.all (index 4)
+    at async MarketPriceService.getAllCropPrices (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:166:9)
+    at async HydroEconomicEngine.getRecommendations (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\HydroEconomicEngine.ts:335:28)
+    at async <anonymous> (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\routes\inference.ts:73:36) {
+  isAxiosError: true,
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 5000,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.13.4',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    params: {
+      'api-key': 'your_api_key_here_get_from_data.gov.in',
+      format: 'json',
+      limit: 30,
+      'filters[commodity_name]': 'Wheat',
+      'sort[arrival_date]': 'desc'
+    },
+    method: 'get',
+    url: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Wheat&sort%5Barrival_date%5D=desc HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'User-Agent: axios/1.13.4\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: api.data.gov.in\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      options: [Object: null prototype],
+      defaultPort: 443,
+      protocol: 'https:',
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 7,
+      agentKeepAliveTimeoutBuffer: 1000,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Wheat&sort%5Barrival_date%5D=desc',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 403,
+      statusMessage: 'Forbidden',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Wheat&sort%5Barrival_date%5D=desc',
+      redirects: [],
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 10,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'api.data.gov.in',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Wheat&sort%5Barrival_date%5D=desc',
+      _timeout: null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false
+    },
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false,
+    Symbol(kBytesWritten): 0,
+    Symbol(kNeedDrain): false,
+    Symbol(corked): 0,
+    Symbol(kChunkedBuffer): [],
+    Symbol(kChunkedLength): 0,
+    Symbol(kSocket): TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'api.data.gov.in',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'api.data.gov.in',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      Symbol(alpncallback): null,
+      Symbol(res): [TLSWrap],
+      Symbol(verified): true,
+      Symbol(pendingSession): null,
+      Symbol(async_id_symbol): -1,
+      Symbol(kHandle): [TLSWrap],
+      Symbol(lastWriteQueueSize): 0,
+      Symbol(timeout): Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 124553,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        Symbol(refed): false,
+        Symbol(kHasPrimitive): false,
+        Symbol(asyncId): 174,
+        Symbol(triggerId): 172,
+        Symbol(kAsyncContextFrame): undefined
+      },
+      Symbol(kBuffer): null,
+      Symbol(kBufferCb): null,
+      Symbol(kBufferGen): null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kSetNoDelay): false,
+      Symbol(kSetKeepAlive): true,
+      Symbol(kSetKeepAliveInitialDelay): 1,
+      Symbol(kBytesRead): 0,
+      Symbol(kBytesWritten): 0,
+      Symbol(connect-options): [Object]
+    },
+    Symbol(kOutHeaders): [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    Symbol(errored): null,
+    Symbol(kHighWaterMark): 16384,
+    Symbol(kRejectNonStandardBodyWrites): false,
+    Symbol(kUniqueHeaders): null
+  },
+  response: {
+    status: 403,
+    statusText: 'Forbidden',
+    headers: Object [AxiosHeaders] {
+      'content-length': '37',
+      'content-type': 'application/json',
+      date: 'Fri, 06 Feb 2026 04:18:04 GMT',
+      'x-generator': 'tyk.io',
+      'set-cookie': [Array]
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 5000,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      params: [Object],
+      method: 'get',
+      url: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070',
+      allowAbsoluteUrls: true,
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Wheat&sort%5Barrival_date%5D=desc HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.13.4\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.data.gov.in\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Wheat&sort%5Barrival_date%5D=desc',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.data.gov.in',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kUniqueHeaders): null
+    },
+    data: { error: 'Key not authorised' }
+  },
+  status: 403
+}
+[MarketPriceService] Failed to fetch price for Tomato: AxiosError: Request failed with status code 403
+    at settle (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\core\settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\adapters\http.js:798:11)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\core\Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MarketPriceService.getLivePrice (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:59:30)
+    at async <anonymous> (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:153:30)
+    at async Promise.all (index 6)
+    at async MarketPriceService.getAllCropPrices (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:166:9)
+    at async HydroEconomicEngine.getRecommendations (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\HydroEconomicEngine.ts:335:28)
+    at async <anonymous> (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\routes\inference.ts:73:36) {
+  isAxiosError: true,
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 5000,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.13.4',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    params: {
+      'api-key': 'your_api_key_here_get_from_data.gov.in',
+      format: 'json',
+      limit: 30,
+      'filters[commodity_name]': 'Tomato',
+      'sort[arrival_date]': 'desc'
+    },
+    method: 'get',
+    url: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Tomato&sort%5Barrival_date%5D=desc HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'User-Agent: axios/1.13.4\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: api.data.gov.in\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      options: [Object: null prototype],
+      defaultPort: 443,
+      protocol: 'https:',
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 7,
+      agentKeepAliveTimeoutBuffer: 1000,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Tomato&sort%5Barrival_date%5D=desc',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 403,
+      statusMessage: 'Forbidden',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Tomato&sort%5Barrival_date%5D=desc',
+      redirects: [],
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 10,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'api.data.gov.in',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Tomato&sort%5Barrival_date%5D=desc',
+      _timeout: null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false
+    },
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false,
+    Symbol(kBytesWritten): 0,
+    Symbol(kNeedDrain): false,
+    Symbol(corked): 0,
+    Symbol(kChunkedBuffer): [],
+    Symbol(kChunkedLength): 0,
+    Symbol(kSocket): TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'api.data.gov.in',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'api.data.gov.in',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      Symbol(alpncallback): null,
+      Symbol(res): [TLSWrap],
+      Symbol(verified): true,
+      Symbol(pendingSession): null,
+      Symbol(async_id_symbol): -1,
+      Symbol(kHandle): [TLSWrap],
+      Symbol(lastWriteQueueSize): 0,
+      Symbol(timeout): Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 124554,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        Symbol(refed): false,
+        Symbol(kHasPrimitive): false,
+        Symbol(asyncId): 186,
+        Symbol(triggerId): 184,
+        Symbol(kAsyncContextFrame): undefined
+      },
+      Symbol(kBuffer): null,
+      Symbol(kBufferCb): null,
+      Symbol(kBufferGen): null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kSetNoDelay): false,
+      Symbol(kSetKeepAlive): true,
+      Symbol(kSetKeepAliveInitialDelay): 1,
+      Symbol(kBytesRead): 0,
+      Symbol(kBytesWritten): 0,
+      Symbol(connect-options): [Object]
+    },
+    Symbol(kOutHeaders): [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    Symbol(errored): null,
+    Symbol(kHighWaterMark): 16384,
+    Symbol(kRejectNonStandardBodyWrites): false,
+    Symbol(kUniqueHeaders): null
+  },
+  response: {
+    status: 403,
+    statusText: 'Forbidden',
+    headers: Object [AxiosHeaders] {
+      'content-length': '37',
+      'content-type': 'application/json',
+      date: 'Fri, 06 Feb 2026 04:18:04 GMT',
+      'x-generator': 'tyk.io',
+      'set-cookie': [Array]
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 5000,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      params: [Object],
+      method: 'get',
+      url: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070',
+      allowAbsoluteUrls: true,
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Tomato&sort%5Barrival_date%5D=desc HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.13.4\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.data.gov.in\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Tomato&sort%5Barrival_date%5D=desc',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.data.gov.in',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kUniqueHeaders): null
+    },
+    data: { error: 'Key not authorised' }
+  },
+  status: 403
+}
+[MarketPriceService] Failed to fetch price for Sugarcane: AxiosError: Request failed with status code 403
+    at settle (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\core\settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\adapters\http.js:798:11)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\core\Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MarketPriceService.getLivePrice (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:59:30)
+    at async <anonymous> (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:153:30)
+    at async Promise.all (index 0)
+    at async MarketPriceService.getAllCropPrices (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:166:9)
+    at async HydroEconomicEngine.getRecommendations (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\HydroEconomicEngine.ts:335:28)
+    at async <anonymous> (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\routes\inference.ts:73:36) {
+  isAxiosError: true,
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 5000,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.13.4',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    params: {
+      'api-key': 'your_api_key_here_get_from_data.gov.in',
+      format: 'json',
+      limit: 30,
+      'filters[commodity_name]': 'Sugarcane',
+      'sort[arrival_date]': 'desc'
+    },
+    method: 'get',
+    url: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Sugarcane&sort%5Barrival_date%5D=desc HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'User-Agent: axios/1.13.4\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: api.data.gov.in\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      options: [Object: null prototype],
+      defaultPort: 443,
+      protocol: 'https:',
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 7,
+      agentKeepAliveTimeoutBuffer: 1000,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Sugarcane&sort%5Barrival_date%5D=desc',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 403,
+      statusMessage: 'Forbidden',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Sugarcane&sort%5Barrival_date%5D=desc',
+      redirects: [],
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 10,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'api.data.gov.in',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Sugarcane&sort%5Barrival_date%5D=desc',
+      _timeout: null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false
+    },
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false,
+    Symbol(kBytesWritten): 0,
+    Symbol(kNeedDrain): false,
+    Symbol(corked): 0,
+    Symbol(kChunkedBuffer): [],
+    Symbol(kChunkedLength): 0,
+    Symbol(kSocket): TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'api.data.gov.in',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'api.data.gov.in',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      Symbol(alpncallback): null,
+      Symbol(res): [TLSWrap],
+      Symbol(verified): true,
+      Symbol(pendingSession): null,
+      Symbol(async_id_symbol): -1,
+      Symbol(kHandle): [TLSWrap],
+      Symbol(lastWriteQueueSize): 0,
+      Symbol(timeout): Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 124587,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        Symbol(refed): false,
+        Symbol(kHasPrimitive): false,
+        Symbol(asyncId): 198,
+        Symbol(triggerId): 196,
+        Symbol(kAsyncContextFrame): undefined
+      },
+      Symbol(kBuffer): null,
+      Symbol(kBufferCb): null,
+      Symbol(kBufferGen): null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kSetNoDelay): false,
+      Symbol(kSetKeepAlive): true,
+      Symbol(kSetKeepAliveInitialDelay): 1,
+      Symbol(kBytesRead): 0,
+      Symbol(kBytesWritten): 0,
+      Symbol(connect-options): [Object]
+    },
+    Symbol(kOutHeaders): [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    Symbol(errored): null,
+    Symbol(kHighWaterMark): 16384,
+    Symbol(kRejectNonStandardBodyWrites): false,
+    Symbol(kUniqueHeaders): null
+  },
+  response: {
+    status: 403,
+    statusText: 'Forbidden',
+    headers: Object [AxiosHeaders] {
+      'content-length': '37',
+      'content-type': 'application/json',
+      date: 'Fri, 06 Feb 2026 04:18:04 GMT',
+      'x-generator': 'tyk.io',
+      'set-cookie': [Array]
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 5000,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      params: [Object],
+      method: 'get',
+      url: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070',
+      allowAbsoluteUrls: true,
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Sugarcane&sort%5Barrival_date%5D=desc HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.13.4\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.data.gov.in\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Sugarcane&sort%5Barrival_date%5D=desc',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.data.gov.in',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kUniqueHeaders): null
+    },
+    data: { error: 'Key not authorised' }
+  },
+  status: 403
+}
+[MarketPriceService] Failed to fetch price for Wheat: AxiosError: Request failed with status code 403
+    at settle (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\core\settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\adapters\http.js:798:11)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\core\Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MarketPriceService.getLivePrice (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:59:30)
+    at async <anonymous> (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:153:30)
+    at async Promise.all (index 2)
+    at async MarketPriceService.getAllCropPrices (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:166:9)
+    at async HydroEconomicEngine.getRecommendations (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\HydroEconomicEngine.ts:335:28)
+    at async <anonymous> (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\routes\inference.ts:73:36) {
+  isAxiosError: true,
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 5000,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.13.4',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    params: {
+      'api-key': 'your_api_key_here_get_from_data.gov.in',
+      format: 'json',
+      limit: 30,
+      'filters[commodity_name]': 'Wheat',
+      'sort[arrival_date]': 'desc'
+    },
+    method: 'get',
+    url: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Wheat&sort%5Barrival_date%5D=desc HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'User-Agent: axios/1.13.4\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: api.data.gov.in\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      options: [Object: null prototype],
+      defaultPort: 443,
+      protocol: 'https:',
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 7,
+      agentKeepAliveTimeoutBuffer: 1000,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Wheat&sort%5Barrival_date%5D=desc',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 403,
+      statusMessage: 'Forbidden',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Wheat&sort%5Barrival_date%5D=desc',
+      redirects: [],
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 10,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'api.data.gov.in',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Wheat&sort%5Barrival_date%5D=desc',
+      _timeout: null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false
+    },
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false,
+    Symbol(kBytesWritten): 0,
+    Symbol(kNeedDrain): false,
+    Symbol(corked): 0,
+    Symbol(kChunkedBuffer): [],
+    Symbol(kChunkedLength): 0,
+    Symbol(kSocket): TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'api.data.gov.in',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'api.data.gov.in',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      Symbol(alpncallback): null,
+      Symbol(res): [TLSWrap],
+      Symbol(verified): true,
+      Symbol(pendingSession): null,
+      Symbol(async_id_symbol): -1,
+      Symbol(kHandle): [TLSWrap],
+      Symbol(lastWriteQueueSize): 0,
+      Symbol(timeout): Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 124628,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        Symbol(refed): false,
+        Symbol(kHasPrimitive): false,
+        Symbol(asyncId): 210,
+        Symbol(triggerId): 208,
+        Symbol(kAsyncContextFrame): undefined
+      },
+      Symbol(kBuffer): null,
+      Symbol(kBufferCb): null,
+      Symbol(kBufferGen): null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kSetNoDelay): false,
+      Symbol(kSetKeepAlive): true,
+      Symbol(kSetKeepAliveInitialDelay): 1,
+      Symbol(kBytesRead): 0,
+      Symbol(kBytesWritten): 0,
+      Symbol(connect-options): [Object]
+    },
+    Symbol(kOutHeaders): [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    Symbol(errored): null,
+    Symbol(kHighWaterMark): 16384,
+    Symbol(kRejectNonStandardBodyWrites): false,
+    Symbol(kUniqueHeaders): null
+  },
+  response: {
+    status: 403,
+    statusText: 'Forbidden',
+    headers: Object [AxiosHeaders] {
+      'content-length': '37',
+      'content-type': 'application/json',
+      date: 'Fri, 06 Feb 2026 04:18:04 GMT',
+      'x-generator': 'tyk.io',
+      'set-cookie': [Array]
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 5000,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      params: [Object],
+      method: 'get',
+      url: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070',
+      allowAbsoluteUrls: true,
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Wheat&sort%5Barrival_date%5D=desc HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.13.4\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.data.gov.in\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Wheat&sort%5Barrival_date%5D=desc',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.data.gov.in',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kUniqueHeaders): null
+    },
+    data: { error: 'Key not authorised' }
+  },
+  status: 403
+}
+[MarketPriceService] Failed to fetch price for Cotton: AxiosError: Request failed with status code 403
+    at settle (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\core\settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\adapters\http.js:798:11)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\core\Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MarketPriceService.getLivePrice (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:59:30)
+    at async <anonymous> (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:153:30)
+    at async Promise.all (index 1)
+    at async MarketPriceService.getAllCropPrices (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:166:9)
+    at async HydroEconomicEngine.getRecommendations (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\HydroEconomicEngine.ts:335:28)
+    at async <anonymous> (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\routes\inference.ts:73:36) {
+  isAxiosError: true,
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 5000,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.13.4',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    params: {
+      'api-key': 'your_api_key_here_get_from_data.gov.in',
+      format: 'json',
+      limit: 30,
+      'filters[commodity_name]': 'Cotton',
+      'sort[arrival_date]': 'desc'
+    },
+    method: 'get',
+    url: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Cotton&sort%5Barrival_date%5D=desc HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'User-Agent: axios/1.13.4\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: api.data.gov.in\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      options: [Object: null prototype],
+      defaultPort: 443,
+      protocol: 'https:',
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 7,
+      agentKeepAliveTimeoutBuffer: 1000,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Cotton&sort%5Barrival_date%5D=desc',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 403,
+      statusMessage: 'Forbidden',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Cotton&sort%5Barrival_date%5D=desc',
+      redirects: [],
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 10,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'api.data.gov.in',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Cotton&sort%5Barrival_date%5D=desc',
+      _timeout: null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false
+    },
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false,
+    Symbol(kBytesWritten): 0,
+    Symbol(kNeedDrain): false,
+    Symbol(corked): 0,
+    Symbol(kChunkedBuffer): [],
+    Symbol(kChunkedLength): 0,
+    Symbol(kSocket): TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'api.data.gov.in',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'api.data.gov.in',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      Symbol(alpncallback): null,
+      Symbol(res): [TLSWrap],
+      Symbol(verified): true,
+      Symbol(pendingSession): null,
+      Symbol(async_id_symbol): -1,
+      Symbol(kHandle): [TLSWrap],
+      Symbol(lastWriteQueueSize): 0,
+      Symbol(timeout): Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 124670,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        Symbol(refed): false,
+        Symbol(kHasPrimitive): false,
+        Symbol(asyncId): 222,
+        Symbol(triggerId): 220,
+        Symbol(kAsyncContextFrame): undefined
+      },
+      Symbol(kBuffer): null,
+      Symbol(kBufferCb): null,
+      Symbol(kBufferGen): null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kSetNoDelay): false,
+      Symbol(kSetKeepAlive): true,
+      Symbol(kSetKeepAliveInitialDelay): 1,
+      Symbol(kBytesRead): 0,
+      Symbol(kBytesWritten): 0,
+      Symbol(connect-options): [Object]
+    },
+    Symbol(kOutHeaders): [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    Symbol(errored): null,
+    Symbol(kHighWaterMark): 16384,
+    Symbol(kRejectNonStandardBodyWrites): false,
+    Symbol(kUniqueHeaders): null
+  },
+  response: {
+    status: 403,
+    statusText: 'Forbidden',
+    headers: Object [AxiosHeaders] {
+      'content-length': '37',
+      'content-type': 'application/json',
+      date: 'Fri, 06 Feb 2026 04:18:04 GMT',
+      'x-generator': 'tyk.io',
+      'set-cookie': [Array]
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 5000,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      params: [Object],
+      method: 'get',
+      url: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070',
+      allowAbsoluteUrls: true,
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Cotton&sort%5Barrival_date%5D=desc HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.13.4\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.data.gov.in\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Cotton&sort%5Barrival_date%5D=desc',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.data.gov.in',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kUniqueHeaders): null
+    },
+    data: { error: 'Key not authorised' }
+  },
+  status: 403
+}
+[MarketPriceService] Failed to fetch price for Gram Raw(Chholia): AxiosError: Request failed with status code 403
+    at settle (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\core\settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\adapters\http.js:798:11)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\node_modules\axios\lib\core\Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async MarketPriceService.getLivePrice (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:59:30)
+    at async <anonymous> (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:153:30)
+    at async Promise.all (index 3)
+    at async MarketPriceService.getAllCropPrices (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\MarketPriceService.ts:166:9)
+    at async HydroEconomicEngine.getRecommendations (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\services\HydroEconomicEngine.ts:335:28)
+    at async <anonymous> (C:\Users\Ranjit Kadam\Documents\AquaSutra\backend\src\routes\inference.ts:73:36) {
+  isAxiosError: true,
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 5000,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.13.4',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    params: {
+      'api-key': 'your_api_key_here_get_from_data.gov.in',
+      format: 'json',
+      limit: 30,
+      'filters[commodity_name]': 'Gram Raw(Chholia)',
+      'sort[arrival_date]': 'desc'
+    },
+    method: 'get',
+    url: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Gram+Raw(Chholia)&sort%5Barrival_date%5D=desc HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'User-Agent: axios/1.13.4\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: api.data.gov.in\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      options: [Object: null prototype],
+      defaultPort: 443,
+      protocol: 'https:',
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {},
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 7,
+      agentKeepAliveTimeoutBuffer: 1000,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Gram+Raw(Chholia)&sort%5Barrival_date%5D=desc',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 403,
+      statusMessage: 'Forbidden',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Gram+Raw(Chholia)&sort%5Barrival_date%5D=desc',
+      redirects: [],
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 10,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'api.data.gov.in',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Gram+Raw(Chholia)&sort%5Barrival_date%5D=desc',
+      _timeout: null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false
+    },
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false,
+    Symbol(kBytesWritten): 0,
+    Symbol(kNeedDrain): false,
+    Symbol(corked): 0,
+    Symbol(kChunkedBuffer): [],
+    Symbol(kChunkedLength): 0,
+    Symbol(kSocket): TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'api.data.gov.in',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'api.data.gov.in',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      Symbol(alpncallback): null,
+      Symbol(res): [TLSWrap],
+      Symbol(verified): true,
+      Symbol(pendingSession): null,
+      Symbol(async_id_symbol): -1,
+      Symbol(kHandle): [TLSWrap],
+      Symbol(lastWriteQueueSize): 0,
+      Symbol(timeout): Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 124684,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        Symbol(refed): false,
+        Symbol(kHasPrimitive): false,
+        Symbol(asyncId): 234,
+        Symbol(triggerId): 232,
+        Symbol(kAsyncContextFrame): undefined
+      },
+      Symbol(kBuffer): null,
+      Symbol(kBufferCb): null,
+      Symbol(kBufferGen): null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kSetNoDelay): false,
+      Symbol(kSetKeepAlive): true,
+      Symbol(kSetKeepAliveInitialDelay): 1,
+      Symbol(kBytesRead): 0,
+      Symbol(kBytesWritten): 0,
+      Symbol(connect-options): [Object]
+    },
+    Symbol(kOutHeaders): [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    Symbol(errored): null,
+    Symbol(kHighWaterMark): 16384,
+    Symbol(kRejectNonStandardBodyWrites): false,
+    Symbol(kUniqueHeaders): null
+  },
+  response: {
+    status: 403,
+    statusText: 'Forbidden',
+    headers: Object [AxiosHeaders] {
+      'content-length': '37',
+      'content-type': 'application/json',
+      date: 'Fri, 06 Feb 2026 04:18:04 GMT',
+      'x-generator': 'tyk.io',
+      'set-cookie': [Array]
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 5000,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      params: [Object],
+      method: 'get',
+      url: 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070',
+      allowAbsoluteUrls: true,
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Gram+Raw(Chholia)&sort%5Barrival_date%5D=desc HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.13.4\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.data.gov.in\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=your_api_key_here_get_from_data.gov.in&format=json&limit=30&filters%5Bcommodity_name%5D=Gram+Raw(Chholia)&sort%5Barrival_date%5D=desc',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.data.gov.in',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kUniqueHeaders): null
+    },
+    data: { error: 'Key not authorised' }
+  },
+  status: 403
+}
+
+✅ [HydroEconomic] Generated 6 recommendations
+🏆 Winner: Tomato (Hybrid) (₹1848/mm, MEDIUM risk)
+[2026-02-06T04:18:46.400Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T04:18:47.179Z] GET /api/farm?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T04:18:48.341Z] GET /api/water/score?lat=19.045100666666666&lon=72.889706&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+🌊 [Backend] Water Score Request Received
+📍 Coords: 19.045100666666666, 72.889706 | Pin: N/A | User: 4bc7acb3-81b1-42db-9a81-4296a009f2db
+🔑 Auth Header Present: true
+[PincodeService] Initialized with 32 records.
+📍 Block Identified: undefined, undefined (undefined)
+[2026-02-06T04:18:48.366Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[API] Leaderboard Request - Village: undefined, UserId: 4bc7acb3-81b1-42db-9a81-4296a009f2db
+[2026-02-06T04:18:48.376Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045100666666666&lon=72.889706
+[WeatherService] API Error: {
+  reason: "Data corrupted at path ''. Cannot initialize ForecastVariableDaily from invalid String value soil_temperature_0cm_mean.",
+  error: true
+}
+[2026-02-06T04:18:49.227Z] GET /api/sowing/status?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db&lat=19.045100666666666&lon=72.889706
+[API] Returned 1 rankings
+[2026-02-06T04:18:49.284Z] GET /api/leaderboard?userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+[API] Leaderboard Request - Village: undefined, UserId: 4bc7acb3-81b1-42db-9a81-4296a009f2db
+[WeatherService] API Error: {
+  reason: "Data corrupted at path ''. Cannot initialize ForecastVariableDaily from invalid String value soil_temperature_0cm_mean.",
+  error: true
+}
+[CGWB] API failed for Mumbai, using fallback data.
+[CGWB] Returning cached status for Mumbai, Mumbai Suburban
+[API] Returned 1 rankings
+[2026-02-06T04:18:50.670Z] GET /api/water/score?lat=19.045100666666666&lon=72.889706&userId=4bc7acb3-81b1-42db-9a81-4296a009f2db
+🌊 [Backend] Water Score Request Received
+📍 Coords: 19.045100666666666, 72.889706 | Pin: N/A | User: 4bc7acb3-81b1-42db-9a81-4296a009f2db
+🔑 Auth Header Present: true
+📍 Block Identified: undefined, undefined (undefined)
+[LocationService] Cache Hit for 19.045,72.890
+[CGWB] Returning cached status for Mumbai, Mumbai Suburban
+[CGWB] Returning cached status for Mumbai, Mumbai Suburban
