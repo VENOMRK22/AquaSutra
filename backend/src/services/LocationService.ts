@@ -113,4 +113,26 @@ export class LocationService {
             };
         }
     }
+
+    static async getDistrictFromPincode(pincode: string): Promise<BlockInfo | null> {
+        // Mock implementation
+        if (pincode === '421503') {
+            return {
+                pincode,
+                district: 'Thane',
+                block: 'Badlapur',
+                state: 'Maharashtra',
+                confidence: 100,
+                source: 'CACHE'
+            };
+        }
+        return {
+            pincode,
+            district: 'Prayagraj', // Default fallback
+            block: 'Chaka',
+            state: 'Uttar Pradesh',
+            confidence: 50,
+            source: 'FALLBACK_NEAREST'
+        };
+    }
 }

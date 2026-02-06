@@ -1,10 +1,13 @@
+import { MarketPriceService } from './MarketPriceService';
 
-import { MarketPriceService, CropPriceMap } from './MarketPriceService';
+type CropPriceMap = Record<string, { currentPrice: number; msp: number; trend: 'UP' | 'DOWN' | 'STABLE'; lastUpdated: Date; }>;
 import { WaterCostCalculator, WaterCostBreakdown } from './WaterCostCalculator';
 import { YieldAdjustmentService } from './YieldAdjustmentService';
 import { CropRiskAssessment, RiskAssessment } from './CropRiskAssessment';
 import { CGWBService } from './CGWBService';
 import { LocationService } from './LocationService';
+import fs from 'fs';
+import path from 'path';
 
 export interface CropConfig {
     id: string;
@@ -155,7 +158,7 @@ export const CROP_DATABASE: CropConfig[] = [
         minTemp: 20,
         maxTemp: 35,
         baseYieldTons: 1.0,
-        baseMarketPrice: 4800,
+        baseMarketPrice: 48000, // Adjusted to INR/Ton (was 4800/Quintal)
         inputCost: 12000,
         soilTypes: ['Black', 'Medium', 'Loamy'],
         zones: ['General'],
@@ -169,7 +172,7 @@ export const CROP_DATABASE: CropConfig[] = [
         minTemp: 15,
         maxTemp: 35,
         baseYieldTons: 12,
-        baseMarketPrice: 1800, // Per Quintal -> 18000/ton? No wait, logic uses tons. Base Price in INR/Ton
+        baseMarketPrice: 18000, // Adjusted to INR/Ton (was 1800/Quintal)
         inputCost: 40000,
         soilTypes: ['Medium', 'Loamy', 'Silt'],
         zones: ['General'],
@@ -252,6 +255,14 @@ export class HydroEconomicEngine {
         const revenue = context.adjustedYield * context.marketPrice;
         const totalCost = crop.inputCost + context.waterCost.totalCostSeason;
         const netProfit = revenue - totalCost;
+
+        // DEBUG LOGGING
+        const fs = require('fs');
+        const path = require('path');
+        const logPath = path.join(__dirname, '../../server_debug.log');
+        const logMsg = `[ProfitCalc] ${crop.name}: Yield=${context.adjustedYield}T, Price=${context.marketPrice}, Rev=${Math.round(revenue)}, Cost=${Math.round(totalCost)} (Input=${crop.inputCost} + Water=${context.waterCost.totalCostSeason}), Net=${Math.round(netProfit)}\n`;
+        try { fs.appendFileSync(logPath, logMsg); } catch (e) { }
+
         const profitPerMm = crop.waterConsumptionMm > 0 ? netProfit / crop.waterConsumptionMm : 0;
         const timeFactor = 365 / crop.durationDays;
         const profitIndex = profitPerMm * timeFactor;
@@ -267,9 +278,10 @@ export class HydroEconomicEngine {
     private async getDistrictFromPincode(pincode: string): Promise<string> {
         try {
             const blockInfo = await LocationService.getDistrictFromPincode(pincode);
-            return blockInfo?.district || 'Prayagraj';
+            // MarketPriceService works best with State names for the API
+            return blockInfo?.state || 'Uttar Pradesh';
         } catch {
-            return 'Prayagraj';
+            return 'Uttar Pradesh';
         }
     }
 
@@ -324,6 +336,14 @@ export class HydroEconomicEngine {
 
         console.log(`🔍 [HydroEconomic] Starting enhanced recommendations for ${ctx.pincode || 'unknown location'}`);
 
+
+        const log = (msg: string) => {
+            try {
+                fs.appendFileSync(path.join(__dirname, '../../server_debug.log'), `[HydroEngine] ${new Date().toISOString()} ${msg}\n`);
+            } catch (e) { /* ignore */ }
+        };
+
+        log('STEP 1: Fetching Market Prices');
         // STEP 1: Fetch live market prices
         const district = ctx.pincode ? await this.getDistrictFromPincode(ctx.pincode) : 'Prayagraj';
         const cropIds = CROP_DATABASE.map(c => c.id);
@@ -332,14 +352,16 @@ export class HydroEconomicEngine {
         let dataQuality = 50;
 
         try {
+            log('Calling MarketPriceService.getAllCropPrices');
             marketPrices = await MarketPriceService.getAllCropPrices(district, cropIds);
+            log('MarketPriceService returned');
             dataQuality = 90;
         } catch (error) {
-            console.warn(`⚠️ [Market] Failed to fetch live prices, using fallback`);
+            log(`MARKET FAILURE: ${error}`);
             marketPrices = {};
             CROP_DATABASE.forEach(crop => {
                 marketPrices[crop.id] = {
-                    currentPrice: crop.baseMarketPrice * 10,
+                    currentPrice: crop.baseMarketPrice, // DB is now normalized to INR/Ton
                     msp: MarketPriceService.getMSP(crop.id),
                     trend: 'STABLE',
                     lastUpdated: new Date()
@@ -347,17 +369,19 @@ export class HydroEconomicEngine {
             });
         }
 
+        log('STEP 2: Groundwater Depth');
         // STEP 2: Get groundwater depth 
         let waterTableDepth = 20;
         if (ctx.lat && ctx.lon) {
             try {
                 const gwLevel = await CGWBService.getGroundwaterLevel(ctx.lat, ctx.lon);
-                waterTableDepth = gwLevel.depth;
+                waterTableDepth = typeof gwLevel === 'number' ? gwLevel : 20;
             } catch (error) {
-                console.warn(`⚠️ [CGWB] Failed to fetch water depth`);
+                log(`CGWB FAILURE: ${error}`);
             }
         }
 
+        log('STEP 3: Block Classification');
         // STEP 3: Get CGWB block classification
         let blockClassification = 'Unknown';
         if (ctx.district && ctx.block) {
@@ -365,16 +389,18 @@ export class HydroEconomicEngine {
                 const cgwbStatus = await CGWBService.getBlockWaterStatus(ctx.district, ctx.block);
                 blockClassification = cgwbStatus.classification;
             } catch (error) {
-                console.warn(`⚠️ [CGWB] Failed to fetch block status`);
+                log(`CGWB BLOCK FAILURE: ${error}`);
             }
         }
 
+        log('STEP 4: Available Water');
         // STEP 4: Calculate available water
         const zone = this.getZoneFromPincode(ctx.pincode);
         const bucketSize = this.getWaterBucketSize(ctx.soilType, ctx.soilDepth);
         const expectedRainfall = 500;
         const waterAvailable = bucketSize + expectedRainfall;
 
+        log('STEP 5: User Intent');
         // STEP 5: Resolve user intent & Pre-calculate context
         const prevCropId = this.findCropIdByName(ctx.previousCropId || '');
         const intentCropId = this.findCropIdByName(userIntentName || '');
@@ -384,7 +410,7 @@ export class HydroEconomicEngine {
             const iCrop = CROP_DATABASE.find(c => c.id === intentCropId);
             if (iCrop) {
                 const iPriceData = marketPrices[intentCropId];
-                const iPrice = iPriceData?.currentPrice || (iCrop.baseMarketPrice * 10);
+                const iPrice = iPriceData?.currentPrice || iCrop.baseMarketPrice;
 
                 const iYieldAdj = YieldAdjustmentService.adjustYieldForWaterStress(
                     iCrop.baseYieldTons, iCrop.waterConsumptionMm, waterAvailable,
@@ -392,7 +418,7 @@ export class HydroEconomicEngine {
                 );
 
                 const iWaterCost = WaterCostCalculator.calculateWaterCost(
-                    iCrop.waterConsumptionMm, ctx.totalLandArea || 1, 'ELECTRIC', waterTableDepth
+                    iCrop.waterConsumptionMm, 1, 'ELECTRIC', waterTableDepth // per-acre
                 );
 
                 const iProfit = await this.calculateEnhancedProfitMetrics(iCrop, {
@@ -426,7 +452,7 @@ export class HydroEconomicEngine {
 
             // 1. GET PRICE
             const priceData = marketPrices[crop.id];
-            const marketPrice = priceData?.currentPrice || (crop.baseMarketPrice * 10);
+            const marketPrice = priceData?.currentPrice || crop.baseMarketPrice;
             const msp = priceData?.msp || null;
             const priceTrend = priceData?.trend || 'STABLE';
             const finalPrice = msp ? Math.max(marketPrice, msp) : marketPrice;
@@ -440,10 +466,10 @@ export class HydroEconomicEngine {
                 cropCategory
             );
 
-            // 3. CALCULATE WATER COST
+            // 3. CALCULATE WATER COST (per acre, for comparable profit index)
             const waterCost = WaterCostCalculator.calculateWaterCost(
                 crop.waterConsumptionMm,
-                ctx.totalLandArea || 1,
+                1, // Calculate per-acre cost for profitability comparison
                 'ELECTRIC',
                 waterTableDepth
             );
@@ -487,8 +513,14 @@ export class HydroEconomicEngine {
                     reasons.push(`💧 Saves ${Math.round(waterSavings)}% water`);
 
                     if (profitMetrics.profitIndex > intentContext.metrics.profitIndex) {
-                        const profitGain = ((profitMetrics.profitIndex / intentContext.metrics.profitIndex - 1) * 100);
-                        reasons.push(`💰 ${profitGain.toFixed(0)}% higher profit/drop`);
+                        let profitGain = 0;
+                        if (intentContext.metrics.profitIndex <= 0) {
+                            // If base crop is making a loss, profit gain is conceptually infinite/massive
+                            reasons.push(`💰 Turns loss into profit`);
+                        } else {
+                            profitGain = ((profitMetrics.profitIndex / intentContext.metrics.profitIndex - 1) * 100);
+                            reasons.push(`💰 ${profitGain.toFixed(0)}% higher profit/drop`);
+                        }
                     }
 
                     if (riskAssessment.riskScore < intentContext.risk.riskScore - 10) {

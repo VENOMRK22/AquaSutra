@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { CROP_DATABASE } from './HydroEconomicEngine';
 
 // ============================================================================
 // INTERFACES
@@ -130,25 +131,31 @@ export class MarketPriceService {
             console.warn('[MarketPrice] Agmarknet API failed, using full mock data');
         }
 
-        // STRATEGY 2: Generate Mock Data for gaps
-        const mockCrops = MOCK_COMMODITIES.map(c => generateMockPrice(c, state));
+        // STRATEGY 2: Skipped (User requested no fake data)
+        // const mockCrops = MOCK_COMMODITIES.map(c => generateMockPrice(c, state));
 
         // STRATEGY 3: Merge (Real data takes precedence)
         const mergedCropsMap = new Map<string, CropPrice>();
 
-        // 1. Add all mock crops first
-        mockCrops.forEach(crop => mergedCropsMap.set(crop.commodity.toLowerCase(), crop));
+        // 1. No Mock Data - Purely API or MSP based
+        // mockCrops.forEach(crop => mergedCropsMap.set(crop.commodity.toLowerCase(), crop));
 
-        // 2. Overwrite with real API data where available
+        // 2. Add real API data
         apiCrops.forEach(crop => mergedCropsMap.set(crop.commodity.toLowerCase(), crop));
 
         const allCrops = Array.from(mergedCropsMap.values());
 
         const snapshot: MarketSnapshot = {
-            trending: allCrops.filter(c => c.trend === 'GROWING').slice(0, 10),
+            trending: allCrops.filter(c => c.trend === 'GROWING')
+                .sort((a, b) => b.changePercent - a.changePercent) // Highest gain first
+                .slice(0, 10),
             allTimeBest: allCrops.sort((a, b) => b.modalPrice - a.modalPrice).slice(0, 10),
-            depreciating: allCrops.filter(c => c.trend === 'DEPRECIATING').slice(0, 10),
-            highDemand: allCrops.filter(c => c.demand === 'HIGH').slice(0, 10),
+            depreciating: allCrops.filter(c => c.trend === 'DEPRECIATING')
+                .sort((a, b) => a.changePercent - b.changePercent) // Most negative first (lowest value)
+                .slice(0, 10),
+            highDemand: allCrops.filter(c => c.demand === 'HIGH')
+                .sort((a, b) => b.arrivalQuantity - a.arrivalQuantity) // Highest quantity first
+                .slice(0, 10),
             allCrops: allCrops.sort((a, b) => a.commodity.localeCompare(b.commodity)),
             lastUpdated: new Date()
         };
@@ -211,11 +218,16 @@ export class MarketPriceService {
                 timeout: 10000
             });
 
+            console.log('[API DEBUG] Response status:', response.status);
+            console.log('[API DEBUG] Records count:', response.data?.records?.length || 0);
+
             if (!response.data || !response.data.records || response.data.records.length === 0) {
+                console.log('[API DEBUG] No records in response. Full response:', JSON.stringify(response.data).slice(0, 500));
                 throw new Error('No data received');
             }
 
             const records = response.data.records;
+            console.log('[API DEBUG] Sample commodities:', records.slice(0, 5).map((r: any) => r.commodity).join(', '));
 
             // Transform API data
             const allCrops: CropPrice[] = records.map((record: any) => ({
@@ -258,6 +270,65 @@ export class MarketPriceService {
         if (spread > 0.02) return 'GROWING';
         if (spread < -0.02) return 'DEPRECIATING';
         return 'STABLE';
+    }
+
+    static async getAllCropPrices(district: string, cropIds: string[]): Promise<Record<string, any>> {
+        // Fetch data for the specified state (API works best with State)
+        const snapshot = await this.getMarketSnapshot(district); // Parameter is named district but we should pass state
+        const prices: Record<string, any> = {};
+
+        // Convert snapshot array to map
+        for (const cropId of cropIds) {
+            // Fuzzy match logic: Check if API commodity name is part of our ID or vice versa
+            const match = snapshot.allCrops.find(c => {
+                const apiName = c.commodity.toLowerCase();
+                const idName = cropId.replace(/_/g, ' ').toLowerCase();
+                // e.g. "onion" in "onion red" or "cotton" in "bt cotton"
+                return idName.includes(apiName) || apiName.includes(idName.split(' ')[0]);
+            });
+
+            if (match) {
+                // API returns ₹/Quintal. Convert to ₹/Ton (x10)
+                const pricePerTon = match.modalPrice * 10;
+
+                prices[cropId] = {
+                    currentPrice: pricePerTon,
+                    msp: this.getMSP(cropId),
+                    trend: match.trend,
+                    lastUpdated: match.date
+                };
+            } else {
+                // FUNDAMENTAL FIX: Use CROP_DATABASE as single source of truth
+                // baseMarketPrice is already in INR/Ton - no conversion needed!
+                const dbCrop = CROP_DATABASE.find(c => c.id === cropId);
+                const fallbackPrice = dbCrop?.baseMarketPrice || 20000; // 20k/Ton default
+
+                prices[cropId] = {
+                    currentPrice: fallbackPrice,
+                    msp: this.getMSP(cropId),
+                    trend: 'STABLE',
+                    lastUpdated: new Date()
+                };
+            }
+        }
+
+        return prices;
+    }
+
+    static getMSP(cropId: string): number {
+        // MSP Values in INR/Quintal (2024-25 Kharif/Rabi)
+        const mspMap: Record<string, number> = {
+            'rice': 2183, 'wheat': 2275, 'maize': 2090,
+            'onion': 1500, 'tomato': 1200, 'potato': 900,
+            'cotton': 6620, 'soybean': 4600, 'sugarcane': 315, // Sugarcane is per quintal
+            'gram': 5440, 'tur': 7000, 'moong': 8558
+        };
+        // Try exact match first
+        const id = cropId.toLowerCase().replace(/_/g, ' ');
+        for (const key of Object.keys(mspMap)) {
+            if (id.includes(key)) return mspMap[key];
+        }
+        return 1500; // Default fallback
     }
 }
 

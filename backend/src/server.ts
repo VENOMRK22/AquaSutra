@@ -17,8 +17,17 @@ app.use(cors({
 app.use(express.json());
 
 // Debug Logging Middleware
+import fs from 'fs';
+import path from 'path';
+
 app.use((req, res, next) => {
-    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    const logMessage = `[${new Date().toISOString()}] ${req.method} ${req.url}\n`;
+    console.log(logMessage.trim());
+    try {
+        fs.appendFileSync(path.join(__dirname, '../server_debug.log'), logMessage);
+    } catch (err) {
+        console.error("Failed to write to log file:", err);
+    }
     next();
 });
 

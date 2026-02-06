@@ -8,6 +8,13 @@ router.post('/crop-recommendation', async (req, res) => {
     try {
         const { pincode, lat, lon, soilType, totalLandArea, previousCropId, userIntentCropId } = req.body;
 
+        // Sync version for simplicity
+        try {
+            const fs = require('fs');
+            const path = require('path');
+            fs.appendFileSync(path.join(__dirname, '../../server_debug.log'), `[Inference] ${new Date().toISOString()} Request received. Body: ${JSON.stringify(req.body)}\n`);
+        } catch (e) { console.error("Log failed", e); }
+
         console.log("--- INFERENCE REQUEST ---");
         console.log("Body:", JSON.stringify(req.body, null, 2));
 
