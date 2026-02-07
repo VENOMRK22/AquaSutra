@@ -83,7 +83,7 @@ const Landing: React.FC = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-[#FAFAFA] text-gray-900 font-sans">
+        <div className="h-full overflow-y-auto bg-[#FAFAFA] text-gray-900 font-sans relative no-scrollbar">
             
             {/* Background Video */}
             <div className="fixed inset-0 z-0 overflow-hidden">
@@ -429,6 +429,11 @@ const Landing: React.FC = () => {
                 <p className="text-sm text-gray-400">
                     © 2026 AquaSutra. Empowering Indian Farmers.
                 </p>
+                <div className="flex justify-center gap-4 mt-4 text-xs text-gray-400">
+                    <a href="/privacy" className="hover:text-emerald-600 transition-colors">Privacy Policy</a>
+                    <span className="text-gray-200">|</span>
+                    <a href="/terms" className="hover:text-emerald-600 transition-colors">Terms of Service</a>
+                </div>
             </footer>
         </div>
     );

@@ -7,6 +7,8 @@ import Leaderboard from './pages/Leaderboard';
 import Profile from './pages/Profile';
 import ProfitAnalysis from './pages/ProfitAnalysis'; // New Page
 import MarketplacePage from './pages/MarketplacePage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 import MainLayout from './layouts/MainLayout';
 import ProtectedRoute from './components/ProtectedRoute';
 import AuthCallback from './pages/AuthCallback';
@@ -21,12 +23,14 @@ const App: React.FC = () => {
       <LanguageProvider>
         <AuthProvider>
           <VoiceProvider>
-            <div className="min-h-screen bg-gray-100 flex justify-center selection:bg-ios-blue/30 selection:text-ios-blue">
+            <div className="h-full w-full bg-gray-100 flex justify-center selection:bg-ios-blue/30 selection:text-ios-blue fixed inset-0 overflow-hidden">
               {/* Mobile-first constraints: Max width for "App" feel on desktop, full width on mobile. No bezel. */}
-              <div className="w-full max-w-md min-h-screen bg-ios-bg relative shadow-2xl overflow-x-hidden">
+              <div className="w-full max-w-md h-full bg-ios-bg relative shadow-2xl overflow-hidden">
                 <Routes>
                   <Route path="/login" element={<Landing />} />
                   <Route path="/auth/callback" element={<AuthCallback />} />
+                  <Route path="/privacy" element={<PrivacyPolicy />} />
+                  <Route path="/terms" element={<TermsOfService />} />
 
                   {/* Protected Routes */}
                   <Route element={<ProtectedRoute />}>

@@ -9,6 +9,7 @@ import { LocationService } from './LocationService';
 import fs from 'fs';
 import path from 'path';
 import { CROP_DATABASE, CropConfig } from '../data/CropDatabase';
+import { spawn } from 'child_process';
 
 
 
@@ -215,6 +216,88 @@ export class HydroEconomicEngine {
         };
     }
 
+    // --- ML INTEGRATION ---
+
+    private async predictBestCrop(ctx: FarmContext): Promise<{ crop: string, confidence: number }[]> {
+        return new Promise((resolve, reject) => {
+            // Heuristic to estimate NPK if missing (Simulated based on soil)
+            // Real app would ask user or use soil health card API
+            let n = 50, p = 50, k = 50;
+            if (ctx.soilType.toLowerCase().includes('clay')) { n = 60; p = 60; k = 60; }
+            if (ctx.soilType.toLowerCase().includes('black')) { n = 70; p = 50; k = 80; }
+            if (ctx.soilType.toLowerCase().includes('red')) { n = 40; p = 30; k = 40; }
+
+            const inputArgs = {
+                N: n, P: p, K: k,
+                temperature: 25, // Mock current temp or fetch API
+                humidity: 60,
+                ph: 6.5,
+                rainfall: 500 // Expected season rain
+            };
+
+            // Use parent's log function if available or console
+            const mlLog = (msg: string) => {
+                try { fs.appendFileSync(path.join(__dirname, '../../server_debug.log'), `[HydroEngine] ${new Date().toISOString()} ${msg}\n`); } catch (e) { console.log(msg); }
+            };
+
+            const scriptPath = path.join(__dirname, '../../ml/predict.py');
+            if (!fs.existsSync(scriptPath)) {
+                mlLog(`❌ SCRIPT NOT FOUND: ${scriptPath}`);
+                resolve([]);
+                return;
+            }
+
+            mlLog(`🐍 Spawning Python process: ${scriptPath}`);
+            mlLog(`🐍 Input Args: ${JSON.stringify(inputArgs)}`);
+
+            const pythonProcess = spawn('python', ['ml/predict.py'], {
+                cwd: path.join(__dirname, '../../') // Root of backend
+            });
+
+            let dataString = '';
+            let errorString = '';
+
+            pythonProcess.on('error', (err) => {
+                mlLog(`❌ FAILED TO SPAWN PYTHON: ${err.message}`);
+                resolve([]);
+            });
+
+            pythonProcess.stdout.on('data', (data) => {
+                dataString += data.toString();
+                mlLog(`🐍 STDOUT: ${data.toString().trim()}`);
+            });
+
+            pythonProcess.stderr.on('data', (data) => {
+                errorString += data.toString();
+                mlLog(`🐍 STDERR: ${data.toString().trim()}`);
+            });
+
+            pythonProcess.on('close', (code) => {
+                mlLog(`🐍 Process closed with code ${code}`);
+                if (code !== 0) {
+                    mlLog(`ML Process failed: ${errorString}`);
+                    resolve([]); // Fallback to rule-based
+                    return;
+                }
+                try {
+                    const result = JSON.parse(dataString);
+                    if (result.success && result.recommendations) {
+                        resolve(result.recommendations);
+                    } else {
+                        resolve([]);
+                    }
+                } catch (e) {
+                    console.error("Failed to parse ML output", dataString);
+                    resolve([]);
+                }
+            });
+
+            // Send input
+            pythonProcess.stdin.write(JSON.stringify(inputArgs));
+            pythonProcess.stdin.end();
+        });
+    }
+
     // --- MAIN API ---
 
     public async getRecommendations(
@@ -223,8 +306,23 @@ export class HydroEconomicEngine {
         limitToCrops?: string[] // NEW: specific crops to evaluate (bypassing filters)
     ): Promise<RecommendationResult[]> {
 
-        console.log(`🔍 [HydroEconomic] Starting enhanced recommendations for ${ctx.pincode || 'unknown location'}`);
+        // --- ML PREDICTION STEP ---
+        let mlSuggestions: { crop: string, confidence: number }[] = [];
+        try {
+            // Only use ML if we are not restricting to specific crops (e.g. comparison)
+            if (!limitToCrops) {
+                console.log(`🤖 [HydroEngine] Calling ML Model...`);
+                mlSuggestions = await this.predictBestCrop(ctx);
+                console.log(`🤖 [HydroEngine] ML Suggestions:`, mlSuggestions);
 
+                if (mlSuggestions.length > 0) {
+                    limitToCrops = mlSuggestions.map(s => s.crop);
+                }
+            }
+        } catch (e) {
+            console.error("ML Prediction Error:", e);
+        }
+        // --------------------------
 
         const log = (msg: string) => {
             try {

@@ -236,7 +236,7 @@ const FarmDashboard: React.FC = () => {
     );
 
     return (
-        <div className="bg-gray-50 min-h-screen pb-24">
+        <div className="bg-gray-50">
             {/* Elegant Header with Gradient & Image - REDUCED HEIGHT */}
             <div
                 className="relative px-6 pt-6 pb-20 rounded-b-[2rem] shadow-xl text-white overflow-hidden"

@@ -104,7 +104,7 @@ const MarketplacePage: React.FC = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 pb-20">
+        <div className="bg-gray-50 pb-24">
 
             {/* Header */}
             <div className="bg-gradient-to-br from-green-600 to-emerald-700 text-white px-6 pt-6 pb-8 rounded-b-3xl shadow-lg">

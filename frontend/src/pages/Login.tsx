@@ -59,7 +59,7 @@ const Login: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-white flex flex-col items-center pt-20 px-6 animate-fade-in text-ios-text">
+        <div className="h-full bg-white flex flex-col items-center pt-20 px-6 animate-fade-in text-ios-text">
 
             {/* Logo / Brand */}
             <div className="mb-10 flex flex-col items-center">

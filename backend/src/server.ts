@@ -39,6 +39,7 @@ import leaderboardRoutes from './routes/leaderboard';
 import inferenceRoutes from './routes/inference';
 import sowingRoutes from './routes/sowing';
 import marketRoutes from './routes/market';
+import aiRoutes from './routes/ai';
 import activityRoutes from './routes/activities';
 
 // Supabase Client
@@ -60,6 +61,10 @@ app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/inference', inferenceRoutes);
 app.use('/api/sowing', sowingRoutes);
 app.use('/api/market', marketRoutes);
+app.use('/api/ai', (req, res, next) => {
+    console.log(`[Server] Entering AI Routes: ${req.method} ${req.url}`);
+    next();
+}, aiRoutes);
 app.use('/api/activities', activityRoutes);
 
 // Test DB Connection Route
@@ -69,6 +74,29 @@ app.get('/api/health', async (req: Request, res: Response) => {
 
 app.listen(Number(port), '0.0.0.0', () => {
     console.log(`[server]: Server is running at http://127.0.0.1:${port}`);
+});
+
+// Global Error Handler
+app.use((err: any, req: Request, res: Response, next: any) => {
+    const errorLog = `[${new Date().toISOString()}] UNCAUGHT EXPRESS ERROR: ${err.message}\n${err.stack}\n----------------\n`;
+    try {
+        require('fs').appendFileSync(require('path').join(process.cwd(), 'backend_error.log'), errorLog);
+    } catch (e) { console.error(e); }
+    res.status(500).json({ error: 'Internal Server Error' });
+});
+
+process.on('uncaughtException', (err) => {
+    const errorLog = `[${new Date().toISOString()}] PROCESS UNCAUGHT EXCEPTION: ${err.message}\n${err.stack}\n----------------\n`;
+    try {
+        require('fs').appendFileSync(require('path').join(process.cwd(), 'backend_error.log'), errorLog);
+    } catch (e) { console.error(e); }
+});
+
+process.on('unhandledRejection', (reason: any, promise) => {
+    const errorLog = `[${new Date().toISOString()}] PROCESS UNHANDLED REJECTION: ${reason}\n----------------\n`;
+    try {
+        require('fs').appendFileSync(require('path').join(process.cwd(), 'backend_error.log'), errorLog);
+    } catch (e) { console.error(e); }
 });
 
 // Trigger reload

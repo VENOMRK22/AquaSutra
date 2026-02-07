@@ -7,10 +7,14 @@
     --ios-safe-area-bottom: env(safe-area-inset-bottom);
   }
 
-  body {
-    @apply bg-ios-bg text-ios-text font-sans antialiased overflow-x-hidden;
-    /* iOS Scroll Physics */
-    -webkit-overflow-scrolling: touch;
+  html,
+  body,
+  #root {
+    @apply bg-ios-bg text-ios-text font-sans antialiased overflow-hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* iOS Scroll Physics - Lock Body */
     overscroll-behavior-y: none;
   }
 

@@ -73,10 +73,10 @@ const Dashboard: React.FC = () => {
     const hasScore = score !== null && score !== undefined && score !== '';
 
     return (
-        <div className="bg-gray-50 min-h-screen pb-24">
+        <div className="bg-gray-50">
 
             {/* Premium Hero Header */}
-            <div className="relative bg-gradient-to-br from-emerald-600 to-teal-800 text-white pt-8 pb-16 px-6 rounded-b-[2.5rem] shadow-xl overflow-hidden -mx-0 z-10">
+            <div className="relative bg-gradient-to-br from-emerald-600 to-teal-800 text-white pt-8 pb-16 px-6 rounded-b-[2.5rem] shadow-xl overflow-hidden -mx-4 z-10">
 
                 {/* Decorative Background Elements */}
                 <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-white opacity-5 rounded-full blur-3xl pointer-events-none"></div>
