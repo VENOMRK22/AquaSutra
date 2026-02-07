@@ -39,6 +39,7 @@ import leaderboardRoutes from './routes/leaderboard';
 import inferenceRoutes from './routes/inference';
 import sowingRoutes from './routes/sowing';
 import marketRoutes from './routes/market';
+import activityRoutes from './routes/activities';
 
 // Supabase Client
 const supabaseUrl = process.env.SUPABASE_URL || '';
@@ -59,6 +60,7 @@ app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/inference', inferenceRoutes);
 app.use('/api/sowing', sowingRoutes);
 app.use('/api/market', marketRoutes);
+app.use('/api/activities', activityRoutes);
 
 // Test DB Connection Route
 app.get('/api/health', async (req: Request, res: Response) => {

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Sprout, ChevronRight, Calendar, Droplets, TrendingUp } from 'lucide-react';
+import { Sprout, ChevronRight, Droplets, TrendingUp, Calendar, CheckCircle2 } from 'lucide-react';
 import WaterBalanceWidget from '../components/WaterBalanceWidget';
 import SowingDispatcherWidget from '../components/SowingDispatcherWidget';
 import { API_BASE_URL } from '../lib/config';
@@ -9,22 +9,40 @@ import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useLanguage } from '../contexts/LanguageContext';
 
-// Simple Icon component helper
-const FileTextIcon = ({ size }: { size: number }) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-        <polyline points="14 2 14 8 20 8" />
-        <line x1="16" y1="13" x2="8" y2="13" />
-        <line x1="16" y1="17" x2="8" y2="17" />
-        <line x1="10" y1="9" x2="8" y2="9" />
-    </svg>
-);
+
 
 const Dashboard: React.FC = () => {
     const { t } = useLanguage();
     const [score, setScore] = React.useState<string | null>(null);
     const [loading, setLoading] = React.useState(true);
+    const [activities, setActivities] = React.useState<any[]>([]);
     const navigate = useNavigate();
+
+    const fetchActivities = async () => {
+        try {
+            const res = await fetch(`${API_BASE_URL}/api/activities/upcoming`);
+            const data = await res.json();
+            if (data.success && data.activities) {
+                setActivities(data.activities);
+            }
+        } catch (e) {
+            console.error("Failed to fetch activities", e);
+        }
+    };
+
+    const markAsDone = async (id: string) => {
+        try {
+            setActivities(prev => prev.filter(a => a.id !== id));
+            await fetch(`${API_BASE_URL}/api/activities/${id}/status`, {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ status: 'Done' })
+            });
+        } catch (e) {
+            console.error(e);
+            fetchActivities();
+        }
+    };
 
     React.useEffect(() => {
         const fetchData = async () => {
@@ -49,6 +67,7 @@ const Dashboard: React.FC = () => {
             setLoading(false);
         };
         fetchData();
+        fetchActivities(); // Fetch activities on load
     }, []);
 
     const hasScore = score !== null && score !== undefined && score !== '';
@@ -121,58 +140,53 @@ const Dashboard: React.FC = () => {
                     <SowingDispatcherWidget />
                 </div>
 
-
-
-                {/* Additional Tools Grid */}
-                <div className="grid grid-cols-2 gap-4">
-                    {/* Interview Widget */}
-                    <button className="bg-white rounded-2xl p-5 shadow-ios flex flex-col items-start gap-3 active:scale-95 transition-transform text-left">
-                        <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center text-ios-purple">
-                            <FileTextIcon size={20} />
+                {/* UPCOMING ACTIVITIES WIDGET */}
+                {activities.length > 0 && (
+                    <div className="animate-in slide-in-from-bottom-4 duration-700 delay-200">
+                        <div className="flex items-center justify-between mb-4">
+                            <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2">
+                                <Calendar size={18} className="text-emerald-600" />
+                                Upcoming Tasks
+                            </h2>
+                            <span className="text-xs font-bold bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">
+                                {activities.length} Pending
+                            </span>
                         </div>
-                        <div>
-                            <h3 className="font-semibold text-ios-text text-base">{t('dashboard.interview')}</h3>
-                            <p className="text-ios-subtext text-xs mt-0.5">{t('dashboard.start_survey')}</p>
+                        <div className="bg-white rounded-2xl shadow-lg shadow-gray-200/50 overflow-hidden border border-gray-100">
+                            {activities.slice(0, 5).map((activity: any) => (
+                                <div key={activity.id} className="p-4 border-b border-gray-50 last:border-0 flex items-start gap-3 hover:bg-gray-50 transition-colors">
+                                    <button
+                                        onClick={() => markAsDone(activity.id)}
+                                        className="mt-1 w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center text-white hover:bg-emerald-500 hover:border-emerald-500 transition-all shrink-0"
+                                    >
+                                        <CheckCircle2 size={14} className="opacity-0 hover:opacity-100" />
+                                    </button>
+                                    <div className="flex-1 min-w-0">
+                                        <h4 className="font-bold text-gray-800 text-sm truncate">{activity.title}</h4>
+                                        <p className="text-xs text-gray-500 font-medium mt-0.5 line-clamp-1">{activity.description}</p>
+                                        <div className="flex items-center gap-2 mt-2 flex-wrap">
+                                            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded
+                                                ${activity.activity_type === 'Water' ? 'bg-blue-50 text-blue-600' :
+                                                    activity.activity_type === 'Fertilizer' ? 'bg-purple-50 text-purple-600' :
+                                                        'bg-orange-50 text-orange-600'}`}>
+                                                {activity.activity_type}
+                                            </span>
+                                            <span className="text-[10px] font-bold text-gray-400">
+                                                📅 {new Date(activity.due_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}
+                                            </span>
+                                            {activity.farm_crops?.name && (
+                                                <span className="text-[10px] font-bold text-gray-400">
+                                                    🌱 {activity.farm_crops.name}
+                                                </span>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    </button>
-
-                    {/* Credit Score Widget */}
-                    <button className="bg-white rounded-2xl p-5 shadow-ios flex flex-col items-start gap-3 active:scale-95 transition-transform text-left">
-                        <div className="w-10 h-10 bg-yellow-100 rounded-xl flex items-center justify-center text-ios-orange">
-                            <Sprout size={20} />
-                        </div>
-                        <div>
-                            <h3 className="font-semibold text-ios-text text-base">{t('dashboard.credit_score')}</h3>
-                            <p className="text-ios-subtext text-xs mt-0.5">{t('dashboard.check_health')}</p>
-                        </div>
-                    </button>
-                </div>
-
-                {/* List Section (Recent Activity) */}
-                <div>
-                    <div className="flex items-center justify-between mb-2 px-1">
-                        <h3 className="text-xl font-bold text-ios-text">{t('dashboard.activity')}</h3>
-                        <button className="text-ios-blue text-sm font-medium">{t('dashboard.see_all')}</button>
                     </div>
+                )}
 
-                    <div className="bg-white rounded-2xl overflow-hidden shadow-ios divide-y divide-gray-100">
-                        {[1, 2, 3].map((_, i) => (
-                            <div key={i} className="p-4 flex items-center gap-4 active:bg-gray-50 transition-colors">
-                                <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-ios-blue flex-shrink-0">
-                                    <Calendar size={18} />
-                                </div>
-                                <div className="flex-grow">
-                                    <h4 className="text-sm font-medium text-ios-text">Irrigation Cycle</h4>
-                                    <p className="text-xs text-ios-subtext">Yesterday, 4:30 PM</p>
-                                </div>
-                                <div className="flex items-center text-ios-subtext">
-                                    <span className="text-sm mr-2">45m</span>
-                                    <ChevronRight size={16} className="text-gray-300" />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
 
             </div>
         </div>

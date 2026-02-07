@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { supabase } from '../lib/supabase';
-import { User, LogOut, ChevronRight, Settings, Phone, Globe } from 'lucide-react';
+import { User, LogOut, ChevronRight, Settings, Phone, Globe, Save, Check } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { API_BASE_URL } from '../lib/config';
 
 interface ProfileData {
     username: string;
     full_name: string;
     avatar_url: string;
+    phone_number: string;
 }
 
 const Profile: React.FC = () => {
     const { user, signOut } = useAuth();
     const { language, setLanguage, t } = useLanguage();
     const [profile, setProfile] = useState<ProfileData | null>(null);
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [phoneSaved, setPhoneSaved] = useState(false);
+    const [saving, setSaving] = useState(false);
 
     useEffect(() => {
         const getProfile = async () => {
@@ -22,7 +27,7 @@ const Profile: React.FC = () => {
 
                 const { data, error } = await supabase
                     .from('profiles')
-                    .select('username, full_name, avatar_url')
+                    .select('username, full_name, avatar_url, phone_number')
                     .eq('id', user.id)
                     .single();
 
@@ -30,6 +35,9 @@ const Profile: React.FC = () => {
                     console.warn("Profile fetch error/missing:", error.message);
                 } else {
                     setProfile(data);
+                    if (data?.phone_number) {
+                        setPhoneNumber(data.phone_number);
+                    }
                 }
             } catch (error) {
                 console.error('Error loading profile:', error);
@@ -38,6 +46,25 @@ const Profile: React.FC = () => {
 
         getProfile();
     }, [user]);
+
+    const savePhoneNumber = async () => {
+        if (!user || !phoneNumber) return;
+        setSaving(true);
+        try {
+            const { error } = await supabase
+                .from('profiles')
+                .update({ phone_number: phoneNumber })
+                .eq('id', user.id);
+
+            if (error) throw error;
+            setPhoneSaved(true);
+            setTimeout(() => setPhoneSaved(false), 2000);
+        } catch (e) {
+            console.error('Failed to save phone:', e);
+        } finally {
+            setSaving(false);
+        }
+    };
 
     const handleSignOut = async () => {
         await signOut();
@@ -63,6 +90,52 @@ const Profile: React.FC = () => {
                         </h2>
                         <p className="text-ios-subtext text-sm truncate">{user?.email}</p>
                     </div>
+                </div>
+
+                {/* WhatsApp Notification Settings */}
+                <div className="bg-white rounded-[1.5rem] p-6 shadow-ios">
+                    <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center text-green-600">
+                            <Phone size={20} />
+                        </div>
+                        <div>
+                            <h3 className="font-bold text-gray-900">WhatsApp Alerts</h3>
+                            <p className="text-xs text-gray-500">Get activity updates on your phone</p>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                        <div className="flex-1 bg-gray-50 rounded-xl px-4 py-3 flex items-center gap-2 border border-gray-100 focus-within:border-green-500 transition-colors">
+                            <span className="text-gray-400 font-medium text-sm">📞</span>
+                            <input
+                                type="tel"
+                                value={phoneNumber}
+                                onChange={(e) => setPhoneNumber(e.target.value)}
+                                placeholder="e.g. 919876543210"
+                                className="bg-transparent border-none outline-none text-gray-900 font-medium text-sm w-full placeholder:text-gray-400"
+                            />
+                        </div>
+                        <button
+                            onClick={savePhoneNumber}
+                            disabled={saving}
+                            className={`p-3 rounded-xl transition-all shadow-sm flex items-center justify-center border
+                                ${phoneSaved
+                                    ? 'bg-green-100 text-green-700 border-green-200'
+                                    : 'bg-black text-white active:scale-95 border-black/10'
+                                }`}
+                        >
+                            {saving ? (
+                                <span className="animate-spin w-5 h-5 border-2 border-white/30 border-t-white rounded-full" />
+                            ) : phoneSaved ? (
+                                <Check size={20} />
+                            ) : (
+                                <Save size={20} />
+                            )}
+                        </button>
+                    </div>
+                    <p className="text-[10px] text-gray-400 mt-2 ml-1">
+                        *Enter number with country code (e.g., 91 for India).
+                    </p>
                 </div>
 
                 {/* Settings Group 1 */}
@@ -91,8 +164,8 @@ const Profile: React.FC = () => {
                                     key={lang}
                                     onClick={() => setLanguage(lang)}
                                     className={`px-3 py-1 text-xs font-semibold rounded-md transition-all ${language === lang
-                                            ? 'bg-white text-ios-text shadow-sm'
-                                            : 'text-gray-400 hover:text-gray-600'
+                                        ? 'bg-white text-ios-text shadow-sm'
+                                        : 'text-gray-400 hover:text-gray-600'
                                         }`}
                                 >
                                     {lang === 'en' ? 'En' : lang === 'mr' ? 'म' : 'हि'}
