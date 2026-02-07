@@ -1,7 +1,33 @@
 import express from 'express';
-import { MarketPriceService } from '../services/MarketPriceService';
+import { MarketPriceService, clearMarketCache } from '../services/MarketPriceService';
 
 const router = express.Router();
+
+// GET /api/market/refresh - Force refresh market data (clears cache)
+router.get('/refresh', async (req, res) => {
+    try {
+        const { state = 'Maharashtra' } = req.query;
+
+        // Clear cache
+        clearMarketCache();
+        console.log('[API] Cache cleared, fetching fresh data...');
+
+        // Fetch fresh data
+        const snapshot = await MarketPriceService.getMarketSnapshot(state as string);
+
+        res.json({
+            success: true,
+            message: 'Cache cleared and data refreshed',
+            data: snapshot
+        });
+    } catch (error) {
+        console.error('Refresh Error:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Failed to refresh market data'
+        });
+    }
+});
 
 // GET /api/market/snapshot - Get categorized market data
 router.get('/snapshot', async (req, res) => {

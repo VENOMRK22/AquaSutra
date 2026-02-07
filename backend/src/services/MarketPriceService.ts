@@ -59,10 +59,14 @@ class MarketCache {
 
     clear(): void {
         this.cache = null;
+        console.log('[MarketCache] Cache cleared');
     }
 }
 
 const marketCache = new MarketCache();
+
+// Export cache clear function for route access
+export const clearMarketCache = () => marketCache.clear();
 
 // ============================================================================
 // MOCK DATA (Fallback - Replace with real API)
@@ -131,22 +135,39 @@ export class MarketPriceService {
             console.warn('[MarketPrice] Agmarknet API failed, falling back to CROP_DATABASE');
         }
 
-        // FALLBACK: If API returned no data, use CROP_DATABASE
+        // FALLBACK: If API returned no data, use CROP_DATABASE with SIMULATED changes
         if (apiCrops.length === 0) {
-            console.log('[MarketPrice] Using CROP_DATABASE for market data');
-            apiCrops = CROP_DATABASE.map(c => ({
-                commodity: c.name,
-                market: 'General Market',
-                state: state,
-                modalPrice: c.baseMarketPrice / 10, // Tons to Quintal (approx)
-                minPrice: (c.baseMarketPrice / 10) * 0.9,
-                maxPrice: (c.baseMarketPrice / 10) * 1.1,
-                arrivalQuantity: 1000,
-                date: new Date(),
-                trend: 'STABLE',
-                changePercent: 0,
-                demand: 'MEDIUM'
-            }));
+            console.log('[MarketPrice] Using CROP_DATABASE for market data (with simulated changes)');
+            apiCrops = CROP_DATABASE.map((c, index) => {
+                // Generate consistent pseudo-random change based on crop name hash
+                const nameHash = c.name.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+                const dayOfYear = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+                const seed = (nameHash + dayOfYear) % 100; // Changes daily
+
+                // Simulate realistic price changes: -15% to +15%
+                const change = ((seed / 100) * 30) - 15;
+                const trend: 'GROWING' | 'DEPRECIATING' | 'STABLE' =
+                    change > 3 ? 'GROWING' : change < -3 ? 'DEPRECIATING' : 'STABLE';
+
+                // Vary arrival quantities
+                const arrivalBase = 5000 + (nameHash % 25000);
+                const demand: 'HIGH' | 'MEDIUM' | 'LOW' =
+                    arrivalBase > 20000 ? 'HIGH' : arrivalBase > 10000 ? 'MEDIUM' : 'LOW';
+
+                return {
+                    commodity: c.name,
+                    market: 'General Market',
+                    state: state,
+                    modalPrice: c.baseMarketPrice / 10,
+                    minPrice: (c.baseMarketPrice / 10) * 0.9,
+                    maxPrice: (c.baseMarketPrice / 10) * 1.1,
+                    arrivalQuantity: arrivalBase,
+                    date: new Date(),
+                    trend,
+                    changePercent: parseFloat(change.toFixed(1)),
+                    demand
+                };
+            });
         }
 
         // STRATEGY 2: No Mock Data - Using real API with calculated changePercent

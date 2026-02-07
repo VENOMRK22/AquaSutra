@@ -4,8 +4,22 @@ import { CROP_DATABASE } from '../data/CropDatabase';
 import { MarketPriceService } from '../services/MarketPriceService';
 import { WaterCostCalculator } from '../services/WaterCostCalculator';
 
+import { AgriAdvisorService, CropAdviceInput } from '../services/AgriAdvisorService';
+
 const router = express.Router();
 const engine = new HydroEconomicEngine();
+
+router.post('/crop-advice', async (req, res) => {
+    try {
+        const input: CropAdviceInput = req.body;
+        console.log("Analyzing Crop:", input.cropName);
+        const advice = await AgriAdvisorService.generateAdvice(input);
+        res.json({ success: true, advice });
+    } catch (error) {
+        console.error("Advice API Error:", error);
+        res.status(500).json({ error: "Failed to generate advice" });
+    }
+});
 
 router.post('/crop-recommendation', async (req, res) => {
     try {

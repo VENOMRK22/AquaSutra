@@ -2,15 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 import { Plus, Trash2, Sprout, Tractor, Pencil, X } from 'lucide-react';
 import WaterForecastModal from '../components/WaterForecastModal';
-import CropPlanWizard from '../components/CropPlanWizard'; // Import
+import CropAdvisorModal from '../components/CropAdvisorModal';
+import CropPlanWizard from '../components/CropPlanWizard';
 import { useLanguage } from '../contexts/LanguageContext';
 import { API_BASE_URL } from '../lib/config';
 
 interface Crop {
     id: string;
-    name: string;      // User defined specific name
-    crop_type: string; // Water consumption category (High/Medium/Low)
-    soil_type: string; // Clay, Black, Sandy, Loamy
+    name: string;
+    crop_type: string;
+    soil_type: string;
     area: number;
     sowing_date: string;
 }
@@ -25,19 +26,25 @@ const FarmDashboard: React.FC = () => {
     const { t } = useLanguage();
     const [farm, setFarm] = useState<Farm | null>(null);
     const [crops, setCrops] = useState<Crop[]>([]);
+
     const [loading, setLoading] = useState(true);
     const [showAddModal, setShowAddModal] = useState(false);
     const [showSetupModal, setShowSetupModal] = useState(false);
-    const [showWizard, setShowWizard] = useState(false); // Wizard State
+    const [showWizard, setShowWizard] = useState(false);
 
     // Forecast Modal State
     const [selectedForecastCrop, setSelectedForecastCrop] = useState<Crop | null>(null);
     const [showForecast, setShowForecast] = useState(false);
+
+    // Advisor Modal State
+    const [showAdvisor, setShowAdvisor] = useState(false);
+    const [selectedAdvisorCrop, setSelectedAdvisorCrop] = useState<Crop | null>(null);
+
     const [coords, setCoords] = useState<{ lat: number, lon: number } | null>(null);
 
     // Form State
     const [newCropName, setNewCropName] = useState('');
-    const [newCropWaterCat, setNewCropWaterCat] = useState('Medium'); // Default to Medium
+    const [newCropWaterCat, setNewCropWaterCat] = useState('Medium');
     const [newSoilType, setNewSoilType] = useState('Clay');
     const [newCropArea, setNewCropArea] = useState('');
 
@@ -59,7 +66,7 @@ const FarmDashboard: React.FC = () => {
             const { data: { user } } = await supabase.auth.getUser();
             if (!user) return;
 
-            const res = await fetch(`http://localhost:3000/api/farm?userId=${user.id}`);
+            const res = await fetch(`${API_BASE_URL}/api/farm?userId=${user.id}`);
             if (!res.ok) throw new Error('Failed to fetch');
             const json = await res.json();
 
@@ -91,7 +98,7 @@ const FarmDashboard: React.FC = () => {
                 return;
             }
 
-            const res = await fetch(`http://localhost:3000/api/farm`, {
+            const res = await fetch(`${API_BASE_URL}/api/farm`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -149,7 +156,7 @@ const FarmDashboard: React.FC = () => {
         }
 
         try {
-            const res = await fetch(`http://localhost:3000/api/farm/crop`, {
+            const res = await fetch(`${API_BASE_URL}/api/farm/crop`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -180,7 +187,7 @@ const FarmDashboard: React.FC = () => {
 
     const handleDeleteCrop = async (id: string) => {
         try {
-            await fetch(`http://localhost:3000/api/farm/crop/${id}`, { method: 'DELETE' });
+            await fetch(`${API_BASE_URL}/api/farm/crop/${id}`, { method: 'DELETE' });
             setCrops(crops.filter(c => c.id !== id));
         } catch (err) {
             console.error(err);
@@ -210,6 +217,11 @@ const FarmDashboard: React.FC = () => {
     const openForecast = (crop: Crop) => {
         setSelectedForecastCrop(crop);
         setShowForecast(true);
+    };
+
+    const openAdvisor = (crop: Crop) => {
+        setSelectedAdvisorCrop(crop);
+        setShowAdvisor(true);
     };
 
     const openEditFarm = () => {
@@ -325,35 +337,36 @@ const FarmDashboard: React.FC = () => {
                         </button>
                     </div>
                 ) : (
-                    <div className="space-y-4">
+                    <div className="grid grid-cols-2 gap-3 pb-6">
                         {crops.map(crop => (
-                            <div key={crop.id} className="bg-white p-5 rounded-[1.5rem] shadow-sm border border-gray-100 flex justify-between items-center group active:scale-[0.99] transition-transform">
-                                <div
-                                    className="flex items-center gap-5 flex-1 cursor-pointer"
-                                    onClick={() => openForecast(crop)}
+                            <div
+                                key={crop.id}
+                                onClick={() => openAdvisor(crop)}
+                                className="bg-white p-4 rounded-[1.5rem] shadow-sm border border-gray-100 relative group active:scale-[0.98] transition-transform flex flex-col items-start gap-3"
+                            >
+                                {/* Delete Button (Top Right Absolute) */}
+                                <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleDeleteCrop(crop.id);
+                                    }}
+                                    className="absolute top-3 right-3 w-8 h-8 bg-gray-50 text-gray-300 hover:text-red-500 hover:bg-red-50 rounded-full flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
                                 >
-                                    {/* Large Icon */}
-                                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl font-bold shadow-inner text-white
-                                        ${crop.crop_type === 'High' ? 'bg-blue-500 shadow-blue-200' :
-                                            crop.crop_type === 'Medium' ? 'bg-green-500 shadow-green-200' :
-                                                'bg-orange-400 shadow-orange-200'}`}>
-                                        {crop.name ? crop.name[0].toUpperCase() : 'C'}
-                                    </div>
+                                    <Trash2 size={16} />
+                                </button>
 
-                                    {/* Clean Info */}
-                                    <div>
-                                        <h3 className="font-bold text-gray-900 text-xl tracking-tight">{crop.name || 'Unknown Crop'}</h3>
-                                        <p className="text-gray-500 font-medium text-sm mt-0.5">{crop.area} {t('farm.acres')}</p>
-                                    </div>
+                                {/* Icon */}
+                                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-bold text-white shadow-sm
+                                        ${crop.crop_type === 'High' ? 'bg-blue-500 shadow-blue-200' :
+                                        crop.crop_type === 'Medium' ? 'bg-green-500 shadow-green-200' :
+                                            'bg-orange-400 shadow-orange-200'}`}>
+                                    {crop.name ? crop.name[0].toUpperCase() : 'C'}
                                 </div>
 
-                                <div className="flex items-center gap-2 pl-4 border-l border-gray-100">
-                                    <button
-                                        onClick={() => handleDeleteCrop(crop.id)}
-                                        className="w-10 h-10 text-gray-300 hover:text-red-500 hover:bg-red-50 rounded-full flex items-center justify-center transition-all"
-                                    >
-                                        <Trash2 size={20} />
-                                    </button>
+                                {/* Info */}
+                                <div>
+                                    <h3 className="font-bold text-gray-900 text-base leading-tight line-clamp-1 pr-6">{crop.name || 'Unknown Crop'}</h3>
+                                    <p className="text-gray-500 font-medium text-xs mt-0.5">{crop.area} {t('farm.acres')}</p>
                                 </div>
                             </div>
                         ))}
@@ -514,6 +527,12 @@ const FarmDashboard: React.FC = () => {
                     crop={selectedForecastCrop}
                 />
             )}
+
+            <CropAdvisorModal
+                isOpen={showAdvisor}
+                onClose={() => setShowAdvisor(false)}
+                crop={selectedAdvisorCrop}
+            />
         </div>
     );
 };

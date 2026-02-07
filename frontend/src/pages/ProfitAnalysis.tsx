@@ -1,8 +1,9 @@
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { ProfitPerDropChart } from '../components/ProfitPerDropChart';
 import { API_BASE_URL } from '../lib/config';
 import { BarChart2, RefreshCw, X, AlertCircle } from 'lucide-react';
+import { useVoiceCommands, useVoice } from '../contexts/VoiceControlContext';
 
 
 interface CropOption {
@@ -108,7 +109,7 @@ const ProfitAnalysis: React.FC = () => {
     // useEffect(() => { if(selectedCrops.length >= 2) handleAnalysis(); }, [selectedCrops]); 
     // Manual trigger is better for UX when selecting multiple items.
 
-    const toggleCrop = (cropId: string) => {
+    const toggleCrop = useCallback((cropId: string) => {
         if (selectedCrops.includes(cropId)) {
             setSelectedCrops(prev => prev.filter(c => c !== cropId));
         } else {
@@ -119,7 +120,108 @@ const ProfitAnalysis: React.FC = () => {
             }
             setSelectedCrops(prev => [...prev, cropId]);
         }
-    };
+    }, [selectedCrops]);
+
+    // Voice Control: Register crop selection commands
+    const { setAvailableEntities } = useVoice();
+
+    // Update available entities when crops load
+    useEffect(() => {
+        if (allCrops.length > 0) {
+            setAvailableEntities(allCrops);
+        }
+    }, [allCrops, setAvailableEntities]);
+
+    // Voice command: Select crop by voice
+    const voiceSelectCrop = useCallback((cropId?: string) => {
+        if (cropId) {
+            // Direct ID provided
+            if (!selectedCrops.includes(cropId)) {
+                toggleCrop(cropId);
+            }
+        }
+    }, [selectedCrops, toggleCrop]);
+
+    // Voice command: Remove crop by voice
+    const voiceRemoveCrop = useCallback((cropId?: string) => {
+        if (cropId && selectedCrops.includes(cropId)) {
+            toggleCrop(cropId);
+        }
+    }, [selectedCrops, toggleCrop]);
+
+    // Voice command: Run analysis
+    const voiceRunAnalysis = useCallback(() => {
+        if (selectedCrops.length >= 2) {
+            handleAnalysis();
+        }
+    }, [selectedCrops, handleAnalysis]);
+
+    // Register page-specific voice commands
+    const voiceCommands = useMemo(() => [
+        {
+            id: 'profit_select_crop',
+            keywords: ['select', 'add', 'chuno', 'niwad', 'jod', 'चुनो', 'निवडा', 'जोड'],
+            description: 'Select a crop for comparison',
+            action: voiceSelectCrop,
+            requiresEntity: true,
+            entityType: 'crop' as const,
+            priority: 10,
+        },
+        {
+            id: 'profit_remove_crop',
+            keywords: ['remove', 'delete', 'hatao', 'kadha', 'हटाओ', 'काढा'],
+            description: 'Remove a crop from comparison',
+            action: voiceRemoveCrop,
+            requiresEntity: true,
+            entityType: 'crop' as const,
+            priority: 10,
+        },
+        {
+            id: 'profit_run_analysis',
+            keywords: ['analyze', 'compare', 'run', 'start', 'chalu', 'shuru', 'चालू', 'शुरू'],
+            description: 'Run the profit comparison',
+            action: voiceRunAnalysis,
+            priority: 10,
+        },
+    ], [voiceSelectCrop, voiceRemoveCrop, voiceRunAnalysis]);
+
+    useVoiceCommands(voiceCommands);
+
+    // Listen for CustomEvents from VoiceControlContext (hardcoded voice commands)
+    useEffect(() => {
+        const handleSelectCrop = (e: CustomEvent) => {
+            const cropId = e.detail?.cropId;
+            console.log('[VoiceEvent] Select crop:', cropId);
+            if (cropId && !selectedCrops.includes(cropId) && selectedCrops.length < 5) {
+                setSelectedCrops(prev => [...prev, cropId]);
+            }
+        };
+
+        const handleRemoveCrop = (e: CustomEvent) => {
+            const cropId = e.detail?.cropId;
+            console.log('[VoiceEvent] Remove crop:', cropId);
+            if (cropId && selectedCrops.includes(cropId)) {
+                setSelectedCrops(prev => prev.filter(c => c !== cropId));
+            }
+        };
+
+        const handleRunAnalysis = () => {
+            console.log('[VoiceEvent] Run analysis');
+            if (selectedCrops.length >= 2) {
+                handleAnalysis();
+            }
+        };
+
+        window.addEventListener('voice-select-crop', handleSelectCrop as EventListener);
+        window.addEventListener('voice-remove-crop', handleRemoveCrop as EventListener);
+        window.addEventListener('voice-run-analysis', handleRunAnalysis);
+
+        return () => {
+            window.removeEventListener('voice-select-crop', handleSelectCrop as EventListener);
+            window.removeEventListener('voice-remove-crop', handleRemoveCrop as EventListener);
+            window.removeEventListener('voice-run-analysis', handleRunAnalysis);
+        };
+    }, [selectedCrops, handleAnalysis]);
 
     return (
         <div className="pb-24 pt-6 px-4 space-y-6">
